@@ -9,6 +9,7 @@ params:
   title="Welcome to Goldydocs: A Docsy Example and Starter Project!"
   height="full td-below-navbar"
   image_anchor="top"
+  color="primary bg-gradient td-below-navbar"
 %}}
 
 <!--

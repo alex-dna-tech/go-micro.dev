@@ -1,12 +1,12 @@
 {
-  "name": "docsy-example-site",
-  "version": "0.14.4-dev",
-  "description": "Example site that uses Docsy theme for technical documentation.",
-  "repository": "github:google/docsy-example",
-  "homepage": "https://example.docsy.dev",
-  "author": "Docsy Authors",
+  "name": "Go Micro Dev Site",
+  "version": "0.1.0-dev",
+  "description": "Go-Micro Framework Documentation.",
+  "repository": "github:micro/go-micro.dev",
+  "homepage": "https://go-micro.dev",
+  "author": "GoMicro Team Authors",
   "license": "Apache-2.0",
-  "bugs": "https://github.com/google/docsy-example/issues",
+  "bugs": "https://github.com/micro/go-micro.dev/issues",
   "spelling": "cSpell:ignore docsy hugo htmltest precheck postbuild rtlcss -",
   "scripts": {
     "_build": "npm run _hugo-dev --",
@@ -51,14 +51,14 @@
     "update": "npm run update:packages && npm run update:docsy:mod"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.24",
+    "autoprefixer": "^10.4.27",
     "cross-env": "^10.1.0",
-    "hugo-extended": "0.155.3",
+    "hugo-extended": "0.157.0",
     "postcss-cli": "^11.0.1",
     "rtlcss": "^4.3.0"
   },
   "optionalDependencies": {
-    "npm-check-updates": "^19.3.2",
+    "npm-check-updates": "^19.6.2",
     "prettier": "^3.8.1"
   },
   "engines": {

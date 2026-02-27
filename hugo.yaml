@@ -1,5 +1,5 @@
-baseURL: https://example.docsy.dev
-title: Goldydocs
+baseURL: https://micro.labqa.pp.ua
+title: Go-Micro Framework Documentation
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu slugorcontentbasename
 
@@ -57,28 +57,10 @@ imaging:
 languages:
   en:
     languageName: English
-    title: Goldydocs
+    title: GoMicro
     params:
-      description: A Docsy example site
+      description: Go-Micro Framework Documentation
   # cSpell:disable
-  no:
-    languageName: Norsk
-    contentDir: content/no
-    title: Gulldoks
-    params:
-      description: Docsy er operativsystem for skyen
-      time_format_default: 02.01.2006
-      time_format_blog: 02.01.2006
-  fa:
-    languageDirection: rtl
-    languageName: 'فارسی (Persian)'
-    contentDir: content/fa
-    title: 'اسناد گلدی'
-    params:
-      description: 'یک نمونه برای پوسته داکسی'
-      time_format_default: 2006.01.02
-      time_format_blog: 2006.01.02
-  # cSpell:enable
 
 markup:
   goldmark:
@@ -135,10 +117,10 @@ params:
   versionWithBuildId: 0.14.4-dev
 
   # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-  github_repo: https://github.com/google/docsy-example
+  github_repo: https://github.com/alex-dna-tech/go-micro.dev
 
   # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-  github_project_repo: https://github.com/google/docsy
+  github_project_repo: https://github.com/alex-dna-tech/go-micro
 
   # Specify a value here if your content directory is not in your repo's root directory
   # github_subdir: ""
@@ -158,9 +140,10 @@ params:
 
   copyright:
     authors: >-
-      Docsy Authors | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) |
-    from_year: 2018
-    to_year: present
+      Go-Micro Authors | [CC BY
+      4.0](https://creativecommons.org/licenses/by/4.0) |
+    from_year: 2026
+    to_year: 2026
 
   # User interface configuration
   ui:
@@ -188,19 +171,19 @@ params:
       # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
       yes: >-
         Glad to hear it! Please <a
-        href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we
-        can improve</a>.
+        href="https://github.com/alex-dna-tech/go-micro.dev/issues/new">tell us
+        how we can improve</a>.
       no: >-
         Sorry to hear that. Please <a
-        href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we
-        can improve</a>.
+        href="https://github.com/alex-dna-tech/go-micro.dev/issues/new">tell us
+        how we can improve</a>.
 
     # Adds a reading time to the top of each doc.
     # If you want this feature, but occasionally need to remove the Reading time from a single page,
     # add "hide_readingtime: true" to the page's front matter
     readingtime:
       enable: false
-  mainBranchPreviewURL: https://main--goldydocs.netlify.app/
+  mainBranchPreviewURL: https://micro.labqa.pp.ua/
   # Docs helpers: use with _param
   btn-lg: class="btn btn-lg btn-{1}" role="button"
   FA: <i class="fa-{1} fa-{2} text-{3} px-1"></i>
