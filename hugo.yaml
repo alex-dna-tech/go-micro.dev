@@ -1,5 +1,5 @@
 baseURL: https://micro.labqa.pp.ua
-title: Go-Micro Framework Documentation
+title: Go Micro
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu slugorcontentbasename
 
@@ -59,7 +59,7 @@ languages:
     languageName: English
     title: GoMicro
     params:
-      description: Go-Micro Framework Documentation
+      description: Go-Micro
   # cSpell:disable
 
 markup:
