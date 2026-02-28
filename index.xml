@@ -228,7 +228,7 @@ v0.14.4-dev &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;script&gt;
 document.addEventListener("DOMContentLoaded", function() {
  var options = { hour: '2-digit', hour12: false, minute: '2-digit', timeZoneName: 'short' };
- var buildDate = new Date("2026-02-28T00:58:27Z");
+ var buildDate = new Date("2026-02-28T01:14:17Z");
  document.getElementById("local-time").innerText = buildDate.toLocaleString(undefined, options);
 });
 &lt;/script&gt;</description></item></channel></rss>
