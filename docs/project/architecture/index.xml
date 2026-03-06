@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Architecture Decision Records on GoMicro</title><link>https://alex-dna-tech.github.io/docs/project/architecture/</link><description>Recent content in Architecture Decision Records on GoMicro</description><generator>Hugo</generator><language>en</language><atom:link href="https://alex-dna-tech.github.io/docs/project/architecture/index.xml" rel="self" type="application/rss+xml"/><item><title>ADR-001: Plugin Architecture</title><link>https://alex-dna-tech.github.io/docs/project/architecture/adr-001-plugin-architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/project/architecture/adr-001-plugin-architecture/</guid><description>&lt;h2 id="status"&gt;Status&lt;a class="td-heading-self-link" href="#status" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Accepted&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="context"&gt;Context&lt;a class="td-heading-self-link" href="#context" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Microservices frameworks need to support multiple infrastructure backends (registries, brokers, transports, stores). Different teams have different preferences and existing infrastructure.&lt;/p&gt;
+&lt;p&gt;Hard-coding specific implementations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Limits framework adoption&lt;/li&gt;
+&lt;li&gt;Forces migration of existing infrastructure&lt;/li&gt;
+&lt;li&gt;Prevents innovation and experimentation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="decision"&gt;Decision&lt;a class="td-heading-self-link" href="#decision" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Go Micro uses a &lt;strong&gt;pluggable architecture&lt;/strong&gt; where:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Core interfaces define contracts (Registry, Broker, Transport, Store, etc.)&lt;/li&gt;
+&lt;li&gt;Multiple implementations live in the same repository under interface directories&lt;/li&gt;
+&lt;li&gt;Plugins are imported directly and passed via options&lt;/li&gt;
+&lt;li&gt;Default implementations work without any infrastructure&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="structure"&gt;Structure&lt;a class="td-heading-self-link" href="#structure" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;go-micro/
+├── registry/ # Interface definition
+│ ├── registry.go
+│ ├── mdns.go # Default implementation
+│ ├── consul/ # Plugin
+│ ├── etcd/ # Plugin
+│ └── nats/ # Plugin
+├── broker/
+├── transport/
+└── store/
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="consequences"&gt;Consequences&lt;a class="td-heading-self-link" href="#consequences" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="positive"&gt;Positive&lt;a class="td-heading-self-link" href="#positive" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;No version hell&lt;/strong&gt;: Plugins versioned with core framework&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Discovery&lt;/strong&gt;: Users browse available plugins in same repo&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Consistency&lt;/strong&gt;: All plugins follow same patterns&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Testing&lt;/strong&gt;: Plugins tested together&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Zero config&lt;/strong&gt;: Default implementations require no setup&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="negative"&gt;Negative&lt;a class="td-heading-self-link" href="#negative" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Repo size&lt;/strong&gt;: More code in one repository&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plugin maintenance&lt;/strong&gt;: Core team responsible for plugin quality&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Breaking changes&lt;/strong&gt;: Harder to evolve individual plugins independently&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="neutral"&gt;Neutral&lt;a class="td-heading-self-link" href="#neutral" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Plugins can be extracted to separate repos if they grow complex&lt;/li&gt;
+&lt;li&gt;Community can contribute plugins via PR&lt;/li&gt;
+&lt;li&gt;Plugin-specific issues easier to triage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="alternatives-considered"&gt;Alternatives Considered&lt;a class="td-heading-self-link" href="#alternatives-considered" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="separate-plugin-repositories"&gt;Separate Plugin Repositories&lt;a class="td-heading-self-link" href="#separate-plugin-repositories" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Used by go-kit and other frameworks. Rejected because:&lt;/p&gt;</description></item><item><title>ADR-004: mDNS as Default Registry</title><link>https://alex-dna-tech.github.io/docs/project/architecture/adr-004-mdns-default-registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/project/architecture/adr-004-mdns-default-registry/</guid><description>&lt;h2 id="status"&gt;Status&lt;a class="td-heading-self-link" href="#status" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Accepted&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="context"&gt;Context&lt;a class="td-heading-self-link" href="#context" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Service discovery is critical for microservices. Common approaches:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Central registry&lt;/strong&gt; (Consul, Etcd) - Requires infrastructure&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DNS-based&lt;/strong&gt; (Kubernetes DNS) - Platform-specific&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Static configuration&lt;/strong&gt; - Doesn&amp;rsquo;t scale&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multicast DNS (mDNS)&lt;/strong&gt; - Zero-config, local network&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For local development and getting started, requiring infrastructure setup is a barrier. Production deployments typically have existing service discovery infrastructure.&lt;/p&gt;
+&lt;h2 id="decision"&gt;Decision&lt;a class="td-heading-self-link" href="#decision" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Use &lt;strong&gt;mDNS as the default registry&lt;/strong&gt; for service discovery.&lt;/p&gt;</description></item><item><title>ADR-009: Progressive Configuration</title><link>https://alex-dna-tech.github.io/docs/project/architecture/adr-009-progressive-configuration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/project/architecture/adr-009-progressive-configuration/</guid><description>&lt;h2 id="status"&gt;Status&lt;a class="td-heading-self-link" href="#status" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Accepted&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="context"&gt;Context&lt;a class="td-heading-self-link" href="#context" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Microservices frameworks face a paradox:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Beginners want &amp;ldquo;Hello World&amp;rdquo; to work immediately&lt;/li&gt;
+&lt;li&gt;Production needs sophisticated configuration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Too simple: Framework is toy, not production-ready
+Too complex: High barrier to entry, discourages adoption&lt;/p&gt;
+&lt;h2 id="decision"&gt;Decision&lt;a class="td-heading-self-link" href="#decision" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Implement &lt;strong&gt;progressive configuration&lt;/strong&gt; where:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Zero config&lt;/strong&gt; works for development&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Environment variables&lt;/strong&gt; provide simple overrides&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Code-based options&lt;/strong&gt; enable fine-grained control&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Defaults are production-aware&lt;/strong&gt; but not production-ready&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="levels-of-configuration"&gt;Levels of Configuration&lt;a class="td-heading-self-link" href="#levels-of-configuration" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="level-1-zero-config-development"&gt;Level 1: Zero Config (Development)&lt;a class="td-heading-self-link" href="#level-1-zero-config-development" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;svc&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;micro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;NewService&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;micro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Name&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;svc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Uses defaults:&lt;/p&gt;</description></item><item><title>ADR-010: Unified Gateway Architecture</title><link>https://alex-dna-tech.github.io/docs/project/architecture/adr-010-unified-gateway/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/project/architecture/adr-010-unified-gateway/</guid><description>&lt;p&gt;&lt;strong&gt;Status:&lt;/strong&gt; Accepted
+&lt;strong&gt;Date:&lt;/strong&gt; 2026-02-11
+&lt;strong&gt;Authors:&lt;/strong&gt; Go Micro Team&lt;/p&gt;
+&lt;h2 id="context"&gt;Context&lt;a class="td-heading-self-link" href="#context" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Previously, the go-micro CLI had two separate gateway implementations:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;micro run&lt;/code&gt;&lt;/strong&gt; gateway (&lt;code&gt;cmd/micro/run/gateway/&lt;/code&gt;) - Simple HTTP-to-RPC proxy for development&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;micro server&lt;/code&gt;&lt;/strong&gt; gateway (&lt;code&gt;cmd/micro/server/&lt;/code&gt;) - Production gateway with authentication, web UI, and API documentation&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This duplication created several problems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Code maintenance&lt;/strong&gt;: Gateway logic (HTTP-to-RPC translation, service discovery, health checks) was implemented twice&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Feature parity&lt;/strong&gt;: Improvements to one gateway didn&amp;rsquo;t automatically benefit the other&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Complexity&lt;/strong&gt;: New features (like MCP integration) would need to be implemented twice&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Testing burden&lt;/strong&gt;: Each gateway required separate testing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="decision"&gt;Decision&lt;a class="td-heading-self-link" href="#decision" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We unified the gateway implementation by:&lt;/p&gt;</description></item><item><title>ADR-XXX: Title</title><link>https://alex-dna-tech.github.io/docs/project/architecture/adr-template/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/project/architecture/adr-template/</guid><description>&lt;p&gt;Status: Proposed&lt;br&gt;
+Date: YYYY-MM-DD&lt;/p&gt;
+&lt;h2 id="context"&gt;Context&lt;a class="td-heading-self-link" href="#context" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Describe the problem, forces, and constraints leading to the decision.&lt;/p&gt;
+&lt;h2 id="decision"&gt;Decision&lt;a class="td-heading-self-link" href="#decision" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;State the decision clearly and precisely.&lt;/p&gt;
+&lt;h2 id="consequences"&gt;Consequences&lt;a class="td-heading-self-link" href="#consequences" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Positive and negative outcomes, trade-offs introduced by this decision.&lt;/p&gt;
+&lt;h2 id="alternatives-considered"&gt;Alternatives Considered&lt;a class="td-heading-self-link" href="#alternatives-considered" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Alternative A - why rejected&lt;/li&gt;
+&lt;li&gt;Alternative B - why rejected&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="implementation-notes"&gt;Implementation Notes&lt;a class="td-heading-self-link" href="#implementation-notes" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;High-level steps or rollout plan if accepted.&lt;/p&gt;
+&lt;h2 id="related"&gt;Related&lt;a class="td-heading-self-link" href="#related" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Link other ADRs, documentation, or issues.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="references"&gt;References&lt;a class="td-heading-self-link" href="#references" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;External resources, prior art, research.&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Migration Guides on GoMicro</title><link>https://alex-dna-tech.github.io/docs/guides/migration/</link><description>Recent content in Migration Guides on GoMicro</description><generator>Hugo</generator><language>en</language><atom:link href="https://alex-dna-tech.github.io/docs/guides/migration/index.xml" rel="self" type="application/rss+xml"/><item><title>Migrating from gRPC</title><link>https://alex-dna-tech.github.io/docs/guides/migration/from-grpc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/migration/from-grpc/</guid><description>&lt;h2 id="why-migrate"&gt;Why Migrate?&lt;a class="td-heading-self-link" href="#why-migrate" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Go Micro adds:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Built-in service discovery&lt;/li&gt;
+&lt;li&gt;Client-side load balancing&lt;/li&gt;
+&lt;li&gt;Pub/sub messaging&lt;/li&gt;
+&lt;li&gt;Multiple transport options&lt;/li&gt;
+&lt;li&gt;Unified tooling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You keep:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Your proto definitions&lt;/li&gt;
+&lt;li&gt;gRPC performance (via gRPC transport)&lt;/li&gt;
+&lt;li&gt;Type safety&lt;/li&gt;
+&lt;li&gt;Streaming support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="migration-strategy"&gt;Migration Strategy&lt;a class="td-heading-self-link" href="#migration-strategy" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="phase-1-parallel-running"&gt;Phase 1: Parallel Running&lt;a class="td-heading-self-link" href="#phase-1-parallel-running" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Run Go Micro alongside existing gRPC services&lt;/p&gt;
+&lt;h3 id="phase-2-gradual-migration"&gt;Phase 2: Gradual Migration&lt;a class="td-heading-self-link" href="#phase-2-gradual-migration" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Migrate services one at a time&lt;/p&gt;
+&lt;h3 id="phase-3-complete-migration"&gt;Phase 3: Complete Migration&lt;a class="td-heading-self-link" href="#phase-3-complete-migration" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;All services on Go Micro&lt;/p&gt;</description></item></channel></rss>

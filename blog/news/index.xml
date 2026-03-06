@@ -1,32 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>News on GoMicro</title><link>https://alex-dna-tech.github.io/blog/news/</link><description>Recent content in News on GoMicro</description><generator>Hugo</generator><language>en</language><atom:link href="https://alex-dna-tech.github.io/blog/news/index.xml" rel="self" type="application/rss+xml"/><item><title>Easy documentation with Docsy</title><link>https://alex-dna-tech.github.io/blog/2026/02/10/first-post/</link><pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/blog/2026/02/10/first-post/</guid><description>&lt;p&gt;&lt;strong&gt;This is a typical blog post that includes images.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The front matter specifies the date of the blog post, its title, a short
-description that will be displayed on the blog landing page, and its author.&lt;/p&gt;
-&lt;h2 id="including-images"&gt;Including images&lt;a class="td-heading-self-link" href="#including-images" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Here&amp;rsquo;s an image that includes a byline and a caption.&lt;/p&gt;
-&lt;figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 510px"&gt;
-&lt;img class="card-img-top" src="https://alex-dna-tech.github.io/blog/2026/02/10/first-post/featured-pexels-peter-xie-sunset-35157036_hu_e73e119a9cfebf79.jpg" width="500" height="300"&gt;
-&lt;figcaption class="card-body px-0 pt-2 pb-0"&gt;
-&lt;p class="card-text"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>News on GoMicro</title><link>https://alex-dna-tech.github.io/blog/news/</link><description>Recent content in News on GoMicro</description><generator>Hugo</generator><language>en</language><atom:link href="https://alex-dna-tech.github.io/blog/news/index.xml" rel="self" type="application/rss+xml"/><item><title>Agents Meet Microservices: A Hands-On Demo</title><link>https://alex-dna-tech.github.io/blog/2026/03/04/agents-meet-microservices-a-hands-on-demo/</link><pubDate>Wed, 04 Mar 2026 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/blog/2026/03/04/agents-meet-microservices-a-hands-on-demo/</guid><description>&lt;p&gt;We talk a lot about AI-native microservices. Time to show it. In this post we&amp;rsquo;ll build three services — projects, tasks, and team — and then hand them to an AI agent. The agent will create projects, assign tasks, and query team skills using nothing but natural language.&lt;/p&gt;
+&lt;p&gt;No API wrappers. No tool definitions. Just Go comments.&lt;/p&gt;
+&lt;h2 id="the-setup"&gt;The Setup&lt;a class="td-heading-self-link" href="#the-setup" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The full code is at &lt;a href="https://github.com/micro/go-micro/tree/master/examples/agent-demo"&gt;&lt;code&gt;examples/agent-demo&lt;/code&gt;&lt;/a&gt;. Here&amp;rsquo;s the architecture:&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart TD
+ User[&amp;lt;b&amp;gt;User&amp;lt;/b&amp;gt; &amp;lt;br/&amp;gt;natural language] --&amp;gt; Agent[&amp;lt;b&amp;gt;AI Agent&amp;lt;/b&amp;gt; &amp;lt;br/&amp;gt;Claude, GPT, etc.]
+ Agent --&amp;gt; Gateway[&amp;lt;b&amp;gt;MCP Gateway&amp;lt;/b&amp;gt; &amp;lt;i&amp;gt;:3000&amp;lt;/i&amp;gt;]
 
-
-
-Image cropped to 500x300
-
-&lt;small class="text-body-secondary"&gt;&lt;br/&gt;Photo by Peter Xie from Pexels&lt;/small&gt;
-&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;The front matter of this post specifies properties to be assigned to all image
-resources:&lt;/p&gt;</description></item><item><title>Second blog post</title><link>https://alex-dna-tech.github.io/blog/2026/01/06/second-post/</link><pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/blog/2026/01/06/second-post/</guid><description>&lt;p&gt;This is a &lt;strong&gt;placeholder page&lt;/strong&gt;. For an example of the kind of content that can
-be added here, see the &lt;a href="https://alex-dna-tech.github.io/docs/getting-started/example-page/"&gt;example page&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="welcome"&gt;Welcome!&lt;a class="td-heading-self-link" href="#welcome" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Welcome to the Docsy theme user guide! This guide shows you how to get started
-creating technical documentation sites using Docsy, including site customization
-and how to use Docsy&amp;rsquo;s blocks and templates.&lt;/p&gt;
-&lt;h2 id="what-is-docsy"&gt;What is Docsy?&lt;a class="td-heading-self-link" href="#what-is-docsy" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Docsy is a theme for the &lt;a href="https://gohugo.io/"&gt;Hugo&lt;/a&gt; static site generator that&amp;rsquo;s
-specifically designed for technical documentation sets and has a lot of best
-practices built in. Use Docsy to get a working and reliable documentation site
-up and running fast, and then get back to focusing on great content for your
-users. &lt;a href="https://alex-dna-tech.github.io/about/"&gt;Learn more about Docsy&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>
+ Gateway --&amp;gt; Project[&amp;lt;b&amp;gt;ProjectService&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;Create / Get / List]
+ Gateway --&amp;gt; Task[&amp;lt;b&amp;gt;TaskService&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;Create / List / Update]
+ Gateway --&amp;gt; Team[&amp;lt;b&amp;gt;TeamService&amp;lt;/b&amp;gt;&amp;lt;br/&amp;gt;Add / List / Get]&lt;/pre&gt;
+&lt;p&gt;The MCP gateway discovers all three services automatically and exposes 9 tools. The agent sees them and knows how to call them — because we wrote good comments.&lt;/p&gt;</description></item><item><title>Building the AI-Native Future of Go Micro with Claude</title><link>https://alex-dna-tech.github.io/blog/2026/03/04/building-the-ai-native-future-of-go-micro-with-claude/</link><pubDate>Wed, 04 Mar 2026 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/blog/2026/03/04/building-the-ai-native-future-of-go-micro-with-claude/</guid><description>&lt;p&gt;Go Micro was recently given access to &lt;strong&gt;Claude Max&lt;/strong&gt; through Anthropic&amp;rsquo;s open source sponsorship program. We wanted to share what we&amp;rsquo;ve built with it, why it matters, and where we&amp;rsquo;re headed.&lt;/p&gt;
+&lt;h2 id="the-sponsorship"&gt;The Sponsorship&lt;a class="td-heading-self-link" href="#the-sponsorship" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Anthropic offers Claude Max access to open source projects. Go Micro applied because our MCP integration — making every microservice an AI tool — aligns directly with Anthropic&amp;rsquo;s Model Context Protocol. They agreed, and we got to work.&lt;/p&gt;</description></item><item><title>Developer Experience Cleanup: One Way to Do Things</title><link>https://alex-dna-tech.github.io/blog/2026/03/04/developer-experience-cleanup-one-way-to-do-things/</link><pubDate>Wed, 04 Mar 2026 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/blog/2026/03/04/developer-experience-cleanup-one-way-to-do-things/</guid><description>&lt;p&gt;Go Micro has always prioritized getting out of your way. But over time, the API accumulated multiple ways to do the same thing — &lt;code&gt;micro.New()&lt;/code&gt;, &lt;code&gt;micro.NewService()&lt;/code&gt;, &lt;code&gt;service.New()&lt;/code&gt;, three different handler registration patterns. If you&amp;rsquo;re building something for AI agents or running a modular monolith, you shouldn&amp;rsquo;t have to choose between equivalent APIs.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ve cleaned it up. Here&amp;rsquo;s what changed and why.&lt;/p&gt;
+&lt;h2 id="one-way-to-create-a-service"&gt;One Way to Create a Service&lt;a class="td-heading-self-link" href="#one-way-to-create-a-service" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Before, there were three ways to create a service:&lt;/p&gt;</description></item><item><title>The Model Package: Client, Server, and Now Data</title><link>https://alex-dna-tech.github.io/blog/2026/03/04/the-model-package-client-server-and-now-data/</link><pubDate>Wed, 04 Mar 2026 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/blog/2026/03/04/the-model-package-client-server-and-now-data/</guid><description>&lt;p&gt;Go Micro has always given you &lt;code&gt;service.Client()&lt;/code&gt; to call other services and &lt;code&gt;service.Server()&lt;/code&gt; to handle requests. But most services also need to save and query data. Until now, that meant either using the low-level &lt;code&gt;store&lt;/code&gt; package (key-value only) or wiring up your own database layer.&lt;/p&gt;
+&lt;p&gt;Today we&amp;rsquo;re shipping the &lt;code&gt;model&lt;/code&gt; package — a typed data model layer that completes the service trifecta: &lt;strong&gt;Client, Server, Model&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id="the-problem"&gt;The Problem&lt;a class="td-heading-self-link" href="#the-problem" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The existing &lt;code&gt;store&lt;/code&gt; package is great for simple key-value storage, but real services need more. You need to filter by fields, paginate results, count records, and use different databases in dev vs production. Most teams end up writing their own data layer or pulling in an ORM that has nothing to do with Go Micro.&lt;/p&gt;</description></item></channel></rss>
