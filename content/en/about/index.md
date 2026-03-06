@@ -2,7 +2,7 @@
 title: About Goldydocs
 linkTitle: About
 description: A sample site using the Docsy Hugo theme.
-menu: { main: { weight: 10 } }
+# menu: { main: { weight: 10 } }
 ---
 
 {{% blocks/cover
@@ -26,13 +26,13 @@ different sections of the documentation and site for more ideas.
 
 {{% /blocks/lead %}}
 
-{{% blocks/section type="row text-center h1" %}}
+{{% blocks/section type="text-center h1 py-4" %}}
 
 This is another section with center alignment
 
 {{% /blocks/section %}}
 
-{{% blocks/section type="h1" %}}
+{{% blocks/section type="container h1 py-4" %}}
 
 This is another section with default alignment
 

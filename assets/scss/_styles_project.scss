@@ -21,3 +21,27 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
     color: tint-color($primary, 80%) !important;
   }
 }
+
+/* .container-fluid { */
+/*   @extend .container; */
+/* } */
+
+.td-hero-block {
+  position: relative;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@if $enable-dark-mode {
+  [data-bs-theme='light'] {
+    .td-footer {
+        background-color: #111827 !important;
+    }
+  }
+  [data-bs-theme='dark'] {
+    body, .td-navbar, .td-footer {
+        background-color: #111827 !important;
+    }
+  }
+}
+
