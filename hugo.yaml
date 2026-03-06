@@ -120,7 +120,7 @@ params:
   github_repo: https://github.com/alex-dna-tech/go-micro.dev
 
   # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-  github_project_repo: https://github.com/alex-dna-tech/go-micro
+  github_project_repo: https://github.com/micro/go-micro
 
   # Specify a value here if your content directory is not in your repo's root directory
   # github_subdir: ""
@@ -140,8 +140,7 @@ params:
 
   copyright:
     authors: >-
-      Go-Micro Authors | [CC BY
-      4.0](https://creativecommons.org/licenses/by/4.0) |
+      Go-Micro Team | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) |
     from_year: 2026
     to_year: 2026
 
@@ -191,18 +190,14 @@ params:
   links:
     # End user relevant links. These will show up on left side of footer and in the community page if you have one.
     user:
-      - name: User mailing list
-        url: https://example.org/mail
-        icon: fa fa-envelope
+      - name: Discord
+        url: https://discord.gg/jwTYuUVAGh
+        icon: fa-brands fa-discord
         desc: Discussion and help from your fellow users
-      - name: X
-        url: https://example.org/x
-        icon: fab fa-x-twitter
-        desc: Follow us on X to get the latest news!
-      - name: Stack Overflow
-        url: https://example.org/stack
-        icon: fab fa-stack-overflow
-        desc: Practical questions and curated answers
+      # - name: Stack Overflow
+      #   url: https://example.org/stack
+      #   icon: fab fa-stack-overflow
+      #   desc: Practical questions and curated answers
     # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
     developer:
       - name: Site info
@@ -210,17 +205,17 @@ params:
         icon: fa-solid fa-hammer
         desc: Site build information.
       - name: GitHub
-        url: https://github.com/google/docsy
+        url: https://github.com/micro/go-micro
         icon: fab fa-github
         desc: Development takes place here!
-      - name: Slack
-        url: https://example.org/slack
-        icon: fab fa-slack
-        desc: Chat with other project developers
-      - name: Developer mailing list
-        url: https://example.org/mail
-        icon: fa fa-envelope
-        desc: Discuss development issues around the project
+      # - name: Slack
+      #   url: https://example.org/slack
+      #   icon: fab fa-slack
+      #   desc: Chat with other project developers
+      # - name: Developer mailing list
+      #   url: https://example.org/mail
+      #   icon: fa fa-envelope
+      #   desc: Discuss development issues around the project
 
 security:
   funcs: # cspell:disable-line

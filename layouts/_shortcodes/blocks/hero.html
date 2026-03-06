@@ -1,0 +1,32 @@
+{{ $blockID := printf "td-cover-block-%d" .Ordinal -}}
+{{ $col_id := .Get "color" | default "dark" -}}
+{{/* Height can be one of: auto, min, med, max, full. */ -}}
+{{ $height := .Get "height" | default "max" -}}
+
+<section id="{{ $blockID }}" class="row td-hero-block td-cover-block--height-{{ $height -}}
+    {{ if not .Site.Params.ui.navbar_translucent_over_cover_disable }} js-td-cover
+    {{- end }} -bg-{{ $col_id }}" {{/**/ -}}
+>
+  <div class="col-12">
+    <div class="container td-overlay__inner">
+      <div class="text-center">
+        {{ with .Get "title" -}}
+          <h1 class="display-1 mt-0 mt-md-5 pb-4">
+            {{- $title := . -}}
+            {{ $title | html -}}
+          </h1>
+        {{ end -}}
+        {{ with .Get "subtitle" -}}
+          <p class="display-2 text-uppercase mb-0">{{ . | html }}</p>
+        {{ end -}}
+        <div class="pt-3 lead">
+          {{ .Inner -}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ with .Get "byline" | default "" -}}
+    <div class="byline">{{ . }}</div>
+  {{- end }}
+</section>
+{{/**/ -}}
