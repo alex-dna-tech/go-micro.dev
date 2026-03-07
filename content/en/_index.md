@@ -81,15 +81,15 @@ params:
 
 <!-- prettier-ignore -->
 <div class="td-cta-buttons my-5">
-  <a {{% _param btn-lg primary %}} href="docs/">
-    Learn more
-  </a>
-  <a {{% _param btn-lg secondary %}}
-    href="{{% param github_project_repo %}}"
-    target="_blank" rel="noopener noreferrer">
-    Get the code
-    {{% _param FA brands github "" %}}
-  </a>
+<a class="download-btn btn btn-go btn-lg d-inline-flex align-items-center gap-2" href="docs/">
+Learn more
+</a>
+<a class="btn btn-outline-go btn-lg d-inline-flex align-items-center gap-2"
+href="{{% param github_project_repo %}}"
+target="_blank" rel="noopener noreferrer">
+Get the code
+{{% _param FA brands github "" %}}
+</a>
 </div>
 
 {{% blocks/link-down color="info" %}}
@@ -99,6 +99,7 @@ params:
 <div class="row g-4 justify-content-center">
 <div class="col-lg-4 col-md-6">
 {{% elements/variant-card 
+    color="gradient"
     title="Pluggable" 
     subtitle="Swap components without changing code" 
 %}}
@@ -108,6 +109,7 @@ params:
 
 <div class="col-lg-4 col-md-6">
 {{% elements/variant-card 
+    color="gradient"
     title="Zero Config" 
     subtitle="Works out of the box with sensible defaults" 
 %}}
@@ -117,6 +119,7 @@ params:
 
 <div class="col-lg-4 col-md-6">
 {{% elements/variant-card 
+    color="gradient"
     title="RPC First" 
     subtitle="Swap components without changing code" 
 %}}
@@ -126,7 +129,7 @@ params:
 
 <div class="col-lg-4 col-md-6">
 {{% elements/variant-card 
-    color="light"
+    color="gradient"
     title="Pub/Sub" 
     subtitle="Swap components without changing code" 
 %}}
@@ -136,6 +139,7 @@ params:
 
 <div class="col-lg-4 col-md-6">
 {{% elements/variant-card 
+    color="gradient"
     title="State Management" 
     subtitle="Unified store interface for persistence" 
 %}}
@@ -145,6 +149,7 @@ params:
 
 <div class="col-lg-4 col-md-6">
 {{% elements/variant-card 
+    color="gradient"
     title="Multi-Transport" 
     subtitle="HTTP, gRPC, NATS, and more" 
 %}}

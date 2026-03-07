@@ -103,17 +103,6 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-.download-btn {
-    background: linear-gradient(135deg, #00ADD8 0%, #0095B6 100%);
-    transition: all 0.3s ease;
-    border: none;
-}
-
-.download-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 173, 216, 0.3);
-}
-
 .size-demo {
     transition: all 0.3s ease;
 }
@@ -166,4 +155,29 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   opacity: .3;
 }
 
+.btn-go {
+    background: linear-gradient(135deg, #00ADD8 0%, #0095B6 100%);
+    transition: all 0.3s ease;
+    border: none;
+    color: #fff;
+}
 
+.btn-go:hover {
+    border-color: #0090b3;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 173, 216, 0.3);
+}
+
+.btn-outline-go {
+    transition: all 0.3s ease;
+    color: #00ADD8;
+    border-color: #00ADD8;
+}
+
+.btn-outline-go:hover {
+    background: rgba(0,173,216,.1);
+    color: #00ADD8;
+    border-color: #00ADD8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 173, 216, 0.3);
+}
