@@ -51,15 +51,15 @@
     "update": "npm run update:packages && npm run update:docsy:mod"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.27",
+    "autoprefixer": "^10.5.0",
     "cross-env": "^10.1.0",
-    "hugo-extended": "0.157.0",
+    "hugo-extended": "0.163.3",
     "postcss-cli": "^11.0.1",
     "rtlcss": "^4.3.0"
   },
   "optionalDependencies": {
-    "npm-check-updates": "^19.6.3",
-    "prettier": "^3.8.1"
+    "npm-check-updates": "^22.2.7",
+    "prettier": "^3.8.4"
   },
   "engines": {
     "node": ">=22"

@@ -3,6 +3,11 @@ title: "Agents Meet Microservices: A Hands-On Demo"
 linkTitle: "Agents Meet Microservices"
 date: 2026-03-04
 description: "Build three microservices and let an AI agent manage them with natural language — no glue code, no API wrappers, just Go comments"
+category:
+- tutorial
+tags:
+- AI
+- Agents
 ---
 
 We talk a lot about AI-native microservices. Time to show it. In this post we'll build three services — projects, tasks, and team — and then hand them to an AI agent. The agent will create projects, assign tasks, and query team skills using nothing but natural language.

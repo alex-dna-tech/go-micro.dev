@@ -83,12 +83,13 @@ params:
 <div class="td-cta-buttons my-5">
 <a class="download-btn btn btn-go btn-lg d-inline-flex align-items-center gap-2" href="docs/">
 Learn more
+<i class="fa-solid fa-book-open-reader"></i>
 </a>
 <a class="btn btn-outline-go btn-lg d-inline-flex align-items-center gap-2"
 href="{{% param github_project_repo %}}"
 target="_blank" rel="noopener noreferrer">
 Get the code
-{{% _param FA brands github "" %}}
+<i class="fa-brands fa-github"></i>
 </a>
 </div>
 

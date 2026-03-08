@@ -120,7 +120,10 @@ params:
   github_repo: https://github.com/alex-dna-tech/go-micro.dev
 
   # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-  github_project_repo: https://github.com/micro/go-micro
+  github_project_repo: https://github.com/alex-dna-tech/go-micro
+
+  # An go.mod vanity module name (example.com/module)
+  go_module_name: micro.labqa.pp.ua/v5
 
   # Specify a value here if your content directory is not in your repo's root directory
   # github_subdir: ""

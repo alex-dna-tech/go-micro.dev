@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>{{ .Site.Params.title }}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="go-import" content="{{ .Site.Params.go_module_name }} git {{ .Site.Params.github_project_repo }}">
+<meta name="go-source" content="{{ .Site.Params.go_module_name }} {{ .Site.Params.github_project_repo }} {{ .Site.Params.github_project_repo }}/tree/master{/dir} {{.Site.Params.github_project_repo}}/blob/master{/dir}/{file}#L{line}">
+</head>
+<body>
+<a href="https://pkg.go.dev/{{ .Site.Params.go_module_name }}">Redirecting to documentation...</a>
+<p>
+{{ printf "%#v" .Site.Params }}
+</p>
+</body>
+</html>
