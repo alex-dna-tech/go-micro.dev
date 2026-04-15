@@ -59,7 +59,7 @@
   },
   "optionalDependencies": {
     "npm-check-updates": "^19.6.3",
-    "prettier": "^3.8.1"
+    "prettier": "^3.8.3"
   },
   "engines": {
     "node": ">=22"
