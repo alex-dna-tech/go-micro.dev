@@ -123,7 +123,7 @@ params:
   github_project_repo: https://github.com/alex-dna-tech/go-micro
 
   # An go.mod vanity module name (example.com/module)
-  go_module_name: micro.labqa.pp.ua/v5
+  go_module_name: micro.labqa.pp.ua
 
   # Specify a value here if your content directory is not in your repo's root directory
   # github_subdir: ""
@@ -133,10 +133,10 @@ params:
   github_branch: main
 
   # Google Custom Search Engine ID. Remove or comment out to disable search.
-  gcs_engine_id: d72aa9b2712488cc3
+  # gcs_engine_id: d72aa9b2712488cc3
 
   # Enable Lunr.js offline search
-  offlineSearch: false
+  offlineSearch: true
 
   # Enable syntax highlighting and copy buttons on code blocks with Prism
   prism_syntax_highlighting: false
@@ -160,7 +160,7 @@ params:
     # Enable to show the side bar menu in its compact state.
     sidebar_menu_compact: false
     # Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
-    sidebar_search_disable: false
+    sidebar_search_disable: true
     # Enable light/dark mode toggle menu in the navbar
     showLightDarkModeMenu: true
 
