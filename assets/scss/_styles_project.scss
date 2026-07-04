@@ -10,6 +10,8 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
 @import 'td/extra/buttons';
 @import 'td/extra/main-container';
 
+
+
 // Example of color tuning
 
 .td-box--primary {
@@ -42,6 +44,12 @@ https://www.docsy.dev/docs/content/lookandfeel/#project-style-files
     body, .td-navbar, .td-footer {
         background-color: #111827 !important;
     }
+  }
+}
+
+.td-max-width-on-larger-screens {
+  @include media-breakpoint-up(lg) {
+    max-width: 96%;
   }
 }
 

@@ -143,7 +143,8 @@ params:
 
   copyright:
     authors: >-
-      Go-Micro Team | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0) |
+      Go Micro [Apache 2.0
+      Licensed](https://www.apache.org/licenses/LICENSE-2.0) |
     from_year: 2026
     to_year: 2026
 
