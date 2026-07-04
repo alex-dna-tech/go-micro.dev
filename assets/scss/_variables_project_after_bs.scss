@@ -181,3 +181,21 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(0, 173, 216, 0.3);
 }
+
+figure {
+  width: 100%;
+  margin: 0;
+}
+
+figure a,
+.image-wrapper {
+  display: block;
+  width: 100%;
+}
+
+.image-wrapper img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}

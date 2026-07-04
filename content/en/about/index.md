@@ -37,3 +37,6 @@ This is another section with center alignment
 This is another section with default alignment
 
 {{% /blocks/section %}}
+
+![This is featured-background](featured-background.jpg)
+
