@@ -3,9 +3,15 @@ title: "Architecture"
 weight: 80
 description: "An overview of the Go Micro architecture."
 ---
+## Architecture
+
 ![Go Micro architecture](architecture.jpg)
 
-> Go Micro abstracts away the details of distributed systems. Here are the main features.
+An overview of the Go Micro architecture.
+
+## Overview
+
+Go Micro abstracts away the details of distributed systems. Here are the main features.
 
 - **Authentication** - Auth is built in as a first class citizen. Authentication and authorization enable secure
   zero trust networking by providing every service an identity and certificates. This additionally includes rule

@@ -1,9 +1,12 @@
 ---
-title: Deployment Guide
-description: >
-    This is a quick reference for deploying go-micro services. For the full guide, see the [Deployment documentation](/docs/overview/deployment/).
+title: "Deployment"
+weight: 1
+draft: true
+description: "This is a quick reference for deploying go-micro services. For the full guide, see the Deployment documentation."
 ---
+# Deployment Guide
 
+This is a quick reference for deploying go-micro services. For the full guide, see the [Deployment documentation](../deployment.md).
 
 ## Workflow
 

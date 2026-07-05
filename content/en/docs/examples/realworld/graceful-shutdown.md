@@ -1,8 +1,10 @@
 ---
-title: Graceful Shutdown
-weight: 2
-description: Properly shutting down services to avoid dropped requests and data loss.
+title: "Graceful Shutdown"
+weight: 1
+draft: true
+description: "Properly shutting down services to avoid dropped requests and data loss."
 ---
+Properly shutting down services to avoid dropped requests and data loss.
 
 ## The Problem
 
@@ -27,13 +29,12 @@ import (
     "os/signal"
     "syscall"
     "time"
-    "go-micro.dev/v5"
-    "go-micro.dev/v5/logger"
+    "go-micro.dev/v6"
+    "go-micro.dev/v6/logger"
 )
 
 func main() {
-    svc := micro.NewService(
-        micro.Name("myservice"),
+    svc := micro.NewService("myservice",
         micro.BeforeStop(func() error {
             logger.Info("Service stopping, running cleanup...")
             return cleanup()
@@ -152,8 +153,8 @@ import (
     "syscall"
     "time"
     
-    "go-micro.dev/v5"
-    "go-micro.dev/v5/logger"
+    "go-micro.dev/v6"
+    "go-micro.dev/v6/logger"
 )
 
 type Application struct {
@@ -231,8 +232,7 @@ func main() {
     app.AddWorker(&Worker{name: "cleanup"})
     app.AddWorker(&Worker{name: "metrics"})
     
-    svc := micro.NewService(
-        micro.Name("myservice"),
+    svc := micro.NewService("myservice",
         micro.BeforeStop(func() error {
             ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
             defer cancel()
@@ -361,5 +361,5 @@ wait
 
 ## Related
 
-- [API Gateway Example](api-gateway) - Multi-service architecture
-- [Getting Started Guide](/docs/overview/getting-started) - Basic service setup
+- [API Gateway Example](api-gateway.md) - Multi-service architecture
+- [Getting Started Guide](../../getting-started.md) - Basic service setup

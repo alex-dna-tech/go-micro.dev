@@ -3,6 +3,8 @@ title: "Agent Guardrails"
 weight: 50
 description: "An autonomous agent decides its own actions at runtime, which is what makes it useful — and what makes it risky. The common failure modes are mundane: it loops, repeating the same call without making "
 ---
+An autonomous agent decides its own actions at runtime, which is what makes it useful — and what makes it risky. The common failure modes are mundane: it loops, repeating the same call without making progress; it runs away, taking far more steps (and cost) than the task warrants; it takes an action that should have had a human or a policy in the way.
+
 Go Micro separates **orchestration** (the model deciding what to do) from **execution safety** (whether a decided action is allowed to run). Every tool call an agent makes passes through one choke point, and that's where the guardrails live — so they apply uniformly to service calls, custom tools, and `delegate`, without touching the model or your services.
 
 ## The three agent guardrails

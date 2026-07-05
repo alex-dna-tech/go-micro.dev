@@ -3,6 +3,8 @@ title: "AI Integration"
 weight: 20
 description: "Go Micro is an AI-native microservices framework. Every service you build is automatically accessible to AI agents, and every service can call AI models. This page explains how the pieces fit together"
 ---
+Go Micro is an AI-native microservices framework. Every service you build is automatically accessible to AI agents, and every service can call AI models. This page explains how the pieces fit together.
+
 ![AI integration architecture](mcp-agent.jpg)
 
 ## The Stack

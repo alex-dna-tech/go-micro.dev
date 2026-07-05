@@ -1,7 +1,7 @@
 ---
 title: "Atlas Cloud Integration"
 weight: 130
-description: "Atlas Cloudhttps://www.atlascloud.ai/ is an enterprise AI infrastructure platform offering 300+ models across text, image, and video through a unified, OpenAI-compatible API. It is an official Go Micr"
+description: "Atlas Cloud is an enterprise AI infrastructure platform offering 300+ models across text, image, and video through a unified, OpenAI-compatible API. It is an official Go Micro sponsor and a first-clas"
 ---
 # Atlas Cloud Integration Guide
 

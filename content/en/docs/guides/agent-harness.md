@@ -3,6 +3,7 @@ title: "The Agent Harness"
 weight: 80
 description: "The first wave of agent frameworks solved one problem: put a model in a loop with"
 ---
+The first wave of agent frameworks solved one problem: put a model in a loop with
 some tools. The harder problem is **operating** that loop — and that's what a
 harness is.
 

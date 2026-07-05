@@ -1,7 +1,12 @@
 ---
-title: Migrating from gRPC
-description: Step-by-step guide to migrating existing gRPC services to Go Micro.
+title: "From Grpc"
+weight: 1
+draft: true
+description: "Step-by-step guide to migrating existing gRPC services to Go Micro."
 ---
+# Migrating from gRPC
+
+Step-by-step guide to migrating existing gRPC services to Go Micro.
 
 ## Why Migrate?
 
@@ -87,7 +92,7 @@ Update your proto generation:
 
 ```bash
 # Install protoc-gen-micro
-go install go-micro.dev/v5/cmd/protoc-gen-micro@v5.16.0
+go install go-micro.dev/v6/cmd/protoc-gen-micro@latest
 
 # Generate both gRPC and Go Micro code
 protoc --proto_path=. \
@@ -97,7 +102,6 @@ protoc --proto_path=. \
   proto/hello.proto
 ```
 
-> **Note:** Use a specific version instead of `@latest` to avoid module path conflicts. See [releases](https://github.com/micro/go-micro/releases) for the latest version.
 
 This generates:
 - `hello.pb.go` - Protocol Buffers types
@@ -112,8 +116,8 @@ package main
 
 import (
     "context"
-    "go-micro.dev/v5"
-    "go-micro.dev/v5/server"
+    "go-micro.dev/v6"
+    "go-micro.dev/v6/server"
     pb "myapp/proto"
 )
 
@@ -125,8 +129,7 @@ func (s *Greeter) SayHello(ctx context.Context, req *pb.HelloRequest, rsp *pb.He
 }
 
 func main() {
-    svc := micro.NewService(
-        micro.Name("greeter"),
+    svc := micro.NewService("greeter",
     )
     svc.Init()
 
@@ -156,7 +159,7 @@ rsp, err := client.SayHello(context.Background(), &pb.HelloRequest{Name: "John"}
 
 **Go Micro client:**
 ```go
-svc := micro.NewService(micro.Name("client"))
+svc := micro.NewService("client")
 svc.Init()
 
 client := pb.NewGreeterService("greeter", svc.Client())
@@ -175,15 +178,14 @@ Use gRPC as the underlying transport:
 
 ```go
 import (
-    "go-micro.dev/v5"
-    "go-micro.dev/v5/client"
-    "go-micro.dev/v5/server"
-    grpcclient "go-micro.dev/v5/client/grpc"
-    grpcserver "go-micro.dev/v5/server/grpc"
+    "go-micro.dev/v6"
+    "go-micro.dev/v6/client"
+    "go-micro.dev/v6/server"
+    grpcclient "go-micro.dev/v6/client/grpc"
+    grpcserver "go-micro.dev/v6/server/grpc"
 )
 
-svc := micro.NewService(
-    micro.Name("greeter"),
+svc := micro.NewService("greeter",
     micro.Client(grpcclient.NewClient()),
     micro.Server(grpcserver.NewServer()),
 )
@@ -262,11 +264,10 @@ defer client.Agent().ServiceDeregister("greeter-1")
 ### After (Go Micro)
 
 ```go
-import "go-micro.dev/v5/registry/consul"
+import "go-micro.dev/v6/registry/consul"
 
 reg := consul.NewConsulRegistry()
-svc := micro.NewService(
-    micro.Name("greeter"),
+svc := micro.NewService("greeter",
     micro.Registry(reg),
 )
 
@@ -287,10 +288,10 @@ svc.Run()
 ### After (Go Micro)
 
 ```go
-import "go-micro.dev/v5/selector"
+import "go-micro.dev/v6/selector"
 
 // Client-side load balancing built-in
-svc := micro.NewService(
+svc := micro.NewService("greeter",
     micro.Selector(selector.NewSelector(
         selector.SetStrategy(selector.RoundRobin),
     )),
@@ -359,11 +360,10 @@ lis, _ := net.Listen("tcp", ":50051")
 **Go Micro**: Automatic or explicit
 ```go
 // Let Go Micro choose
-svc := micro.NewService(micro.Name("greeter"))
+svc := micro.NewService("greeter")
 
 // Or specify
-svc := micro.NewService(
-    micro.Name("greeter"),
+svc := micro.NewService("greeter",
     micro.Address(":50051"),
 )
 ```
@@ -385,9 +385,9 @@ gRPC uses protobuf by default. Go Micro supports multiple codecs.
 
 Ensure both use protobuf:
 ```go
-import "go-micro.dev/v5/codec/proto"
+import "go-micro.dev/v6/codec/proto"
 
-svc := micro.NewService(
+svc := micro.NewService("greeter",
     micro.Codec("application/protobuf", proto.Marshaler{}),
 )
 ```
@@ -412,4 +412,4 @@ svc := micro.NewService(
 
 - [Examples](../examples/)
 - [GitHub Issues](https://github.com/micro/go-micro/issues)
-- [API Documentation](https://pkg.go.dev/go-micro.dev/v5)
+- [API Documentation](https://pkg.go.dev/go-micro.dev/v6)

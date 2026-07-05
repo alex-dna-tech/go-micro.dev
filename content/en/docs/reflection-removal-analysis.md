@@ -1,7 +1,10 @@
 ---
-title: "Analysis: Removing Reflection from go-micro"
+title: "Reflection Removal Analysis"
+weight: 1
 draft: true
+description: "Author: GitHub Copilot"
 ---
+# Analysis: Removing Reflection from go-micro
 
 **Date**: 2026-02-03  
 **Author**: GitHub Copilot  
@@ -517,6 +520,6 @@ Reflection introduces these allocations per request:
 >
 > **Recommendation**: Keep reflection as a deliberate design choice. For users needing maximum performance, recommend profiling first and considering gRPC/psrpc if code generation is acceptable.
 >
-> See detailed analysis: [reflection-removal-analysis.md](reflection-removal-analysis.md)
+> See detailed analysis: [reflection-removal-analysis.md](reflection-removal-analysis)
 >
 > Closing as "won't fix" - reflection is an intentional architectural decision that enables go-micro's simplicity and flexibility.

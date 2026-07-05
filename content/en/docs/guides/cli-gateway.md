@@ -1,17 +1,33 @@
 ---
-title: CLI & Gateway Guide
-description: >
-    The Go Micro CLI provides two gateway modes for accessing your microservices: development (`micro run`) and production (`micro server`). Both use the same underlying gateway architecture, ensuring consistent behavior across environments.
+title: "Cli Gateway"
+weight: 1
+draft: true
+description: "The Go Micro CLI provides two gateway modes for accessing your microservices: development (micro run) and production (micro server). Both use the same underlying gateway architecture, ensuring consist"
 ---
+# CLI & Gateway Guide
 
+The Go Micro CLI provides two gateway modes for accessing your microservices: development (`micro run`) and production (`micro server`). Both use the same underlying gateway architecture, ensuring consistent behavior across environments.
 
 ## Overview
 
-```mermaid
-flowchart TD
-    HTTP[<b>HTTP Requests</b>] --> Gateway[<b>Unified Gateway</b><br/><br/>• Service Discovery<br/>• HTTP → RPC<br/>• Web Dashboard<br/>• Health Checks]
-
-    Gateway --> Services[<b>Your Services</b><br/>via Registry]
+```
+                    ┌─────────────────────┐
+                    │   HTTP Requests     │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   Unified Gateway   │
+                    │                     │
+                    │  • Service Discovery│
+                    │  • HTTP → RPC       │
+                    │  • Web Dashboard    │
+                    │  • Health Checks    │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   Your Services     │
+                    │  (via Registry)     │
+                    └─────────────────────┘
 ```
 
 ## Quick Comparison
@@ -208,7 +224,7 @@ Scopes provide fine-grained access control over which tokens can call which endp
 **Scopes are enforced on all call paths:**
 
 - Direct API calls (`/api/{service}/{endpoint}`)
-- MCP tool calls (`/api/mcp/call`)
+- MCP tool calls (`/mcp/call`)
 - Agent playground tool invocations
 
 The gateway uses `auth.Account` from the go-micro framework. The account's `Scopes` field carries the same `[]string` used by the framework's `wrapper/auth` package for service-level auth.
@@ -320,8 +336,8 @@ package main
 import (
     "context"
     "log"
-    "go-micro.dev/v5/cmd/micro/server"
-    "go-micro.dev/v5/store"
+    "go-micro.dev/v6/cmd/micro/server"
+    "go-micro.dev/v6/store"
 )
 
 func main() {
@@ -409,5 +425,5 @@ micro server --address :9000
 ## Need Help?
 
 - **Issues**: [github.com/micro/go-micro/issues](https://github.com/micro/go-micro/issues)
-- **Discord**: [discord.gg/jwTYuUVAGh](https://discord.gg/jwTYuUVAGh)
+- **Discord**: [discord.gg/G8Gk5j3uXr](https://discord.gg/G8Gk5j3uXr)
 - **Docs**: [go-micro.dev/docs](https://go-micro.dev/docs)

@@ -1,14 +1,19 @@
 ---
-title: Testing Micro Services
-description: The `testing` package provides utilities for testing micro services in isolation.
+title: "Testing"
+weight: 1
+draft: true
+description: "The testing package provides utilities for testing micro services in isolation."
 ---
+# Testing Micro Services
+
+The `testing` package provides utilities for testing micro services in isolation.
 
 ## Quick Start
 
 ```go
 import (
     "testing"
-    "go-micro.dev/v5/test"
+    "go-micro.dev/v6/test"
 )
 
 func TestGreeter(t *testing.T) {
@@ -100,7 +105,7 @@ package users
 import (
     "context"
     "testing"
-    "go-micro.dev/v5/test"
+    "go-micro.dev/v6/test"
 )
 
 type UsersHandler struct {

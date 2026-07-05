@@ -1,0 +1,35 @@
+---
+title: "Registry Consul"
+weight: 1
+draft: true
+description: "Use Consul as the service registry."
+---
+# Service Discovery with Consul
+
+Use Consul as the service registry.
+
+## In code
+
+```go
+package main
+
+import (
+    "go-micro.dev/v6"
+    "go-micro.dev/v6/registry/consul"
+)
+
+func main() {
+    reg := consul.NewConsulRegistry()
+    svc := micro.NewService("consul-registry", micro.Registry(reg))
+    svc.Init()
+    svc.Run()
+}
+```
+
+## Via environment
+
+Run your service with env vars set:
+
+```bash
+MICRO_REGISTRY=consul MICRO_REGISTRY_ADDRESS=127.0.0.1:8500 go run main.go
+```

@@ -3,11 +3,11 @@ title: "Configuration"
 weight: 90
 description: "Go Micro follows a progressive configuration model so you can start with zero setup and layer in complexity only when needed."
 ---
-
 ![Configuration](config.jpg)
 
-## Levels of Configuration
+Go Micro follows a progressive configuration model so you can start with zero setup and layer in complexity only when needed.
 
+## Levels of Configuration
 
 1. Zero Config (Defaults)
    - mDNS registry, HTTP transport, in-memory broker/store

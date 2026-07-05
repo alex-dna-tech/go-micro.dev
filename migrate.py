@@ -82,16 +82,13 @@ def strip_duplicate_header_and_description(body, title):
     lines = body.split('\n')
     stripped = []
     found_h1 = False
-    found_first_p = False
     for line in lines:
         if not found_h1 and line.startswith('# ') and line[2:].strip() == title:
             found_h1 = True
             continue
-        if found_h1 and not found_first_p and not line.strip():
+        if found_h1 and not stripped and not line.strip():
             continue
-        if found_h1 and not found_first_p and not line.startswith('#'):
-            found_first_p = True
-            continue
+        found_h1 = True
         stripped.append(line)
     return '\n'.join(stripped).strip() + '\n'
 
@@ -103,7 +100,7 @@ def get_description(body, title):
                 or line.startswith('```') or line.startswith('<img') \
                 or line.startswith('<'):
             continue
-        text = re.sub(r'[\[\]\(\)]', '', line)
+        text = re.sub(r'\[([^\]]*)\]\([^)]*\)', r'\1', line)
         text = re.sub(r'[*_~`]', '', text).strip()
         if len(text) > 20:
             return text[:200]
@@ -111,14 +108,11 @@ def get_description(body, title):
 
 
 def url_to_jekyll_source(url):
-    # Remove leading / and strip .html
     path = url.lstrip('/')
     if path.endswith('.html'):
         path = path[:-5]
-    # Remove /docs/ prefix to get relative path in tmp/docs/
     if path.startswith('docs/'):
         path = path[5:]
-    # Handle special badge URL (/badge.html)
     if path.startswith('badge'):
         return os.path.join('tmp', path + '.html')
     return os.path.join(JEKYLL_DOCS_DIR, path + '.md')
@@ -149,16 +143,142 @@ def url_to_target_info(url, section):
     return os.path.join(HUGO_DOCS_DIR, target_dir, f'{filename}.md'), target_dir
 
 
-def generate_frontmatter(title, weight, description, link_title=None):
+def resolve_bundle_path(target_path):
+    base_no_ext = target_path.rsplit('.', 1)[0]
+    if os.path.isdir(base_no_ext):
+        return os.path.join(base_no_ext, 'index.md')
+    return target_path
+
+
+def generate_frontmatter(title, weight, description, link_title=None, draft=False):
     lines = ['---']
     lines.append(f'title: "{title}"')
     if link_title:
         lines.append(f'linkTitle: "{link_title}"')
     lines.append(f'weight: {weight}')
+    if draft:
+        lines.append('draft: true')
     desc = description.replace('"', '\\"').replace('\n', ' ')
     lines.append(f'description: "{desc}"')
     lines.append('---')
     return '\n'.join(lines)
+
+
+def kebab_to_title(s):
+    s = s.replace('-', ' ').replace('_', ' ')
+    parts = s.split()
+    return ' '.join(p.capitalize() for p in parts)
+
+
+def collect_nav_urls(nav):
+    urls = set()
+    for section in nav:
+        items = nav[section]
+        if isinstance(items, list):
+            for item in items:
+                if isinstance(item, dict) and 'url' in item:
+                    urls.add(item['url'])
+    return urls
+
+
+def jekyll_path_to_orphan_target(rel_path):
+    rel_no_ext = rel_path.rsplit('.', 1)[0]
+    return os.path.join(HUGO_DOCS_DIR, rel_no_ext + '.md')
+
+
+def process_orphan(jekyll_abs_path, target_path, nav_urls, nav_generated_paths, generated, errors):
+    if target_path in nav_generated_paths:
+        generated.append(f'{target_path} (skipped, nav-generated)')
+        return
+
+    with open(jekyll_abs_path) as f:
+        content = f.read()
+
+    body = strip_jekyll_frontmatter(content)
+    body = rewrite_html_links(body)
+
+    filename = os.path.basename(jekyll_abs_path)
+    title = kebab_to_title(filename.rsplit('.', 1)[0])
+
+    description = get_description(body, title)
+    frontmatter = generate_frontmatter(title, 1, description, draft=True)
+
+    body = strip_duplicate_header_and_description(body, title)
+
+    target_file_dir = os.path.dirname(target_path)
+    body, images_to_copy = rewrite_img_tags(body, target_file_dir)
+    for src_img, dst_img in images_to_copy:
+        if os.path.exists(src_img):
+            shutil.copy2(src_img, dst_img)
+            generated.append(f'  img: {dst_img}')
+
+    os.makedirs(os.path.dirname(target_path), exist_ok=True)
+    with open(target_path, 'w') as f:
+        f.write(frontmatter + '\n' + body)
+
+    generated.append(f'{target_path} (orphan, draft=true, weight=1)')
+
+
+def process_orphans(nav, nav_generated_paths, generated, errors):
+    nav_urls = collect_nav_urls(nav)
+
+    for root, dirs, files in os.walk(JEKYLL_DOCS_DIR):
+        rel_root = os.path.relpath(root, JEKYLL_DOCS_DIR)
+        for f in files:
+            if not f.endswith('.md'):
+                continue
+
+            if f in ('index.md', '_index.md'):
+                continue
+
+            jekyll_abs = os.path.join(root, f)
+            rel_path = os.path.join(rel_root, f) if rel_root != '.' else f
+
+            is_nav = False
+            for url in nav_urls:
+                jek_path = url_to_jekyll_source(url)
+                if os.path.exists(jek_path) and os.path.samefile(jek_path, jekyll_abs):
+                    is_nav = True
+                    break
+
+            if is_nav:
+                continue
+
+            target = jekyll_path_to_orphan_target(rel_path)
+            process_orphan(jekyll_abs, target, nav_urls, nav_generated_paths, generated, errors)
+
+
+def cleanup_stale_files():
+    cleaned = []
+    for root, dirs, files in os.walk(HUGO_DOCS_DIR):
+        for f in files:
+            file_path = os.path.join(root, f)
+            base_no_ext = file_path.rsplit('.', 1)[0]
+
+            if f.endswith('.md') and not f.startswith('_index'):
+                if os.path.isdir(base_no_ext):
+                    os.remove(file_path)
+                    cleaned.append(file_path)
+
+            if f.endswith('.jpg'):
+                parent = os.path.dirname(file_path)
+                bundle_dir = parent
+                if os.path.basename(bundle_dir) != 'images':
+                    jpg_base = file_path.rsplit('.', 1)[0]
+                    if os.path.isdir(jpg_base):
+                        os.remove(file_path)
+                        cleaned.append(file_path)
+
+    for root, dirs, files in os.walk(HUGO_DOCS_DIR):
+        for f in files:
+            if f.endswith('.jpg') and os.path.basename(root) != os.path.basename(f).rsplit('.', 1)[0]:
+                parent_no_ext = os.path.join(os.path.dirname(root), os.path.basename(f).rsplit('.', 1)[0])
+                if os.path.isdir(parent_no_ext):
+                    file_path = os.path.join(root, f)
+                    os.remove(file_path)
+                    cleaned.append(file_path)
+
+    return cleaned
 
 
 def main():
@@ -168,6 +288,7 @@ def main():
     generated = []
     skipped = []
     errors = []
+    nav_generated_paths = set()
 
     section_order = ['core', 'interfaces', 'examples', 'guides', 'project']
     guides_page_count = 0
@@ -182,10 +303,14 @@ def main():
             title = item['title']
 
             if url in INDEX_URLS:
+                for parts in INDEX_PATH_MAP.values():
+                    nav_generated_paths.add(os.path.join(HUGO_DOCS_DIR, *parts))
                 skipped.append(f'{title} → _index.md (preserved)')
                 continue
 
-            target_path, target_dir = url_to_target_info(url, section)
+            target_path_flat, target_dir = url_to_target_info(url, section)
+            target_path = resolve_bundle_path(target_path_flat)
+            nav_generated_paths.add(target_path)
             jekyll_source = url_to_jekyll_source(url)
 
             if url in CROSS_SECTION_WEIGHTS:
@@ -233,15 +358,32 @@ def main():
 
             generated.append(f'{target_path} (weight={weight})')
 
-    print(f'Generated: {len(generated)}')
+    print(f'Generated nav pages: {len(generated)}')
     for g in generated:
         print(f'  + {g}')
     if skipped:
         print(f'Skipped (_index preserved): {len(skipped)}')
         for s in skipped:
             print(f'  - {s}')
+
+    print('\n--- Orphan content ---')
+    orphan_generated = []
+    process_orphans(nav, nav_generated_paths, orphan_generated, errors)
+    print(f'Orphan pages: {len(orphan_generated)}')
+    for g in orphan_generated:
+        print(f'  + {g}')
+
+    print('\n--- Cleanup stale files ---')
+    cleaned = cleanup_stale_files()
+    if cleaned:
+        print(f'Removed {len(cleaned)} stale files:')
+        for c in cleaned:
+            print(f'  - {c}')
+    else:
+        print('No stale files to clean up.')
+
     if errors:
-        print(f'Errors: {len(errors)}', file=sys.stderr)
+        print(f'\nErrors: {len(errors)}', file=sys.stderr)
         for e in errors:
             print(f'  ! {e}', file=sys.stderr)
 

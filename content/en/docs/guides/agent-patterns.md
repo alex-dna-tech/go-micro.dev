@@ -3,6 +3,8 @@ title: "Agent Integration Patterns"
 weight: 70
 description: "This guide covers common patterns for integrating AI agents with Go Micro services, from single-agent workflows to multi-agent architectures."
 ---
+This guide covers common patterns for integrating AI agents with Go Micro services, from single-agent workflows to multi-agent architectures.
+
 ## Pattern 1: Single Agent with Multiple Services
 
 The simplest and most common pattern. One AI agent has access to multiple microservices as MCP tools.

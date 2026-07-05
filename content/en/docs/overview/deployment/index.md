@@ -3,8 +3,11 @@ title: "Deployment"
 weight: 70
 description: "This guide covers deploying go-micro services to a Linux server using systemd."
 ---
+# Deploying Go Micro Services
 
 ![Go Micro deployment](deployment.jpg)
+
+This guide covers deploying go-micro services to a Linux server using systemd.
 
 ## Overview
 

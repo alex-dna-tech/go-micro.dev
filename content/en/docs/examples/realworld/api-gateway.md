@@ -1,20 +1,32 @@
 ---
-title: API Gateway with Backend Services
-description: A complete example showing an API gateway routing to multiple backend microservices.
+title: "Api Gateway"
+weight: 1
+draft: true
+description: "A complete example showing an API gateway routing to multiple backend microservices."
 ---
+# API Gateway with Backend Services
+
+A complete example showing an API gateway routing to multiple backend microservices.
 
 ## Architecture
-```mermaid
-flowchart TD
-    Client --> APIGateway[API Gateway]
 
-    APIGateway --> Users[Users Service]
-    APIGateway --> Orders[Orders Service]
-    APIGateway --> Products[Products Service]
-
-    Users --> PostgreSQL[(PostgreSQL)]
-    Orders --> PostgreSQL
-    Products --> PostgreSQL
+```
+                  ┌─────────────┐
+   Client ───────>│ API Gateway │
+                  └──────┬──────┘
+                         │
+          ┌──────────────┼──────────────┐
+          │              │              │
+    ┌─────▼────┐   ┌────▼─────┐  ┌────▼─────┐
+    │  Users   │   │  Orders  │  │ Products │
+    │ Service  │   │ Service  │  │ Service  │
+    └──────────┘   └──────────┘  └──────────┘
+          │              │              │
+          └──────────────┼──────────────┘
+                         │
+                  ┌──────▼──────┐
+                  │  PostgreSQL │
+                  └─────────────┘
 ```
 
 ## Services
@@ -28,8 +40,8 @@ package main
 import (
     "context"
     "database/sql"
-    "go-micro.dev/v5"
-    "go-micro.dev/v5/server"
+    "go-micro.dev/v6"
+    "go-micro.dev/v6/server"
     _ "github.com/lib/pq"
 )
 
@@ -69,8 +81,7 @@ func main() {
     }
     defer db.Close()
 
-    svc := micro.NewService(
-        micro.Name("users"),
+    svc := micro.NewService("users",
         micro.Version("1.0.0"),
     )
 
@@ -94,9 +105,9 @@ import (
     "context"
     "database/sql"
     "time"
-    "go-micro.dev/v5"
-    "go-micro.dev/v5/client"
-    "go-micro.dev/v5/server"
+    "go-micro.dev/v6"
+    "go-micro.dev/v6/client"
+    "go-micro.dev/v6/server"
 )
 
 type Order struct {
@@ -162,8 +173,7 @@ func main() {
     }
     defer db.Close()
 
-    svc := micro.NewService(
-        micro.Name("orders"),
+    svc := micro.NewService("orders",
         micro.Version("1.0.0"),
     )
 
@@ -190,8 +200,8 @@ import (
     "encoding/json"
     "net/http"
     "strconv"
-    "go-micro.dev/v5"
-    "go-micro.dev/v5/client"
+    "go-micro.dev/v6"
+    "go-micro.dev/v6/client"
 )
 
 type Gateway struct {
@@ -244,8 +254,7 @@ func (g *Gateway) CreateOrder(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-    svc := micro.NewService(
-        micro.Name("api.gateway"),
+    svc := micro.NewService("api.gateway",
     )
     svc.Init()
 

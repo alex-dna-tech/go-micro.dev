@@ -1,12 +1,17 @@
 ---
-title: Health Checks
-description: The `health` package provides health check functionality for microservices, including Kubernetes-style liveness and readiness probes.
+title: "Health"
+weight: 1
+draft: true
+description: "The health package provides health check functionality for microservices, including Kubernetes-style liveness and readiness probes."
 ---
+# Health Checks
+
+The `health` package provides health check functionality for microservices, including Kubernetes-style liveness and readiness probes.
 
 ## Quick Start
 
 ```go
-import "go-micro.dev/v5/health"
+import "go-micro.dev/v6/health"
 
 func main() {
     // Register health checks
@@ -113,6 +118,28 @@ health.Register("disk", health.CustomCheck(func() error {
     return nil
 }))
 ```
+
+### RegistryCheck
+
+Verifies the service registry is still reachable. A go-micro service can keep running while it has silently lost its connection to the registry (etcd, Consul, …) — the process looks healthy, but other services can no longer discover it. `RegistryCheck` surfaces that state so a readiness probe can take the pod out of rotation.
+
+```go
+svc := micro.NewService("orders")
+
+health.Register("registry", health.RegistryCheck(svc.Options().Registry))
+```
+
+Registered checks are [critical](#critical-vs-non-critical-checks) by default, so when the registry connection is lost, `/health/ready` returns 503 and Kubernetes stops routing to the pod:
+
+```yaml
+readinessProbe:
+  httpGet:
+    path: /health/ready
+    port: 8080
+  periodSeconds: 5
+```
+
+The check lists services under the configured probe timeout, so an unreachable registry is reported as `down` rather than hanging the probe. It works with any registry implementation — the connectivity is exercised through the standard `ListServices` call.
 
 ## Critical vs Non-Critical Checks
 
