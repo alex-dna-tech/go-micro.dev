@@ -1,5 +1,7 @@
 ---
-title: "ADR-001: Plugin Architecture"
+title: "Adr 001 Plugin Architecture"
+weight: 1
+description: "Microservices frameworks need to support multiple infrastructure backends (registries, brokers, transports, stores). Different teams have different preferences and existing infrastructure."
 ---
 
 ## Status

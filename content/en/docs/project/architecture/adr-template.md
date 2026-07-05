@@ -1,5 +1,8 @@
 ---
-title: "ADR-XXX: Title"
+title: "Adr Template"
+weight: 1
+draft: true
+description: "Describe the problem, forces, and constraints leading to the decision."
 ---
 
 Status: Proposed  

@@ -1,5 +1,7 @@
 ---
-title: "ADR-010: Unified Gateway Architecture"
+title: "Adr 010 Unified Gateway"
+weight: 1
+description: "Authors: Go Micro Team"
 ---
 
 **Status:** Accepted

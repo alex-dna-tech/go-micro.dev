@@ -5,7 +5,7 @@ date: 2026-03-04
 description: "How Anthropic's Claude Max sponsorship accelerated Go Micro's MCP integration — WebSocket transport, OpenTelemetry, agent SDKs, and what's next"
 ---
 
-Go Micro was recently given access to **Claude Max** through Anthropic's open source sponsorship program. We wanted to share what we've built with it, why it matters, and where we're headed.
+> Go Micro was recently given access to **Claude Max** through Anthropic's open source sponsorship program. We wanted to share what we've built with it, why it matters, and where we're headed.
 
 ## The Sponsorship
 

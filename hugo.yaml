@@ -1,5 +1,19 @@
 baseURL: https://micro.labqa.pp.ua
 title: Go Micro
+menus:
+  main:
+    - name: Discord
+      params:
+        rel: external
+      pre: <i class="fa-brands fa-discord"></i>
+      url: https://discord.gg/G8Gk5j3uXr
+      weight: 30
+    - name: GitHub
+      params:
+        rel: external
+      pre: <i class="fa-brands fa-github"></i>
+      url: https://github.com/micro/go-micro
+      weight: 40
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu slugorcontentbasename
 

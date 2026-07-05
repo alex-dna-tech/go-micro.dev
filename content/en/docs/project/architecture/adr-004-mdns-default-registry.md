@@ -1,5 +1,7 @@
 ---
-title: "ADR-004: mDNS as Default Registry"
+title: "Adr 004 Mdns Default Registry"
+weight: 1
+description: "Service discovery is critical for microservices. Common approaches:"
 ---
 
 ## Status
@@ -29,12 +31,11 @@ Use **mDNS as the default registry** for service discovery.
 
 ```go
 // Default - uses mDNS automatically
-svc := micro.NewService(micro.Name("myservice"))
+svc := micro.NewService("myservice")
 
 // Production - swap to Consul
 reg := consul.NewConsulRegistry()
-svc := micro.NewService(
-    micro.Name("myservice"),
+svc := micro.NewService("myservice",
     micro.Registry(reg),
 )
 ```

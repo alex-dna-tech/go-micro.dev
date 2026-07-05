@@ -1,5 +1,7 @@
 ---
-title: "ADR-009: Progressive Configuration"
+title: "Adr 009 Progressive Configuration"
+weight: 1
+description: "Microservices frameworks face a paradox:"
 ---
 
 ## Status
@@ -27,7 +29,7 @@ Implement **progressive configuration** where:
 
 ### Level 1: Zero Config (Development)
 ```go
-svc := micro.NewService(micro.Name("hello"))
+svc := micro.NewService("hello")
 svc.Run()
 ```
 
@@ -60,8 +62,7 @@ b := nats.NewNatsBroker(
     nats.DrainConnection(),
 )
 
-svc := micro.NewService(
-    micro.Name("myservice"),
+svc := micro.NewService("myservice",
     micro.Version("1.2.3"),
     micro.Registry(reg),
     micro.Broker(b),
