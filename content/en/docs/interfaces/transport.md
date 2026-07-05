@@ -1,8 +1,13 @@
 ---
-title: Transport
-weight: 3
-description: The transport layer is responsible for communication between services.
+title: "Transport"
+weight: 30
+description: "The transport layer is responsible for communication between services."
 ---
+# Transport
+
+<img src="/images/generated/transport.jpg" alt="Transport" style="width: 100%; border-radius: 8px; margin: 1rem 0 1.5rem;" />
+
+The transport layer is responsible for communication between services.
 
 ## Features
 - Pluggable transport implementations
@@ -11,9 +16,9 @@ description: The transport layer is responsible for communication between servic
 ## Implementations
 Supported transports include:
 - HTTP (default)
-- NATS (`go-micro.dev/v5/transport/nats`)
-- gRPC (`go-micro.dev/v5/transport/grpc`)
-- Memory (`go-micro.dev/v5/transport/memory`)
+- NATS (`go-micro.dev/v6/transport/nats`)
+- gRPC (`go-micro.dev/v6/transport/grpc`)
+- Memory (`go-micro.dev/v6/transport/memory`)
 
 ## Important: Transport vs Native gRPC
 
@@ -23,21 +28,19 @@ If you need native gRPC compatibility (to use `grpcurl`, polyglot gRPC clients, 
 
 ```go
 import (
-    grpcServer "go-micro.dev/v5/server/grpc"
-    grpcClient "go-micro.dev/v5/client/grpc"
+    grpcServer "go-micro.dev/v6/server/grpc"
+    grpcClient "go-micro.dev/v6/client/grpc"
 )
 
-// Important: Server must be specified before Name
-service := micro.NewService(
+service := micro.NewService("myservice",
     micro.Server(grpcServer.NewServer()),
     micro.Client(grpcClient.NewClient()),
-    micro.Name("myservice"),
 )
 ```
 
-See [Native gRPC Compatibility](guides/grpc-compatibility.md) for a complete guide.
+See [Native gRPC Compatibility](guides/grpc-compatibility) for a complete guide.
 
-Plugins are scoped under `go-micro.dev/v5/transport/<plugin>`.
+Plugins are scoped under `go-micro.dev/v6/transport/<plugin>`.
 
 You can specify the transport when initializing your service or via env vars.
 
@@ -49,13 +52,13 @@ Here's how to use a custom transport (e.g., gRPC) in your Go Micro service:
 package main
 
 import (
-    "go-micro.dev/v5"
-    "go-micro.dev/v5/transport/grpc"
+    "go-micro.dev/v6"
+    "go-micro.dev/v6/transport/grpc"
 )
 
 func main() {
     t := grpc.NewTransport()
-    service := micro.NewService(
+    service := micro.NewService("transport-example",
         micro.Transport(t),
     )
     service.Init()
@@ -66,13 +69,13 @@ func main() {
 NATS transport:
 ```go
 import (
-    "go-micro.dev/v5"
-    tnats "go-micro.dev/v5/transport/nats"
+    "go-micro.dev/v6"
+    tnats "go-micro.dev/v6/transport/nats"
 )
 
 func main() {
     t := tnats.NewTransport()
-    service := micro.NewService(micro.Transport(t))
+    service := micro.NewService("transport-example", micro.Transport(t))
     service.Init()
     service.Run()
 }

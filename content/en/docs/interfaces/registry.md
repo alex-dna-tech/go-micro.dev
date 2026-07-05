@@ -1,8 +1,13 @@
 ---
-title: Registry
-weight: 1
-description: The registry is responsible for service discovery in Go Micro. It allows services to register themselves and discover other services.
+title: "Registry"
+weight: 10
+description: "The registry is responsible for service discovery in Go Micro. It allows services to register themselves and discover other services."
 ---
+# Registry
+
+<img src="/images/generated/registry.jpg" alt="Registry" style="width: 100%; border-radius: 8px; margin: 1rem 0 1.5rem;" />
+
+The registry is responsible for service discovery in Go Micro. It allows services to register themselves and discover other services.
 
 ## Features
 - Service registration and deregistration
@@ -20,7 +25,7 @@ You can configure the registry when initializing your service.
 
 ## Plugins Location
 
-Registry plugins live in this repository under `go-micro.dev/v5/registry/<plugin>` (e.g., `consul`, `etcd`, `nats`). Import the desired package and pass it via `micro.Registry(...)`.
+Registry plugins live in this repository under `go-micro.dev/v6/registry/<plugin>` (e.g., `consul`, `etcd`, `nats`). Import the desired package and pass it via `micro.Registry(...)`.
 
 ## Configure via environment
 
@@ -43,13 +48,13 @@ Here's how to use a custom registry (e.g., Consul) in your Go Micro service:
 package main
 
 import (
-    "go-micro.dev/v5"
-    "go-micro.dev/v5/registry/consul"
+    "go-micro.dev/v6"
+    "go-micro.dev/v6/registry/consul"
 )
 
 func main() {
     reg := consul.NewRegistry()
-    service := micro.NewService(
+    service := micro.NewService("registry-example",
         micro.Registry(reg),
     )
     service.Init()

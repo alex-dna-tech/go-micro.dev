@@ -1,8 +1,13 @@
 ---
-title: Deploying Go Micro Services
-weight: 3
-description: This guide covers deploying go-micro services to a Linux server using systemd.
+title: "Deployment"
+weight: 70
+description: "This guide covers deploying go-micro services to a Linux server using systemd."
 ---
+# Deploying Go Micro Services
+
+<img src="/images/generated/deployment.jpg" alt="Go Micro deployment" style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;" />
+
+This guide covers deploying go-micro services to a Linux server using systemd.
 
 ## Overview
 
@@ -364,11 +369,11 @@ This gives you:
 
 The server discovers services via the registry automatically. Default login: `admin` / `micro`.
 
-See the [micro server documentation](server.md) for details.
+See the [micro server documentation](server) for details.
 
 ## Next Steps
 
-- [micro run](guides/micro-run.md) - Local development
-- [micro server](server.md) - Production web dashboard with auth
+- [micro run](guides/micro-run) - Local development
+- [micro server](server) - Production web dashboard with auth
 - [micro.mu configuration](guides/micro-run.md#configuration-file) - Configuration file format
-- [Health checks](guides/health.md) - Service health endpoints
+- [Health checks](guides/health) - Service health endpoints

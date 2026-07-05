@@ -1,8 +1,11 @@
 ---
-title: Framework Comparison
-weight: 1
-description: How Go Micro compares to other Go microservices frameworks.
+title: "Comparison"
+weight: 150
+description: "How Go Micro compares to other Go microservices frameworks."
 ---
+# Framework Comparison
+
+How Go Micro compares to other Go microservices frameworks.
 
 ## Quick Comparison
 
@@ -95,7 +98,7 @@ func (s *MyService) DoThing(ctx context.Context, req *Request, rsp *Response) er
 }
 
 func main() {
-    svc := micro.NewService(micro.Name("myservice"))
+    svc := micro.NewService("myservice")
     svc.Init()
     svc.Handle(new(MyService))
     svc.Run()
@@ -134,11 +137,11 @@ func main() {
 You can use gRPC with Go Micro for native gRPC compatibility:
 ```go
 import (
-    grpcServer "go-micro.dev/v5/server/grpc"
-    grpcClient "go-micro.dev/v5/client/grpc"
+    grpcServer "go-micro.dev/v6/server/grpc"
+    grpcClient "go-micro.dev/v6/client/grpc"
 )
 
-svc := micro.NewService(
+svc := micro.NewService("myservice",
     micro.Server(grpcServer.NewServer()),
     micro.Client(grpcClient.NewClient()),
 )
@@ -172,6 +175,106 @@ See [Native gRPC Compatibility](grpc-compatibility.md) for a complete guide.
 - You prefer libraries over sidecars
 - You want simpler deployment (no sidecar management)
 
+## vs Agent Frameworks (Google ADK)
+
+[ADK](https://adk.dev/) (Agent Development Kit) is Google's open-source, code-first
+framework for building AI agents. It spans several languages (Python, TypeScript,
+Go, Java, Kotlin); [`adk-go`](https://github.com/google/adk-go) is the Go
+implementation. It's model-agnostic (optimized for Gemini), speaks MCP and A2A,
+and supports multi-agent systems, evaluation, and deployment to Cloud Run / GKE.
+
+They overlap on agents but solve different problems. ADK is a library for building
+an agent process — you define an agent, its tools, and a model, then run and deploy
+it. Go Micro is the harness around agents once they operate real systems: service
+discovery, inter-service RPC, pub/sub, durable flows, tool execution, and deployment.
+Those pieces are out of scope for ADK, and you bring your own.
+
+In Go Micro an agent is built as an ordinary service: it registers in the registry,
+is callable by RPC (`Agent.Chat`) and over A2A, and other services and agents
+discover and call it the same way they call anything else. Its endpoints are exposed
+as MCP tools automatically. So once you have more than one agent or service, Go Micro
+also gives you the discovery, RPC, pub/sub, config, and deployment around them.
+
+| | Go Micro | Google ADK |
+|---|----------|------------|
+| **Primary unit** | A harnessed service (an agent is a service with an LLM inside) | An agent |
+| **Service discovery / registry** | Built-in (mDNS, Consul, etcd) | Not in scope |
+| **Inter-service RPC, load balancing, pub/sub** | Built-in | Not in scope |
+| **MCP** | Every service endpoint is automatically an MCP tool (no extra code) | MCP tools, wired explicitly |
+| **A2A** | Agents are A2A-reachable services | Supported |
+| **Deterministic orchestration** | Flows | Graph workflows |
+| **Multi-agent** | Agents discover & call each other via the registry; `plan`/`delegate` built in | Composition, routing, workflow patterns |
+| **Evaluation suite** | Harnesses/conformance today; first-class evaluation is a gap | Yes (criteria, user/env simulation, metrics) |
+| **Context engineering** | Store-backed memory | "Context as source code" (auto filter/summarize/token tracking) |
+| **Languages** | Go | Python, TypeScript, Go, Java, Kotlin |
+| **Backing** | Community | Google |
+
+### When to choose ADK
+- You want an agent framework with first-class **evaluation** and context tooling
+- You're polyglot, or invested in the Google Cloud / Gemini ecosystem
+- You want a cross-language A2A ecosystem with Google's backing
+
+### When to choose Go Micro
+- You want an **agent harness** where agents and services are the same thing —
+  registered, discoverable, load-balanced, and deployed the same way
+- You want your existing services to become agent tools with **zero extra code**
+  (every endpoint is an MCP tool automatically)
+- You're building in Go and want one set of primitives for services, agents, and flows
+
+### They interoperate
+
+Both speak **MCP** and **A2A**, so this isn't strictly either/or: a Go Micro agent
+and an ADK agent (in any language) can call each other over A2A, and either can
+consume the other's MCP tools. A common pattern is to run Go Micro as the service
+mesh / runtime and let ADK (or any A2A agent) plug into it.
+
+## vs tRPC-Agent-Go
+
+[tRPC-Agent-Go](https://github.com/trpc-group/trpc-agent-go) (maintained by tRPC-Group,
+validated inside Tencent) is a production-grade Go framework for agent systems:
+LLM / Chain / Parallel / Cycle / Graph agents, function tools, MCP, A2A, AG-UI, Redis
+memory and RAG, evaluation, agent self-evolution, and OpenTelemetry. It's a serious,
+well-resourced project.
+
+They overlap heavily on agents but take a different approach. tRPC-Agent-Go is an **agent
+SDK you run alongside your services** — you compose agents and tools into graphs and
+conditional workflows, and your microservices (tRPC) live separately and are called
+into. Go Micro starts from the premise that **an agent is a service** — one runtime
+where every endpoint is automatically a tool, an agent registers and is discovered and
+load-balanced like anything else, and workflows are durable code paths rather than a
+graph DSL. The premise is that the line between "your services" and "your agents" is
+accidental complexity; remove it and there's less to wire and keep in sync.
+
+| | Go Micro | tRPC-Agent-Go |
+|---|----------|---------------|
+| **Primary unit** | A harnessed service (an agent is a service with an LLM inside) | An agent |
+| **Orchestration** | Durable `flow` steps + `Loop` — plain code paths | Graph / Chain / Parallel / Cycle agents (graph DSL) |
+| **Services as tools** | Every endpoint is automatically an MCP tool | Function tools + MCP, wired explicitly |
+| **Service runtime** | Built in — agents *are* services (registry, RPC, load balancing, pub/sub) | Runs alongside your existing service stack (tRPC) |
+| **MCP / A2A** | Both, generated from the registry | Both |
+| **Evaluation / self-evolution** | Verification loop on the roadmap; not yet first-class | First-class today |
+| **Memory / RAG** | Store-backed memory (Postgres, NATS KV, file); RAG on the roadmap | In-memory / Redis memory; RAG today |
+| **Observability** | OpenTelemetry run timelines, `micro runs` | OpenTelemetry, Langfuse examples |
+| **Backing** | Independent, community | tRPC-Group / Tencent |
+
+### When to choose tRPC-Agent-Go
+- You want a graph/workflow DSL for composing agents and tools
+- You're on tRPC, or want to add agents alongside an existing service stack
+- You want first-class evaluation and self-evolution today, with a large team behind it
+
+### When to choose Go Micro
+- You want one runtime where services, agents, and flows are the same primitives —
+  registered, discoverable, and deployed the same way
+- You want your existing services to become agent tools with zero extra code
+- You prefer durable flows and plain code paths over a graph DSL, in a small,
+  independent framework you can hold in your head
+
+### They interoperate
+
+Both speak **MCP** and **A2A**, so a Go Micro agent and a tRPC-Agent-Go agent can call
+each other over A2A, and either can consume the other's MCP tools. You can run Go Micro
+as the service-and-agent runtime and still reach an agent built on tRPC-Agent-Go.
+
 ## Feature Deep Dive
 
 ### Service Discovery
@@ -179,11 +282,11 @@ See [Native gRPC Compatibility](grpc-compatibility.md) for a complete guide.
 **Go Micro**: Built-in with plugins
 ```go
 // Zero-config for dev
-svc := micro.NewService(micro.Name("myservice"))
+svc := micro.NewService("myservice")
 
 // Consul for production
 reg := consul.NewRegistry()
-svc := micro.NewService(micro.Registry(reg))
+svc := micro.NewService("myservice", micro.Registry(reg))
 ```
 
 **go-kit**: Bring your own

@@ -1,10 +1,14 @@
 ---
-title: Model Context Protocol (MCP)
-linkTitle: MCP & AI Agents
-weight: 2
-description: >
-    Go Micro provides built-in support for the Model Context Protocol (MCP), enabling AI agents like Claude to discover and interact with your microservices as tools.
+title: "MCP & AI Agents"
+linkTitle: "MCP & AI Agents"
+weight: 60
+description: "Go Micro provides built-in support for the Model Context Protocol MCPhttps://modelcontextprotocol.io/, enabling AI agents like Claude to discover and interact with your microservices as tools."
 ---
+# Model Context Protocol (MCP)
+
+Go Micro provides built-in support for the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), enabling AI agents like Claude to discover and interact with your microservices as tools.
+
+<img src="/images/generated/mcp-agent.jpg" alt="AI agent calling microservices via MCP" style="width: 100%; border-radius: 8px; margin: 1rem 0 1.5rem;" />
 
 ## Overview
 
@@ -26,7 +30,7 @@ package main
 
 import (
     "context"
-    "go-micro.dev/v5"
+    "go-micro.dev/v6"
 )
 
 type GreeterService struct{}
@@ -48,15 +52,11 @@ type HelloResponse struct {
 }
 
 func main() {
-    service := micro.NewService(
-        micro.Name("greeter"),
-    )
-
+    service := micro.NewService("greeter")
     service.Init()
 
     // Register handler - docs extracted automatically from comments!
-    handler := service.Server().NewHandler(new(GreeterService))
-    service.Server().Handle(handler)
+    service.Handle(new(GreeterService))
 
     service.Run()
 }
@@ -135,11 +135,11 @@ MCP tool calls go through the same authentication and scope enforcement as regul
 
 ```bash
 # List available MCP tools (requires valid token)
-curl http://localhost:8080/api/mcp/tools \
+curl http://localhost:8080/mcp/tools \
   -H "Authorization: Bearer <token>"
 
 # Call a specific tool (scope-checked)
-curl -X POST http://localhost:8080/api/mcp/call \
+curl -X POST http://localhost:8080/mcp/call \
   -H "Authorization: Bearer <token>" \
   -d '{"tool":"greeter.GreeterService.SayHello","input":{"name":"World"}}'
 ```

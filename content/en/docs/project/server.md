@@ -1,6 +1,9 @@
 ---
-title: Micro Server (Optional)
+title: "Server (optional)"
+weight: 60
+description: "The Micro server is an optional web dashboard and authenticated API gateway for production environments. It provides a secure entrypoint for discovering and interacting with services that are already "
 ---
+# Micro Server (Optional)
 
 The Micro server is an optional web dashboard and authenticated API gateway for production environments. It provides a secure entrypoint for discovering and interacting with services that are already running (e.g., managed by systemd via `micro deploy`).
 
@@ -19,17 +22,15 @@ The Micro server is an optional web dashboard and authenticated API gateway for 
 | **Dashboard** | Full gateway UI with auth, scopes, agent | Full dashboard with API explorer, logs, user/token management |
 | **When to use** | Day-to-day development | Deployed environments, shared servers |
 
-For local development, use [`micro run`](guides/micro-run.md) instead.
+For local development, use [`micro run`](guides/micro-run) instead.
 
 ## Install
 
 Install the CLI which includes the server command:
 
 ```bash
-go install go-micro.dev/v5/cmd/micro@v5.16.0
+go install go-micro.dev/v6/cmd/micro@latest
 ```
-
-> **Note:** Use a specific version instead of `@latest` to avoid module path conflicts. See [releases](https://github.com/micro/go-micro/releases) for the latest version.
 
 ## Run
 
@@ -54,7 +55,7 @@ Then open http://localhost:8080 and log in with the default admin account (`admi
 
 ## Typical Production Setup
 
-After deploying services with [`micro deploy`](deployment.md):
+After deploying services with [`micro deploy`](deployment):
 
 ```bash
 # On your server, start the dashboard

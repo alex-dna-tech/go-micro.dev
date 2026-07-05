@@ -1,8 +1,13 @@
 ---
-title: Configuration
-weight: 5
-description: Go Micro follows a progressive configuration model so you can start with zero setup and layer in complexity only when needed.
+title: "Configuration"
+weight: 90
+description: "Go Micro follows a progressive configuration model so you can start with zero setup and layer in complexity only when needed."
 ---
+# Configuration
+
+<img src="/images/generated/config.jpg" alt="Configuration" style="width: 100%; border-radius: 8px; margin: 1rem 0 1.5rem;" />
+
+Go Micro follows a progressive configuration model so you can start with zero setup and layer in complexity only when needed.
 
 ## Levels of Configuration
 
@@ -49,8 +54,7 @@ No code changes required. The framework internally wires the selected implementa
 ## Equivalent Code Configuration
 
 ```go
-service := micro.NewService(
-    micro.Name("helloworld"),
+service := micro.NewService("helloworld",
     micro.Broker(nats.NewBroker()),
     micro.Transport(natstransport.NewTransport()),
     micro.Registry(consul.NewRegistry(registry.Addrs("127.0.0.1:8500"))),
@@ -122,5 +126,5 @@ Load with your process manager or container orchestrator.
 ## Related
 
 - [ADR-009: Progressive Configuration](architecture/adr-009-progressive-configuration.md)
-- [Getting Started](getting-started.md)
-- [Plugins](plugins.md)
+- [Getting Started](getting-started)
+- [Plugins](plugins)

@@ -1,8 +1,11 @@
 ---
-title: Store
-weight: 4
-description: The store provides a pluggable interface for data storage in Go Micro.
+title: "Store"
+weight: 40
+description: "The store provides a pluggable interface for data storage in Go Micro."
 ---
+# Store
+
+The store provides a pluggable interface for data storage in Go Micro.
 
 ## Features
 - Key-value storage
@@ -11,12 +14,12 @@ description: The store provides a pluggable interface for data storage in Go Mic
 ## Implementations
 Supported stores include:
 - Memory (default)
-- File (`go-micro.dev/v5/store/file`)
-- MySQL (`go-micro.dev/v5/store/mysql`)
-- Postgres (`go-micro.dev/v5/store/postgres`)
-- NATS JetStream KV (`go-micro.dev/v5/store/nats-js-kv`)
+- File (`go-micro.dev/v6/store/file`)
+- MySQL (`go-micro.dev/v6/store/mysql`)
+- Postgres (`go-micro.dev/v6/store/postgres`)
+- NATS JetStream KV (`go-micro.dev/v6/store/nats-js-kv`)
 
-Plugins are scoped under `go-micro.dev/v5/store/<plugin>`.
+Plugins are scoped under `go-micro.dev/v6/store/<plugin>`.
 
 Configure the store in code or via environment variables.
 
@@ -28,13 +31,13 @@ Here's how to use the store in your Go Micro service:
 package main
 
 import (
-    "go-micro.dev/v5"
-    "go-micro.dev/v5/store"
+    "go-micro.dev/v6"
+    "go-micro.dev/v6/store"
     "log"
 )
 
 func main() {
-    service := micro.NewService()
+    service := micro.NewService("store-example")
     service.Init()
 
     // Write a record
@@ -56,13 +59,13 @@ func main() {
 Postgres:
 ```go
 import (
-    "go-micro.dev/v5"
-    postgres "go-micro.dev/v5/store/postgres"
+    "go-micro.dev/v6"
+    postgres "go-micro.dev/v6/store/postgres"
 )
 
 func main() {
     st := postgres.NewStore()
-    svc := micro.NewService(micro.Store(st))
+    svc := micro.NewService("store-example", micro.Store(st))
     svc.Init()
     svc.Run()
 }
@@ -71,13 +74,13 @@ func main() {
 NATS JetStream KV:
 ```go
 import (
-    "go-micro.dev/v5"
-    natsjskv "go-micro.dev/v5/store/nats-js-kv"
+    "go-micro.dev/v6"
+    natsjskv "go-micro.dev/v6/store/nats-js-kv"
 )
 
 func main() {
     st := natsjskv.NewStore()
-    svc := micro.NewService(micro.Store(st))
+    svc := micro.NewService("store-example", micro.Store(st))
     svc.Init()
     svc.Run()
 }
