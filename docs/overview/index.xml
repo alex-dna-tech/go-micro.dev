@@ -1,134 +1,192 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Overview on GoMicro</title><link>https://alex-dna-tech.github.io/docs/overview/</link><description>Recent content in Overview on GoMicro</description><generator>Hugo</generator><language>en</language><atom:link href="https://alex-dna-tech.github.io/docs/overview/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting Started</title><link>https://alex-dna-tech.github.io/docs/overview/getting-started/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/getting-started/</guid><description>&lt;h2 id="development-workflow"&gt;Development Workflow&lt;a class="td-heading-self-link" href="#development-workflow" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Go Micro has a clear lifecycle for development through deployment:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Overview on GoMicro</title><link>https://alex-dna-tech.github.io/docs/overview/</link><description>Recent content in Overview on GoMicro</description><generator>Hugo</generator><language>en</language><atom:link href="https://alex-dna-tech.github.io/docs/overview/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting Started</title><link>https://alex-dna-tech.github.io/docs/overview/getting-started/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/getting-started/</guid><description>&lt;p&gt;&lt;figure role="figure" aria-label="Getting started with Go Micro"&gt;
+ &lt;a href="https://alex-dna-tech.github.io/docs/overview/getting-started/getting-started.jpg"&gt;
+ &lt;div class="image-wrapper" style="background: linear-gradient(#f9fafa, #0c2948, #2465b9, #6491b6);"&gt;
+ &lt;img
+ alt="Getting started with Go Micro"
+ title="Getting started with Go Micro"
+ width="1200"
+ height="800"srcset="https://alex-dna-tech.github.io/docs/overview/getting-started/getting-started_hu_c05e585dd960375a.webp 420w, https://alex-dna-tech.github.io/docs/overview/getting-started/getting-started_hu_9ba73f0edb63f542.webp 789w, https://alex-dna-tech.github.io/docs/overview/getting-started/getting-started_hu_948df0649b496320.webp 1019w, "
+ sizes="(min-width: 1000px) 789px, (min-width: 500px) 80.42vw, 87.78vw"
+ src="https://alex-dna-tech.github.io/docs/overview/getting-started/getting-started_hu_ad8b581b4a82e9f4.jpg"
+ decoding="async"loading="lazy"
+ /&gt;
+ &lt;/div&gt;
+ &lt;/a&gt;
+ &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Go Micro has three core abstractions:&lt;/p&gt;
 &lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th&gt;Stage&lt;/th&gt;
- &lt;th&gt;Command&lt;/th&gt;
- &lt;th&gt;Purpose&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;Develop&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;micro run&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Local dev with hot reload and API gateway&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;Build&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;micro build&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Compile production binaries&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;Deploy&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;micro deploy&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Push to a remote Linux server via SSH + systemd&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;Dashboard&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;micro server&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Optional production web UI with auth&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Abstraction&lt;/th&gt;
+					&lt;th&gt;What&lt;/th&gt;
+					&lt;th&gt;Constructor&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Service&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Capability — endpoints, data, business logic&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;micro.NewService(&amp;quot;task&amp;quot;)&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Agent&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Intelligence — manages services with an LLM&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;micro.NewAgent(&amp;quot;task-mgr&amp;quot;)&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Flow&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;Orchestration — event-driven LLM triggers&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;micro.NewFlow(&amp;quot;onboard&amp;quot;)&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id="quick-start-cli"&gt;Quick Start (CLI)&lt;a class="td-heading-self-link" href="#quick-start-cli" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Install the CLI:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;go install go-micro.dev/v5/cmd/micro@v5.16.0
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Use a specific version instead of &lt;code&gt;@latest&lt;/code&gt; to avoid module path conflicts. See &lt;a href="https://github.com/micro/go-micro/releases"&gt;releases&lt;/a&gt; for the latest version.&lt;/p&gt;</description></item><item><title>Model Context Protocol (MCP)</title><link>https://alex-dna-tech.github.io/docs/overview/mcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/mcp/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;MCP gateway automatically exposes your microservices as AI-accessible tools through:&lt;/p&gt;
+&lt;h2 id="prerequisites"&gt;Prerequisites&lt;a class="td-heading-self-link" href="#prerequisites" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Automatic service discovery&lt;/strong&gt; via the registry&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Dynamic tool generation&lt;/strong&gt; from service endpoints&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Stdio transport&lt;/strong&gt; for local AI tools (Claude Code, etc.)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;HTTP/SSE transport&lt;/strong&gt; for web-based agents&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Automatic documentation extraction&lt;/strong&gt; from Go comments&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Go 1.24+&lt;/strong&gt; for development. The &lt;code&gt;curl&lt;/code&gt; install below gives you the &lt;code&gt;micro&lt;/code&gt; binary without Go, but &lt;code&gt;micro run&lt;/code&gt; compiles your services, so you&amp;rsquo;ll want Go installed to build them.&lt;/li&gt;
+&lt;li&gt;An &lt;strong&gt;LLM provider key&lt;/strong&gt; (Anthropic, OpenAI, Gemini, …) &lt;em&gt;only&lt;/em&gt; for the AI features — &lt;code&gt;micro run --prompt&lt;/code&gt;, &lt;code&gt;micro chat&lt;/code&gt;, and agents. Plain services need no key. Set it before running, e.g. &lt;code&gt;export ANTHROPIC_API_KEY=sk-ant-...&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="quick-start"&gt;Quick Start&lt;a class="td-heading-self-link" href="#quick-start" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id="1-add-documentation-to-your-service"&gt;1. Add Documentation to Your Service&lt;a class="td-heading-self-link" href="#1-add-documentation-to-your-service" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Simply write Go doc comments on your handler methods:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;package&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;go-micro.dev/v5&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;type&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;GreeterService&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;struct&lt;/span&gt;&lt;span class="p"&gt;{}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// SayHello greets a person by name. Returns a friendly greeting message.&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;//
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// @example {&amp;#34;name&amp;#34;: &amp;#34;Alice&amp;#34;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;func&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;GreeterService&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;SayHello&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;ctx&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;context&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Context&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;HelloRequest&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;rsp&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;HelloResponse&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;error&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;rsp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Message&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Hello &amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Name&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;nil&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;type&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HelloRequest&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;struct&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Name&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;`json:&amp;#34;name&amp;#34; description:&amp;#34;Person&amp;#39;s name to greet&amp;#34;`&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;type&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HelloResponse&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;struct&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Message&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;`json:&amp;#34;message&amp;#34; description:&amp;#34;Greeting message&amp;#34;`&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;func&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;service&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;micro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;NewService&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;micro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Name&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;greeter&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;service&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// Register handler - docs extracted automatically from comments!&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;handler&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;service&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Server&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nf"&gt;NewHandler&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;GreeterService&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;service&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Server&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nf"&gt;Handle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;handler&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;service&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;That&amp;rsquo;s it!&lt;/strong&gt; Documentation is automatically extracted from your Go comments.&lt;/p&gt;</description></item><item><title>Deploying Go Micro Services</title><link>https://alex-dna-tech.github.io/docs/overview/deployment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/deployment/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Before your first provider-backed agent run, check the local path with:&lt;/p&gt;</description></item><item><title>AI Integration</title><link>https://alex-dna-tech.github.io/docs/overview/ai-integration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/ai-integration/</guid><description>&lt;p&gt;Go Micro is an AI-native microservices framework. Every service you build is automatically accessible to AI agents, and every service can call AI models. This page explains how the pieces fit together.&lt;/p&gt;
+&lt;p&gt;&lt;figure role="figure" aria-label="AI integration architecture"&gt;
+ &lt;a href="https://alex-dna-tech.github.io/docs/overview/ai-integration/mcp-agent.jpg"&gt;
+ &lt;div class="image-wrapper" style="background: linear-gradient(#fbfbfd, #5751ca, #253148, #61a2ec);"&gt;
+ &lt;img
+ alt="AI integration architecture"
+ title="AI integration architecture"
+ width="1200"
+ height="800"srcset="https://alex-dna-tech.github.io/docs/overview/ai-integration/mcp-agent_hu_ba31eeb74bd933d8.webp 420w, https://alex-dna-tech.github.io/docs/overview/ai-integration/mcp-agent_hu_f72d1b550800a11b.webp 789w, https://alex-dna-tech.github.io/docs/overview/ai-integration/mcp-agent_hu_9bc95ecee8a0c523.webp 1019w, "
+ sizes="(min-width: 1000px) 789px, (min-width: 500px) 80.42vw, 87.78vw"
+ src="https://alex-dna-tech.github.io/docs/overview/ai-integration/mcp-agent_hu_7ee7cd86a98c8b0b.jpg"
+ decoding="async"loading="lazy"
+ /&gt;
+ &lt;/div&gt;
+ &lt;/a&gt;
+ &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id="the-stack"&gt;The Stack&lt;a class="td-heading-self-link" href="#the-stack" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Your Services → write Go handlers, register with the framework
+ ↓
+Registry → automatic service discovery (mDNS, Consul, etcd)
+ ↓
+Gateways → micro api (HTTP→RPC) / micro mcp (MCP tools)
+ ↓
+ai.Tools → discovers services + executes RPCs programmatically
+ ↓
+ai.Model → calls LLMs (Anthropic, OpenAI, Gemini, Atlas Cloud, ...)
+ ↓
+agent / flow / micro chat → agent-managed, event-driven, or interactive orchestration
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Every layer is optional. You can use go-micro without AI. You can use the &lt;code&gt;ai&lt;/code&gt; package without MCP. But when you stack them, you get services that AI agents can discover and orchestrate automatically.&lt;/p&gt;</description></item><item><title>MCP &amp; AI Agents</title><link>https://alex-dna-tech.github.io/docs/overview/mcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/mcp/</guid><description>&lt;h1 id="model-context-protocol-mcp"&gt;Model Context Protocol (MCP)&lt;a class="td-heading-self-link" href="#model-context-protocol-mcp" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Go Micro provides built-in support for the &lt;a href="https://modelcontextprotocol.io/"&gt;Model Context Protocol (MCP)&lt;/a&gt;, enabling AI agents like Claude to discover and interact with your microservices as tools.&lt;/p&gt;
+&lt;p&gt;&lt;figure role="figure" aria-label="AI agent calling microservices via MCP"&gt;
+ &lt;a href="https://alex-dna-tech.github.io/docs/overview/mcp/mcp-agent.jpg"&gt;
+ &lt;div class="image-wrapper" style="background: linear-gradient(#fbfbfd, #5751ca, #253148, #61a2ec);"&gt;
+ &lt;img
+ alt="AI agent calling microservices via MCP"
+ title="AI agent calling microservices via MCP"
+ width="1200"
+ height="800"srcset="https://alex-dna-tech.github.io/docs/overview/mcp/mcp-agent_hu_ba31eeb74bd933d8.webp 420w, https://alex-dna-tech.github.io/docs/overview/mcp/mcp-agent_hu_f72d1b550800a11b.webp 789w, https://alex-dna-tech.github.io/docs/overview/mcp/mcp-agent_hu_9bc95ecee8a0c523.webp 1019w, "
+ sizes="(min-width: 1000px) 789px, (min-width: 500px) 80.42vw, 87.78vw"
+ src="https://alex-dna-tech.github.io/docs/overview/mcp/mcp-agent_hu_7ee7cd86a98c8b0b.jpg"
+ decoding="async"loading="lazy"
+ /&gt;
+ &lt;/div&gt;
+ &lt;/a&gt;
+ &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;MCP gateway automatically exposes your microservices as AI-accessible tools through:&lt;/p&gt;</description></item><item><title>Deployment</title><link>https://alex-dna-tech.github.io/docs/overview/deployment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/deployment/</guid><description>&lt;h1 id="deploying-go-micro-services"&gt;Deploying Go Micro Services&lt;a class="td-heading-self-link" href="#deploying-go-micro-services" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;figure role="figure" aria-label="Go Micro deployment"&gt;
+ &lt;a href="https://alex-dna-tech.github.io/docs/overview/deployment/deployment.jpg"&gt;
+ &lt;div class="image-wrapper" style="background: linear-gradient(#f8f9fa, #343f4e);"&gt;
+ &lt;img
+ alt="Go Micro deployment"
+ title="Go Micro deployment"
+ width="1200"
+ height="800"srcset="https://alex-dna-tech.github.io/docs/overview/deployment/deployment_hu_cd3632b2febdde06.webp 420w, https://alex-dna-tech.github.io/docs/overview/deployment/deployment_hu_97155c3ee79b34e9.webp 789w, https://alex-dna-tech.github.io/docs/overview/deployment/deployment_hu_23cf7c7384e0a335.webp 1019w, "
+ sizes="(min-width: 1000px) 789px, (min-width: 500px) 80.42vw, 87.78vw"
+ src="https://alex-dna-tech.github.io/docs/overview/deployment/deployment_hu_e5fe382058eded73.jpg"
+ decoding="async"loading="lazy"
+ /&gt;
+ &lt;/div&gt;
+ &lt;/a&gt;
+ &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;This guide covers deploying go-micro services to a Linux server using systemd.&lt;/p&gt;
+&lt;h2 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;go-micro provides a clear workflow from development to production:&lt;/p&gt;
 &lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th&gt;Stage&lt;/th&gt;
- &lt;th&gt;Command&lt;/th&gt;
- &lt;th&gt;Purpose&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;Develop&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;micro run&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Local dev with hot reload and API gateway&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;Build&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;micro build&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Compile production binaries for any target OS&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;Deploy&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;micro deploy&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Push binaries to a remote Linux server via SSH + systemd&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;strong&gt;Dashboard&lt;/strong&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;micro server&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Optional production web UI with JWT auth and user management&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Stage&lt;/th&gt;
+					&lt;th&gt;Command&lt;/th&gt;
+					&lt;th&gt;Purpose&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Develop&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;micro run&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Local dev with hot reload and API gateway&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Build&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;micro build&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Compile production binaries for any target OS&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Deploy&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;micro deploy&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Push binaries to a remote Linux server via SSH + systemd&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;&lt;strong&gt;Dashboard&lt;/strong&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;micro server&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Optional production web UI with JWT auth and user management&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Each command has a distinct role — they don&amp;rsquo;t overlap:&lt;/p&gt;</description></item><item><title>Architecture</title><link>https://alex-dna-tech.github.io/docs/overview/architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/architecture/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Each command has a distinct role — they don&amp;rsquo;t overlap:&lt;/p&gt;</description></item><item><title>Architecture</title><link>https://alex-dna-tech.github.io/docs/overview/architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/architecture/</guid><description>&lt;h2 id="architecture"&gt;Architecture&lt;a class="td-heading-self-link" href="#architecture" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;figure role="figure" aria-label="Go Micro architecture"&gt;
+ &lt;a href="https://alex-dna-tech.github.io/docs/overview/architecture/architecture.jpg"&gt;
+ &lt;div class="image-wrapper" style="background: linear-gradient(#fafcfc, #4a9cab);"&gt;
+ &lt;img
+ alt="Go Micro architecture"
+ title="Go Micro architecture"
+ width="1200"
+ height="800"srcset="https://alex-dna-tech.github.io/docs/overview/architecture/architecture_hu_aa2c2748d28f7925.webp 420w, https://alex-dna-tech.github.io/docs/overview/architecture/architecture_hu_6ec28a2136c777bc.webp 789w, https://alex-dna-tech.github.io/docs/overview/architecture/architecture_hu_ef55cd436480e300.webp 1019w, "
+ sizes="(min-width: 1000px) 789px, (min-width: 500px) 80.42vw, 87.78vw"
+ src="https://alex-dna-tech.github.io/docs/overview/architecture/architecture_hu_1f3bda2fe3a95b12.jpg"
+ decoding="async"loading="lazy"
+ /&gt;
+ &lt;/div&gt;
+ &lt;/a&gt;
+ &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;An overview of the Go Micro architecture.&lt;/p&gt;
+&lt;h2 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Go Micro abstracts away the details of distributed systems. Here are the main features.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Authentication&lt;/strong&gt; - Auth is built in as a first class citizen. Authentication and authorization enable secure
 zero trust networking by providing every service an identity and certificates. This additionally includes rule
-based access control.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Dynamic Config&lt;/strong&gt; - Load and hot reload dynamic config from anywhere. The config interface provides a way to load application
-level config from any source such as env vars, file, etcd. You can merge the sources and even define fallbacks.&lt;/p&gt;</description></item><item><title>Configuration</title><link>https://alex-dna-tech.github.io/docs/overview/config/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/config/</guid><description>&lt;h2 id="levels-of-configuration"&gt;Levels of Configuration&lt;a class="td-heading-self-link" href="#levels-of-configuration" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+based access control.&lt;/p&gt;</description></item><item><title>Configuration</title><link>https://alex-dna-tech.github.io/docs/overview/config/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/config/</guid><description>&lt;p&gt;&lt;figure role="figure" aria-label="Configuration"&gt;
+ &lt;a href="https://alex-dna-tech.github.io/docs/overview/config/config.jpg"&gt;
+ &lt;div class="image-wrapper" style="background: linear-gradient(#fafcfd, #4f9dc5, #316db5);"&gt;
+ &lt;img
+ alt="Configuration"
+ title="Configuration"
+ width="1200"
+ height="800"srcset="https://alex-dna-tech.github.io/docs/overview/config/config_hu_cfe61e0889fa405c.webp 420w, https://alex-dna-tech.github.io/docs/overview/config/config_hu_9970dc5116a634d0.webp 789w, https://alex-dna-tech.github.io/docs/overview/config/config_hu_8ebc9ff0aa41a60a.webp 1019w, "
+ sizes="(min-width: 1000px) 789px, (min-width: 500px) 80.42vw, 87.78vw"
+ src="https://alex-dna-tech.github.io/docs/overview/config/config_hu_952fb3d2bcd9a5b0.jpg"
+ decoding="async"loading="lazy"
+ /&gt;
+ &lt;/div&gt;
+ &lt;/a&gt;
+ &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Go Micro follows a progressive configuration model so you can start with zero setup and layer in complexity only when needed.&lt;/p&gt;
+&lt;h2 id="levels-of-configuration"&gt;Levels of Configuration&lt;a class="td-heading-self-link" href="#levels-of-configuration" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Zero Config (Defaults)
 &lt;ul&gt;
@@ -153,82 +211,82 @@ level config from any source such as env vars, file, etcd. You can merge the sou
 &lt;/ol&gt;
 &lt;h2 id="core-environment-variables"&gt;Core Environment Variables&lt;a class="td-heading-self-link" href="#core-environment-variables" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th&gt;Component&lt;/th&gt;
- &lt;th&gt;Variable&lt;/th&gt;
- &lt;th&gt;Example&lt;/th&gt;
- &lt;th&gt;Purpose&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td&gt;Registry&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_REGISTRY&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_REGISTRY=consul&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Select registry implementation&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Registry Address&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_REGISTRY_ADDRESS&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_REGISTRY_ADDRESS=127.0.0.1:8500&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Point to registry service&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Broker&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_BROKER&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_BROKER=nats&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Select broker implementation&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Broker Address&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_BROKER_ADDRESS&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_BROKER_ADDRESS=nats://localhost:4222&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Broker endpoint&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Transport&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_TRANSPORT&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_TRANSPORT=nats&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Select transport implementation&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Transport Address&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_TRANSPORT_ADDRESS&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_TRANSPORT_ADDRESS=nats://localhost:4222&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Transport endpoint&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Store&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_STORE&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_STORE=postgres&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Select store implementation&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Store Database&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_STORE_DATABASE&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_STORE_DATABASE=app&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Logical database name&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Store Table&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_STORE_TABLE&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_STORE_TABLE=records&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Default table/collection&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Store Address&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_STORE_ADDRESS&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_STORE_ADDRESS=postgres://user:pass@localhost:5432/app?sslmode=disable&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Connection string&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Server Address&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_SERVER_ADDRESS&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;MICRO_SERVER_ADDRESS=:8080&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Bind address for RPC server&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Component&lt;/th&gt;
+					&lt;th&gt;Variable&lt;/th&gt;
+					&lt;th&gt;Example&lt;/th&gt;
+					&lt;th&gt;Purpose&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Registry&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_REGISTRY&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_REGISTRY=consul&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Select registry implementation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Registry Address&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_REGISTRY_ADDRESS&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_REGISTRY_ADDRESS=127.0.0.1:8500&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Point to registry service&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Broker&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_BROKER&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_BROKER=nats&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Select broker implementation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Broker Address&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_BROKER_ADDRESS&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_BROKER_ADDRESS=nats://localhost:4222&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Broker endpoint&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Transport&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_TRANSPORT&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_TRANSPORT=nats&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Select transport implementation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Transport Address&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_TRANSPORT_ADDRESS&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_TRANSPORT_ADDRESS=nats://localhost:4222&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Transport endpoint&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Store&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_STORE&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_STORE=postgres&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Select store implementation&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Store Database&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_STORE_DATABASE&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_STORE_DATABASE=app&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Logical database name&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Store Table&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_STORE_TABLE&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_STORE_TABLE=records&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Default table/collection&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Store Address&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_STORE_ADDRESS&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_STORE_ADDRESS=postgres://user:pass@localhost:5432/app?sslmode=disable&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Connection string&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Server Address&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_SERVER_ADDRESS&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;MICRO_SERVER_ADDRESS=:8080&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;Bind address for RPC server&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id="example-switching-components-via-env-vars"&gt;Example: Switching Components via Env Vars&lt;a class="td-heading-self-link" href="#example-switching-components-via-env-vars" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Use NATS for broker and transport, Consul for registry&lt;/span&gt;
@@ -239,7 +297,24 @@ level config from any source such as env vars, file, etcd. You can merge the sou
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Run your service&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;go run main.go
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;No code changes required. The framework internally wires the selected implementations.&lt;/p&gt;</description></item><item><title>Observability</title><link>https://alex-dna-tech.github.io/docs/overview/observability/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/observability/</guid><description>&lt;h2 id="core-principles"&gt;Core Principles&lt;a class="td-heading-self-link" href="#core-principles" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;No code changes required. The framework internally wires the selected implementations.&lt;/p&gt;</description></item><item><title>Observability</title><link>https://alex-dna-tech.github.io/docs/overview/observability/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/observability/</guid><description>&lt;p&gt;&lt;figure role="figure" aria-label="Observability"&gt;
+ &lt;a href="https://alex-dna-tech.github.io/docs/overview/observability/observability.jpg"&gt;
+ &lt;div class="image-wrapper" style="background: linear-gradient(#fafbfb, #316ed1);"&gt;
+ &lt;img
+ alt="Observability"
+ title="Observability"
+ width="1200"
+ height="800"srcset="https://alex-dna-tech.github.io/docs/overview/observability/observability_hu_c35ef65da993d86.webp 420w, https://alex-dna-tech.github.io/docs/overview/observability/observability_hu_997817932a35fcea.webp 789w, https://alex-dna-tech.github.io/docs/overview/observability/observability_hu_e9f359535b4a4444.webp 1019w, "
+ sizes="(min-width: 1000px) 789px, (min-width: 500px) 80.42vw, 87.78vw"
+ src="https://alex-dna-tech.github.io/docs/overview/observability/observability_hu_551bcce23f3483fe.jpg"
+ decoding="async"loading="lazy"
+ /&gt;
+ &lt;/div&gt;
+ &lt;/a&gt;
+ &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Observability in Go Micro spans logs, metrics, and traces. The goal is rapid insight into service behavior with minimal configuration.&lt;/p&gt;
+&lt;h2 id="core-principles"&gt;Core Principles&lt;a class="td-heading-self-link" href="#core-principles" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Structured Logs – Machine-parsable, leveled output&lt;/li&gt;
 &lt;li&gt;Metrics – Quantitative trends (counters, gauges, histograms)&lt;/li&gt;
@@ -247,22 +322,14 @@ level config from any source such as env vars, file, etcd. You can merge the sou
 &lt;li&gt;Correlation – IDs flowing through all three signals&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="logging"&gt;Logging&lt;a class="td-heading-self-link" href="#logging" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;The default logger can be replaced. Use env vars to adjust level:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;MICRO_LOG_LEVEL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;debug go run main.go
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Recommended fields:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;service&lt;/code&gt; – service name&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;version&lt;/code&gt; – release identifier&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;trace_id&lt;/code&gt; – propagated context id&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;span_id&lt;/code&gt; – current operation id&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="metrics"&gt;Metrics&lt;a class="td-heading-self-link" href="#metrics" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Patterns:&lt;/p&gt;</description></item><item><title>Hosting Go Micro Services</title><link>https://alex-dna-tech.github.io/docs/overview/hosting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/hosting/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The default logger can be replaced. Use env vars to adjust level:&lt;/p&gt;</description></item><item><title>Hosting Go Micro Services</title><link>https://alex-dna-tech.github.io/docs/overview/hosting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/hosting/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;Go Micro services are compiled Go binaries that communicate via RPC and event-driven messaging. Hosting them requires infrastructure that supports service discovery, inter-service communication, persistent storage, and configuration management. Because go-micro uses a pluggable architecture, the hosting environment can range from a single VPS to a fully orchestrated cluster.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id="current-hosting-options"&gt;Current Hosting Options&lt;a class="td-heading-self-link" href="#current-hosting-options" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="single-vps-or-bare-metal"&gt;Single VPS or Bare Metal&lt;a class="td-heading-self-link" href="#single-vps-or-bare-metal" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The simplest approach. Deploy compiled binaries to a Linux server and manage them with systemd. This is the model described in the &lt;a href="https://alex-dna-tech.github.io/docs/overview/deployment/"&gt;Deployment Guide&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Performance Considerations</title><link>https://alex-dna-tech.github.io/docs/overview/performance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/performance/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The simplest approach. Deploy compiled binaries to a Linux server and manage them with systemd. This is the model described in the &lt;a href="https://alex-dna-tech.github.io/docs/overview/deployment/"&gt;Deployment Guide&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Performance Considerations</title><link>https://alex-dna-tech.github.io/docs/overview/performance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/performance/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;go-micro is designed for &lt;strong&gt;developer productivity and ease of use&lt;/strong&gt; while maintaining good performance for most use cases. This document explains the performance characteristics and trade-offs.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id="reflection-usage"&gt;Reflection Usage&lt;a class="td-heading-self-link" href="#reflection-usage" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;go-micro uses Go&amp;rsquo;s reflection package to enable its core feature: &lt;strong&gt;registering any Go struct as a service handler&lt;/strong&gt; without code generation or boilerplate.&lt;/p&gt;
 &lt;h3 id="why-reflection"&gt;Why Reflection?&lt;a class="td-heading-self-link" href="#why-reflection" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;

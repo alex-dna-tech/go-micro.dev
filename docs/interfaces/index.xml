@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Interfaces on GoMicro</title><link>https://alex-dna-tech.github.io/docs/interfaces/</link><description>Recent content in Interfaces on GoMicro</description><generator>Hugo</generator><language>en</language><atom:link href="https://alex-dna-tech.github.io/docs/interfaces/index.xml" rel="self" type="application/rss+xml"/><item><title>Client/Server</title><link>https://alex-dna-tech.github.io/docs/interfaces/client-server/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/client-server/</guid><description>&lt;h2 id="client"&gt;Client&lt;a class="td-heading-self-link" href="#client" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;The client is used to make requests to other services.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Interfaces on GoMicro</title><link>https://alex-dna-tech.github.io/docs/interfaces/</link><description>Recent content in Interfaces on GoMicro</description><generator>Hugo</generator><language>en</language><atom:link href="https://alex-dna-tech.github.io/docs/interfaces/index.xml" rel="self" type="application/rss+xml"/><item><title>Client/Server</title><link>https://alex-dna-tech.github.io/docs/interfaces/client-server/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/client-server/</guid><description>&lt;p&gt;The client is used to make requests to other services.&lt;/p&gt;
 &lt;h2 id="server"&gt;Server&lt;a class="td-heading-self-link" href="#server" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The server handles incoming requests.&lt;/p&gt;
 &lt;p&gt;Both client and server are pluggable and support middleware wrappers for additional functionality.&lt;/p&gt;
@@ -30,7 +29,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Fatal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Registry</title><link>https://alex-dna-tech.github.io/docs/interfaces/registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/registry/</guid><description>&lt;h2 id="features"&gt;Features&lt;a class="td-heading-self-link" href="#features" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Registry</title><link>https://alex-dna-tech.github.io/docs/interfaces/registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/registry/</guid><description>&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;The registry is responsible for service discovery in Go Micro. It allows services to register themselves and discover other services.&lt;/p&gt;
+&lt;h2 id="features"&gt;Features&lt;a class="td-heading-self-link" href="#features" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Service registration and deregistration&lt;/li&gt;
 &lt;li&gt;Service lookup&lt;/li&gt;
@@ -46,10 +47,24 @@
 &lt;/ul&gt;
 &lt;p&gt;You can configure the registry when initializing your service.&lt;/p&gt;
 &lt;h2 id="plugins-location"&gt;Plugins Location&lt;a class="td-heading-self-link" href="#plugins-location" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Registry plugins live in this repository under &lt;code&gt;go-micro.dev/v5/registry/&amp;lt;plugin&amp;gt;&lt;/code&gt; (e.g., &lt;code&gt;consul&lt;/code&gt;, &lt;code&gt;etcd&lt;/code&gt;, &lt;code&gt;nats&lt;/code&gt;). Import the desired package and pass it via &lt;code&gt;micro.Registry(...)&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="configure-via-environment"&gt;Configure via environment&lt;a class="td-heading-self-link" href="#configure-via-environment" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt;MICRO_REGISTRY=etcd MICRO_REGISTRY_ADDRESS=127.0.0.1:2379 micro server
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Common variables:&lt;/p&gt;</description></item><item><title>Broker</title><link>https://alex-dna-tech.github.io/docs/interfaces/broker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/broker/</guid><description>&lt;h2 id="features"&gt;Features&lt;a class="td-heading-self-link" href="#features" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Registry plugins live in this repository under &lt;code&gt;go-micro.dev/v6/registry/&amp;lt;plugin&amp;gt;&lt;/code&gt; (e.g., &lt;code&gt;consul&lt;/code&gt;, &lt;code&gt;etcd&lt;/code&gt;, &lt;code&gt;nats&lt;/code&gt;). Import the desired package and pass it via &lt;code&gt;micro.Registry(...)&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Broker</title><link>https://alex-dna-tech.github.io/docs/interfaces/broker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/broker/</guid><description>&lt;p&gt;&lt;figure role="figure" aria-label="Broker"&gt;
+ &lt;a href="https://alex-dna-tech.github.io/docs/interfaces/broker/broker.jpg"&gt;
+ &lt;div class="image-wrapper" style="background: linear-gradient(#fafbfc, #2759b5, #ed9844, #ee7614);"&gt;
+ &lt;img
+ alt="Broker"
+ title="Broker"
+ width="1200"
+ height="800"srcset="https://alex-dna-tech.github.io/docs/interfaces/broker/broker_hu_a9586d7379d0c90c.webp 420w, https://alex-dna-tech.github.io/docs/interfaces/broker/broker_hu_9b79fdc2980d11f8.webp 789w, https://alex-dna-tech.github.io/docs/interfaces/broker/broker_hu_6991a4d6cf44a5d.webp 1019w, "
+ sizes="(min-width: 1000px) 789px, (min-width: 500px) 80.42vw, 87.78vw"
+ src="https://alex-dna-tech.github.io/docs/interfaces/broker/broker_hu_e170b75b16f6887b.jpg"
+ decoding="async"loading="lazy"
+ /&gt;
+ &lt;/div&gt;
+ &lt;/a&gt;
+ &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;The broker provides pub/sub messaging for Go Micro services.&lt;/p&gt;
+&lt;h2 id="features"&gt;Features&lt;a class="td-heading-self-link" href="#features" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Publish messages to topics&lt;/li&gt;
 &lt;li&gt;Subscribe to topics&lt;/li&gt;
@@ -59,47 +74,29 @@
 &lt;p&gt;Supported brokers include:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;HTTP (default)&lt;/li&gt;
-&lt;li&gt;NATS (&lt;code&gt;go-micro.dev/v5/broker/nats&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;RabbitMQ (&lt;code&gt;go-micro.dev/v5/broker/rabbitmq&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Memory (&lt;code&gt;go-micro.dev/v5/broker/memory&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;NATS (&lt;code&gt;go-micro.dev/v6/broker/nats&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;RabbitMQ (&lt;code&gt;go-micro.dev/v6/broker/rabbitmq&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Memory (&lt;code&gt;go-micro.dev/v6/broker/memory&lt;/code&gt;)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Plugins are scoped under &lt;code&gt;go-micro.dev/v5/broker/&amp;lt;plugin&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Configure the broker in code or via environment variables.&lt;/p&gt;
-&lt;h2 id="example-usage"&gt;Example Usage&lt;a class="td-heading-self-link" href="#example-usage" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Here&amp;rsquo;s how to use the broker in your Go Micro service:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;package&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;go-micro.dev/v5&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;go-micro.dev/v5/broker&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;log&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;func&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;service&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;micro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;NewService&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;service&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// Publish a message&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;broker&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Publish&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;topic&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nx"&gt;broker&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Message&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;Body&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="nb"&gt;byte&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;hello world&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)});&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;nil&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Fatal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// Subscribe to a topic&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;_&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;broker&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Subscribe&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;topic&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;broker&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Event&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;error&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Received message: %s&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;string&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Message&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;Body&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;nil&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;nil&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Fatal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// Run the service&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;service&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Run&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;nil&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Fatal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;err&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="configure-a-specific-broker-in-code"&gt;Configure a specific broker in code&lt;a class="td-heading-self-link" href="#configure-a-specific-broker-in-code" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;NATS:&lt;/p&gt;</description></item><item><title>Transport</title><link>https://alex-dna-tech.github.io/docs/interfaces/transport/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/transport/</guid><description>&lt;h2 id="features"&gt;Features&lt;a class="td-heading-self-link" href="#features" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Plugins are scoped under &lt;code&gt;go-micro.dev/v6/broker/&amp;lt;plugin&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Configure the broker in code or via environment variables.&lt;/p&gt;</description></item><item><title>Transport</title><link>https://alex-dna-tech.github.io/docs/interfaces/transport/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/transport/</guid><description>&lt;p&gt;&lt;figure role="figure" aria-label="Transport"&gt;
+ &lt;a href="https://alex-dna-tech.github.io/docs/interfaces/transport/transport.jpg"&gt;
+ &lt;div class="image-wrapper" style="background: linear-gradient(#f9fafb, #15335a, #1c64bb, #529fe7);"&gt;
+ &lt;img
+ alt="Transport"
+ title="Transport"
+ width="1200"
+ height="800"srcset="https://alex-dna-tech.github.io/docs/interfaces/transport/transport_hu_b0d9876d30e32af8.webp 420w, https://alex-dna-tech.github.io/docs/interfaces/transport/transport_hu_c0cb8131af8cda0e.webp 789w, https://alex-dna-tech.github.io/docs/interfaces/transport/transport_hu_975c1b0a1fec43bc.webp 1019w, "
+ sizes="(min-width: 1000px) 789px, (min-width: 500px) 80.42vw, 87.78vw"
+ src="https://alex-dna-tech.github.io/docs/interfaces/transport/transport_hu_c92d7a33b5580651.jpg"
+ decoding="async"loading="lazy"
+ /&gt;
+ &lt;/div&gt;
+ &lt;/a&gt;
+ &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;The transport layer is responsible for communication between services.&lt;/p&gt;
+&lt;h2 id="features"&gt;Features&lt;a class="td-heading-self-link" href="#features" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Pluggable transport implementations&lt;/li&gt;
 &lt;li&gt;Secure and efficient communication&lt;/li&gt;
@@ -108,13 +105,13 @@
 &lt;p&gt;Supported transports include:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;HTTP (default)&lt;/li&gt;
-&lt;li&gt;NATS (&lt;code&gt;go-micro.dev/v5/transport/nats&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;gRPC (&lt;code&gt;go-micro.dev/v5/transport/grpc&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Memory (&lt;code&gt;go-micro.dev/v5/transport/memory&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;NATS (&lt;code&gt;go-micro.dev/v6/transport/nats&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;gRPC (&lt;code&gt;go-micro.dev/v6/transport/grpc&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Memory (&lt;code&gt;go-micro.dev/v6/transport/memory&lt;/code&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="important-transport-vs-native-grpc"&gt;Important: Transport vs Native gRPC&lt;a class="td-heading-self-link" href="#important-transport-vs-native-grpc" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;The gRPC &lt;strong&gt;transport&lt;/strong&gt; uses gRPC as an underlying communication protocol, similar to how NATS or RabbitMQ might be used. It does &lt;strong&gt;not&lt;/strong&gt; provide native gRPC compatibility with tools like &lt;code&gt;grpcurl&lt;/code&gt; or standard gRPC clients generated by &lt;code&gt;protoc&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;If you need native gRPC compatibility (to use &lt;code&gt;grpcurl&lt;/code&gt;, polyglot gRPC clients, etc.), you must use the gRPC &lt;strong&gt;server&lt;/strong&gt; and &lt;strong&gt;client&lt;/strong&gt; packages instead:&lt;/p&gt;</description></item><item><title>Store</title><link>https://alex-dna-tech.github.io/docs/interfaces/store/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/store/</guid><description>&lt;h2 id="features"&gt;Features&lt;a class="td-heading-self-link" href="#features" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The gRPC &lt;strong&gt;transport&lt;/strong&gt; uses gRPC as an underlying communication protocol, similar to how NATS or RabbitMQ might be used. It does &lt;strong&gt;not&lt;/strong&gt; provide native gRPC compatibility with tools like &lt;code&gt;grpcurl&lt;/code&gt; or standard gRPC clients generated by &lt;code&gt;protoc&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Store</title><link>https://alex-dna-tech.github.io/docs/interfaces/store/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/store/</guid><description>&lt;p&gt;The store provides a pluggable interface for data storage in Go Micro.&lt;/p&gt;
+&lt;h2 id="features"&gt;Features&lt;a class="td-heading-self-link" href="#features" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Key-value storage&lt;/li&gt;
 &lt;li&gt;Multiple backend support&lt;/li&gt;
@@ -123,25 +120,25 @@
 &lt;p&gt;Supported stores include:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Memory (default)&lt;/li&gt;
-&lt;li&gt;File (&lt;code&gt;go-micro.dev/v5/store/file&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;MySQL (&lt;code&gt;go-micro.dev/v5/store/mysql&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Postgres (&lt;code&gt;go-micro.dev/v5/store/postgres&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;NATS JetStream KV (&lt;code&gt;go-micro.dev/v5/store/nats-js-kv&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;File (&lt;code&gt;go-micro.dev/v6/store/file&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;MySQL (&lt;code&gt;go-micro.dev/v6/store/mysql&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Postgres (&lt;code&gt;go-micro.dev/v6/store/postgres&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;NATS JetStream KV (&lt;code&gt;go-micro.dev/v6/store/nats-js-kv&lt;/code&gt;)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Plugins are scoped under &lt;code&gt;go-micro.dev/v5/store/&amp;lt;plugin&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Plugins are scoped under &lt;code&gt;go-micro.dev/v6/store/&amp;lt;plugin&amp;gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Configure the store in code or via environment variables.&lt;/p&gt;
 &lt;h2 id="example-usage"&gt;Example Usage&lt;a class="td-heading-self-link" href="#example-usage" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Here&amp;rsquo;s how to use the store in your Go Micro service:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;package&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;go-micro.dev/v5&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;go-micro.dev/v5/store&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;go-micro.dev/v6&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;go-micro.dev/v6/store&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;log&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;func&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;service&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;micro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;NewService&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;service&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;micro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;NewService&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;store-example&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;service&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// Write a record&lt;/span&gt;&lt;span class="w"&gt;
@@ -157,29 +154,16 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Read value: %s&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;string&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;recs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;Value&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="configure-a-specific-store-in-code"&gt;Configure a specific store in code&lt;a class="td-heading-self-link" href="#configure-a-specific-store-in-code" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Postgres:&lt;/p&gt;</description></item><item><title>Plugins</title><link>https://alex-dna-tech.github.io/docs/interfaces/plugins/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/plugins/</guid><description>&lt;p&gt;Common interfaces and locations:&lt;/p&gt;
+&lt;p&gt;Postgres:&lt;/p&gt;</description></item><item><title>Plugins</title><link>https://alex-dna-tech.github.io/docs/interfaces/plugins/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/plugins/</guid><description>&lt;p&gt;Plugins are scoped under each interface directory within this repository. To use a plugin, import it directly from the corresponding interface subpackage and pass it to your service via options.&lt;/p&gt;
+&lt;p&gt;Common interfaces and locations:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Registry: &lt;code&gt;go-micro.dev/v5/registry/*&lt;/code&gt; (e.g. &lt;code&gt;consul&lt;/code&gt;, &lt;code&gt;etcd&lt;/code&gt;, &lt;code&gt;nats&lt;/code&gt;, &lt;code&gt;mdns&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Broker: &lt;code&gt;go-micro.dev/v5/broker/*&lt;/code&gt; (e.g. &lt;code&gt;nats&lt;/code&gt;, &lt;code&gt;rabbitmq&lt;/code&gt;, &lt;code&gt;http&lt;/code&gt;, &lt;code&gt;memory&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Transport: &lt;code&gt;go-micro.dev/v5/transport/*&lt;/code&gt; (e.g. &lt;code&gt;nats&lt;/code&gt;, default &lt;code&gt;http&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Server: &lt;code&gt;go-micro.dev/v5/server/*&lt;/code&gt; (e.g. &lt;code&gt;grpc&lt;/code&gt; for native gRPC compatibility)&lt;/li&gt;
-&lt;li&gt;Client: &lt;code&gt;go-micro.dev/v5/client/*&lt;/code&gt; (e.g. &lt;code&gt;grpc&lt;/code&gt; for native gRPC compatibility)&lt;/li&gt;
-&lt;li&gt;Store: &lt;code&gt;go-micro.dev/v5/store/*&lt;/code&gt; (e.g. &lt;code&gt;postgres&lt;/code&gt;, &lt;code&gt;mysql&lt;/code&gt;, &lt;code&gt;nats-js-kv&lt;/code&gt;, &lt;code&gt;memory&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Registry: &lt;code&gt;go-micro.dev/v6/registry/*&lt;/code&gt; (e.g. &lt;code&gt;consul&lt;/code&gt;, &lt;code&gt;etcd&lt;/code&gt;, &lt;code&gt;nats&lt;/code&gt;, &lt;code&gt;mdns&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Broker: &lt;code&gt;go-micro.dev/v6/broker/*&lt;/code&gt; (e.g. &lt;code&gt;nats&lt;/code&gt;, &lt;code&gt;rabbitmq&lt;/code&gt;, &lt;code&gt;http&lt;/code&gt;, &lt;code&gt;memory&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Transport: &lt;code&gt;go-micro.dev/v6/transport/*&lt;/code&gt; (e.g. &lt;code&gt;nats&lt;/code&gt;, default &lt;code&gt;http&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Server: &lt;code&gt;go-micro.dev/v6/server/*&lt;/code&gt; (e.g. &lt;code&gt;grpc&lt;/code&gt; for native gRPC compatibility)&lt;/li&gt;
+&lt;li&gt;Client: &lt;code&gt;go-micro.dev/v6/client/*&lt;/code&gt; (e.g. &lt;code&gt;grpc&lt;/code&gt; for native gRPC compatibility)&lt;/li&gt;
+&lt;li&gt;Store: &lt;code&gt;go-micro.dev/v6/store/*&lt;/code&gt; (e.g. &lt;code&gt;postgres&lt;/code&gt;, &lt;code&gt;mysql&lt;/code&gt;, &lt;code&gt;nats-js-kv&lt;/code&gt;, &lt;code&gt;memory&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;Auth, Cache, etc. follow the same pattern under their respective directories.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="registry-examples"&gt;Registry Examples&lt;a class="td-heading-self-link" href="#registry-examples" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Consul:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;go-micro.dev/v5&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;go-micro.dev/v5/registry/consul&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;func&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;reg&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;consul&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;NewConsulRegistry&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;svc&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;micro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;NewService&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;micro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Registry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;reg&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;svc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;svc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Etcd:&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Consul:&lt;/p&gt;</description></item></channel></rss>
