@@ -3,10 +3,6 @@ title: "Payments (x402)"
 weight: 140
 description: "Go Micro can require a payment before a tool runs, using x402https://x402.org — the open HTTP 402 Payment Required standard for stablecoin payments, designed for AI agents and onchain APIs. It lets ev"
 ---
-# Payments (x402)
-
-Go Micro can require a payment before a tool runs, using [x402](https://x402.org) — the open HTTP **402 Payment Required** standard for stablecoin payments, designed for AI agents and onchain APIs. It lets every Go Micro endpoint, already exposed as an AI-callable tool, become a *paid* tool: a service answers a call with `402` and payment requirements, the client pays and retries, and the gateway verifies the payment before serving.
-
 Payments are **opt-in** and **dependency-light**. Go Micro carries no chain or crypto code — it speaks the protocol and delegates verification and settlement to a pluggable **facilitator** (Coinbase CDP, Alchemy, or self-hosted), so Base and Solana are just different facilitators behind one interface.
 
 ## The wrapper

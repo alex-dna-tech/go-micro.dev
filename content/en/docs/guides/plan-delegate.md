@@ -3,10 +3,6 @@ title: "Plan & Delegate"
 weight: 40
 description: "Every Go Micro agent has two built-in capabilities, on top of the service tools it discovers:"
 ---
-# Plan & Delegate
-
-Every Go Micro agent has two built-in capabilities, on top of the service tools it discovers:
-
 - **`plan`** — record an ordered plan in memory before doing multi-step work.
 - **`delegate`** — hand a self-contained subtask to another agent.
 

@@ -3,11 +3,7 @@ title: "Broker"
 weight: 20
 description: "The broker provides pub/sub messaging for Go Micro services."
 ---
-# Broker
-
-<img src="/images/generated/broker.jpg" alt="Broker" style="width: 100%; border-radius: 8px; margin: 1rem 0 1.5rem;" />
-
-The broker provides pub/sub messaging for Go Micro services.
+![Broker](broker.jpg)
 
 ## Features
 - Publish messages to topics

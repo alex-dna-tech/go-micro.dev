@@ -3,10 +3,6 @@ title: "Registry"
 weight: 10
 description: "The registry is responsible for service discovery in Go Micro. It allows services to register themselves and discover other services."
 ---
-# Registry
-
-<img src="/images/generated/registry.jpg" alt="Registry" style="width: 100%; border-radius: 8px; margin: 1rem 0 1.5rem;" />
-
 The registry is responsible for service discovery in Go Micro. It allows services to register themselves and discover other services.
 
 ## Features

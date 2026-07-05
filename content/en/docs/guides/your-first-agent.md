@@ -3,9 +3,6 @@ title: "Your First Agent"
 weight: 10
 description: "This walkthrough builds the smallest useful Go Micro agent path: one service"
 ---
-# Your First Agent
-
-This walkthrough builds the smallest useful Go Micro agent path: one service
 with typed endpoints, one agent scoped to that service, and one CLI conversation
 that proves the agent can use the service as a tool. It is the 0→1 version of
 the services → agents → workflows lifecycle: build capability first, add

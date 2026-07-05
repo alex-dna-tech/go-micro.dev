@@ -3,9 +3,6 @@ title: "Agent Loops"
 weight: 90
 description: "Most agent work is one-shot: a prompt goes in, an answer comes out. The next"
 ---
-# Agent Loops
-
-Most agent work is one-shot: a prompt goes in, an answer comes out. The next
 step in agentic systems is the **loop** — run a step over and over, letting the
 agent keep working until the goal is met instead of stopping after one pass. One
 agent improves an architecture while another removes duplicated abstractions,

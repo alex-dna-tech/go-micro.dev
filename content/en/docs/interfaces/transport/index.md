@@ -3,11 +3,7 @@ title: "Transport"
 weight: 30
 description: "The transport layer is responsible for communication between services."
 ---
-# Transport
-
-<img src="/images/generated/transport.jpg" alt="Transport" style="width: 100%; border-radius: 8px; margin: 1rem 0 1.5rem;" />
-
-The transport layer is responsible for communication between services.
+![Transport](transport.jpg)
 
 ## Features
 - Pluggable transport implementations

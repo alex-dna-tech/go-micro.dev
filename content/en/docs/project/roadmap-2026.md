@@ -1,5 +1,6 @@
 ---
 title: "Go Micro 2026: The AI-Native Era"
+draft: true
 ---
 
 ## The Paradigm Shift

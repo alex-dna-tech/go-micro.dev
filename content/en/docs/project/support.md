@@ -3,10 +3,6 @@ title: "Commercial Support"
 weight: 10
 description: "Go Micro is free and open source. There are two ways to get help: the community, and commercial support."
 ---
-# Commercial Support
-
-Go Micro is free and open source. There are two ways to get help: the community, and commercial support.
-
 ## Community support (free)
 
 - **Documentation** — [/docs](/docs)

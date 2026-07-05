@@ -1,10 +1,10 @@
 ---
 title: Performance Considerations
+weight: 110
+description: ""
 ---
 
-## Overview
-
-go-micro is designed for **developer productivity and ease of use** while maintaining good performance for most use cases. This document explains the performance characteristics and trade-offs.
+> go-micro is designed for **developer productivity and ease of use** while maintaining good performance for most use cases. This document explains the performance characteristics and trade-offs.
 
 ## Reflection Usage
 

@@ -1,11 +1,10 @@
 ---
 title: Hosting Go Micro Services
+weight: 105
 description: This document outlines what hosting looks like for go-micro services, the options available today, and what an ideal hosting platform would provide.
 ---
 
-## Overview
-
-Go Micro services are compiled Go binaries that communicate via RPC and event-driven messaging. Hosting them requires infrastructure that supports service discovery, inter-service communication, persistent storage, and configuration management. Because go-micro uses a pluggable architecture, the hosting environment can range from a single VPS to a fully orchestrated cluster.
+> Go Micro services are compiled Go binaries that communicate via RPC and event-driven messaging. Hosting them requires infrastructure that supports service discovery, inter-service communication, persistent storage, and configuration management. Because go-micro uses a pluggable architecture, the hosting environment can range from a single VPS to a fully orchestrated cluster.
 
 ## Current Hosting Options
 

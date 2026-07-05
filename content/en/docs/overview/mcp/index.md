@@ -2,13 +2,10 @@
 title: "MCP & AI Agents"
 linkTitle: "MCP & AI Agents"
 weight: 60
-description: "Go Micro provides built-in support for the Model Context Protocol MCPhttps://modelcontextprotocol.io/, enabling AI agents like Claude to discover and interact with your microservices as tools."
+description: "Go Micro provides built-in support for the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), enabling AI agents like Claude to discover and interact with your microservices as tools."
 ---
-# Model Context Protocol (MCP)
 
-Go Micro provides built-in support for the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), enabling AI agents like Claude to discover and interact with your microservices as tools.
-
-<img src="/images/generated/mcp-agent.jpg" alt="AI agent calling microservices via MCP" style="width: 100%; border-radius: 8px; margin: 1rem 0 1.5rem;" />
+![AI agent calling microservices via MCP](mcp-agent.jpg)
 
 ## Overview
 
@@ -191,4 +188,3 @@ See \`examples/mcp/documented\` for a complete working example.
 - [MCP Specification](https://modelcontextprotocol.io/)
 - [Full Documentation Guide](https://github.com/micro/go-micro/blob/master/gateway/mcp/DOCUMENTATION.md)
 - [Examples](https://github.com/micro/go-micro/tree/master/examples/mcp)
-

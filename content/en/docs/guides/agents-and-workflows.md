@@ -3,10 +3,6 @@ title: "Agents and Workflows"
 weight: 60
 description: "Go Micro's AI primitives map directly onto the taxonomy in Anthropic's Building Effective Agentshttps://www.anthropic.com/engineering/building-effective-agents. That post draws one distinction that ma"
 ---
-# Agents and Workflows
-
-Go Micro's AI primitives map directly onto the taxonomy in Anthropic's [Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents). That post draws one distinction that matters:
-
 - **Workflows** — "LLMs and tools orchestrated through **predefined code paths**." Deterministic.
 - **Agents** — "LLMs **dynamically direct their own processes** and tool usage." Model-driven.
 

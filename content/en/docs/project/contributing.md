@@ -3,13 +3,8 @@ title: "Contributing"
 weight: 30
 description: "This is a rendered copy of the repository CONTRIBUTING.md for convenient access via the documentation site."
 ---
-# Contributing
 
-This is a rendered copy of the repository `CONTRIBUTING.md` for convenient access via the documentation site.
-
-## Overview
-
-Go Micro welcomes contributions of all kinds: code, documentation, examples, and plugins.
+> Go Micro welcomes contributions of all kinds: code, documentation, examples, and plugins.
 
 ## Quick Start
 

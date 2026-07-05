@@ -3,9 +3,6 @@ title: "Agent2Agent (A2A)"
 weight: 100
 description: "Go Micro speaks the Agent2Agent A2A protocolhttps://a2a-protocol.org — the open standard for agents on different frameworks to discover and call each other over HTTP. The A2A gateway is the agent-side"
 ---
-# Agent2Agent (A2A)
-
-Go Micro speaks the [Agent2Agent (A2A) protocol](https://a2a-protocol.org) — the open standard for agents on different frameworks to discover and call each other over HTTP. The A2A gateway is the agent-side analogue of the [MCP gateway](../mcp): MCP exposes your services as tools, A2A exposes your agents as agents.
 
 There is nothing to add to an agent. An agent already registers in the registry with `type=agent` metadata; the gateway discovers it, generates an **Agent Card** from that metadata, and translates incoming A2A tasks to the agent's existing `Agent.Chat` RPC — the same call `delegate` and flows use.
 

@@ -1,11 +1,11 @@
 ---
 title: "Getting Started"
 weight: 10
-description: "Go Micro has three core abstractions:"
+description: ""
 ---
-# Getting Started
 
-<img src="/images/generated/getting-started.jpg" alt="Getting started with Go Micro" style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;" />
+
+![Getting started with Go Micro](getting-started.jpg)
 
 Go Micro has three core abstractions:
 

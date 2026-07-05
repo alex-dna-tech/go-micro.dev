@@ -3,6 +3,7 @@
 
 import re
 import os
+import shutil
 import sys
 
 import yaml
@@ -57,6 +58,42 @@ def rewrite_html_links(content):
         return f'{pre}{url}{post}'
 
     return re.sub(r'(\]\()([^)]+\.html)(\))', _replace_link, content)
+
+
+def rewrite_img_tags(content, target_dir):
+    images_to_copy = []
+    def _replace_img(m):
+        src = m.group(1)
+        alt = m.group(2)
+        filename = src.rsplit('/', 1)[-1]
+        src_path = os.path.join('tmp', 'images', 'generated', filename)
+        dst_path = os.path.join(target_dir, filename)
+        images_to_copy.append((src_path, dst_path))
+        return f'![{alt}]({filename})'
+    body = re.sub(
+        r'<img\s+src="(/images/generated/[^"]+)"\s+alt="([^"]*)"[^>]*/?>',
+        _replace_img,
+        content,
+    )
+    return body, images_to_copy
+
+
+def strip_duplicate_header_and_description(body, title):
+    lines = body.split('\n')
+    stripped = []
+    found_h1 = False
+    found_first_p = False
+    for line in lines:
+        if not found_h1 and line.startswith('# ') and line[2:].strip() == title:
+            found_h1 = True
+            continue
+        if found_h1 and not found_first_p and not line.strip():
+            continue
+        if found_h1 and not found_first_p and not line.startswith('#'):
+            found_first_p = True
+            continue
+        stripped.append(line)
+    return '\n'.join(stripped).strip() + '\n'
 
 
 def get_description(body, title):
@@ -175,7 +212,14 @@ def main():
 
             body = strip_jekyll_frontmatter(source_content)
             body = rewrite_html_links(body)
+            target_file_dir = os.path.dirname(target_path)
+            body, images_to_copy = rewrite_img_tags(body, target_file_dir)
+            for src_img, dst_img in images_to_copy:
+                if os.path.exists(src_img):
+                    shutil.copy2(src_img, dst_img)
+                    generated.append(f'  img: {dst_img}')
             description = get_description(body, title)
+            body = strip_duplicate_header_and_description(body, title)
 
             link_title = None
             if title == 'MCP & AI Agents':

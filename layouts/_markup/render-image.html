@@ -11,8 +11,8 @@
 {{- $image := .Page.Resources.GetMatch .Destination -}}
 {{- if and (not $image) .Page.File -}}
   {{- $image = resources.Get (path.Join .Page.File.Dir .Destination) -}}
-{{- else -}}
-  {{- $image := resources.Get $image -}}
+{{- else if not $image -}}
+  {{- $image = resources.Get .Destination -}}
 {{- end -}}
 {{- with $image -}}
   {{- $image_width := $image.Width -}}
