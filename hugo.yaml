@@ -50,13 +50,18 @@ permalinks:
 # Image processing configuration.
 imaging:
   resampleFilter: CatmullRom
-  quality: 75
+  jpeg:
+    quality: 75
+  webp:
+    quality: 75
+  avif:
+    quality: 75
   anchor: smart
 
 # Language configuration
 languages:
   en:
-    languageName: English
+    label: English
     title: GoMicro
     params:
       description: Go-Micro
@@ -81,7 +86,7 @@ markup:
 # Comment out if you don't want the "print entire section" link enabled.
 outputs:
   home: [HTML, print, RSS, redirects, markdown, LLMS]
-  pages: [HTML, print, RSS, markdown]
+  page: [HTML, print, RSS, markdown]
   section: [HTML, print, RSS, markdown]
 
 params:
