@@ -10,8 +10,6 @@ LLMS index: [llms.txt](/llms.txt)
 
 ![Transport](transport.jpg)
 
-The transport layer is responsible for communication between services.
-
 ## Features
 - Pluggable transport implementations
 - Secure and efficient communication

@@ -8,8 +8,6 @@ LLMS index: [llms.txt](/llms.txt)
 
 ---
 
-The store provides a pluggable interface for data storage in Go Micro.
-
 ## Features
 - Key-value storage
 - Multiple backend support

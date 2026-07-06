@@ -1,19 +1,12 @@
 # Your First Agent
 
-> This walkthrough builds the smallest useful Go Micro agent path: one service
+> This walkthrough builds the smallest useful Go Micro agent path: one service with typed endpoints, one agent scoped to that service, and one CLI conversation that proves the agent can use the service as a tool. It is the 0→1 version of the services → agents → workflows lifecycle: build capability first, add intelligence on top, then keep a clear path toward flows when the work needs to run on events or schedules.
 
 ---
 
 LLMS index: [llms.txt](/llms.txt)
 
 ---
-
-This walkthrough builds the smallest useful Go Micro agent path: one service
-with typed endpoints, one agent scoped to that service, and one CLI conversation
-that proves the agent can use the service as a tool. It is the 0→1 version of
-the services → agents → workflows lifecycle: build capability first, add
-intelligence on top, then keep a clear path toward flows when the work needs to
-run on events or schedules.
 
 ## Runnable reference first
 

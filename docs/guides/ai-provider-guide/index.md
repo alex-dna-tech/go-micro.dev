@@ -1,20 +1,12 @@
 # AI Provider Guide
 
-> This guide walks you through implementing a new AI model provider for
+> This guide walks you through implementing a new AI model provider for go-micro's `ai` package. After following these steps your provider will be available via `ai.New("yourprovider")` and automatically usable by the MCP gateway, the agent playground, and any service that calls `service.Model()`.
 
 ---
 
 LLMS index: [llms.txt](/llms.txt)
 
 ---
-
-# Adding an AI Provider to Go Micro
-
-This guide walks you through implementing a new AI model provider for
-go-micro's `ai` package. After following these steps your provider will
-be available via `ai.New("yourprovider")` and automatically usable by the
-MCP gateway, the agent playground, and any service that calls
-`service.Model()`.
 
 ## Overview
 

@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Guides on GoMicro</title><link>https://alex-dna-tech.github.io/docs/guides/</link><description>Recent content in Guides on GoMicro</description><generator>Hugo</generator><language>en</language><atom:link href="https://alex-dna-tech.github.io/docs/guides/index.xml" rel="self" type="application/rss+xml"/><item><title>No-secret First Agent</title><link>https://alex-dna-tech.github.io/docs/guides/no-secret-first-agent/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/no-secret-first-agent/</guid><description>&lt;h1 id="no-secret-first-agent-transcript"&gt;No-secret first-agent transcript&lt;a class="td-heading-self-link" href="#no-secret-first-agent-transcript" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;This is the fastest first-agent success path when you do not have a provider key
-handy. It starts from the maintained &lt;code&gt;examples/support&lt;/code&gt; app and uses the
-repository harness that CI already runs: real Go Micro services, registry,
-broker, client, store, agent loop, flow handoff, and guardrail code with only the
-LLM provider mocked.&lt;/p&gt;
 &lt;p&gt;Use it before the live-provider &lt;a href="https://alex-dna-tech.github.io/docs/guides/your-first-agent/"&gt;Your First Agent&lt;/a&gt;
 walkthrough when you want to see the services → agents → workflows lifecycle run
-end to end with no secrets.&lt;/p&gt;</description></item><item><title>Your First Agent</title><link>https://alex-dna-tech.github.io/docs/guides/your-first-agent/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/your-first-agent/</guid><description>&lt;p&gt;This walkthrough builds the smallest useful Go Micro agent path: one service
-with typed endpoints, one agent scoped to that service, and one CLI conversation
-that proves the agent can use the service as a tool. It is the 0→1 version of
-the services → agents → workflows lifecycle: build capability first, add
-intelligence on top, then keep a clear path toward flows when the work needs to
-run on events or schedules.&lt;/p&gt;</description></item><item><title>0→hero Reference</title><link>https://alex-dna-tech.github.io/docs/guides/zero-to-hero/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/zero-to-hero/</guid><description>&lt;p&gt;Use it when you want to answer: &amp;ldquo;Can I scaffold a service, run it locally, talk
+end to end with no secrets.&lt;/p&gt;
+&lt;h2 id="what-this-proves"&gt;What this proves&lt;a class="td-heading-self-link" href="#what-this-proves" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Services&lt;/strong&gt; expose typed &lt;code&gt;customers&lt;/code&gt;, &lt;code&gt;tickets&lt;/code&gt;, and &lt;code&gt;notify&lt;/code&gt; endpoints.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The &lt;code&gt;support&lt;/code&gt; agent&lt;/strong&gt; discovers those endpoints as tools and uses them to
+triage a ticket.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The &lt;code&gt;intake&lt;/code&gt; flow&lt;/strong&gt; turns a &lt;code&gt;ticket.created&lt;/code&gt; event into an agent run.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The approval gate&lt;/strong&gt; intercepts the customer email action before the tool
+executes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="transcript"&gt;Transcript&lt;a class="td-heading-self-link" href="#transcript" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;From a fresh clone of the repository:&lt;/p&gt;</description></item><item><title>Your First Agent</title><link>https://alex-dna-tech.github.io/docs/guides/your-first-agent/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/your-first-agent/</guid><description>&lt;h2 id="runnable-reference-first"&gt;Runnable reference first&lt;a class="td-heading-self-link" href="#runnable-reference-first" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;If you want to run the lifecycle before copying code, start with the &lt;a href="https://alex-dna-tech.github.io/docs/guides/no-secret-first-agent/"&gt;no-secret first-agent transcript&lt;/a&gt; or run the maintained support-desk example from the repository root:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;go run ./examples/support
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It uses a deterministic mock model by default, so it needs no provider key, and it exercises the same shape this guide teaches: services become tools, an agent uses them, and a flow can trigger the work. Use the transcript for expected output, then use this guide when you are ready to build the smaller 0→1 version yourself.&lt;/p&gt;</description></item><item><title>0→hero Reference</title><link>https://alex-dna-tech.github.io/docs/guides/zero-to-hero/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/zero-to-hero/</guid><description>&lt;p&gt;Use it when you want to answer: &amp;ldquo;Can I scaffold a service, run it locally, talk
 to an agent, inspect durable work, and reach the deployment boundary without
 cloud credentials?&amp;rdquo;&lt;/p&gt;
 &lt;h2 id="what-the-contract-covers"&gt;What the contract covers&lt;a class="td-heading-self-link" href="#what-the-contract-covers" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -67,9 +71,7 @@ cloud credentials?&amp;rdquo;&lt;/p&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id="run-the-runnable-example"&gt;Run the runnable example&lt;a class="td-heading-self-link" href="#run-the-runnable-example" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;From the repository root, start with the support-desk example when you want to see the full lifecycle in one terminal:&lt;/p&gt;</description></item><item><title>Debugging your agent</title><link>https://alex-dna-tech.github.io/docs/guides/debugging-agents/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/debugging-agents/</guid><description>&lt;p&gt;Use this guide when an agent surprises you: it answered without using a service,
-called the wrong endpoint, looped, lost memory, refused a tool, or behaved
-differently when a flow handed work to it. The local inner loop is:&lt;/p&gt;
+&lt;p&gt;From the repository root, start with the support-desk example when you want to see the full lifecycle in one terminal:&lt;/p&gt;</description></item><item><title>Debugging your agent</title><link>https://alex-dna-tech.github.io/docs/guides/debugging-agents/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/debugging-agents/</guid><description>&lt;p&gt;The local inner loop is:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;micro run &lt;span class="c1"&gt;# start services, agents, gateway, dashboard&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;micro chat &lt;span class="c1"&gt;# reproduce one turn&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;micro inspect ... &lt;span class="c1"&gt;# read the recorded run or workflow history&lt;/span&gt;
@@ -116,26 +118,26 @@ agent keep working until the goal is met instead of stopping after one pass. One
 agent improves an architecture while another removes duplicated abstractions,
 both opening pull requests continuously; a draft is refined until it&amp;rsquo;s good
 enough; a build is fixed and re-run until it&amp;rsquo;s green.&lt;/p&gt;</description></item><item><title>Agent2Agent (A2A)</title><link>https://alex-dna-tech.github.io/docs/guides/a2a-protocol/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/a2a-protocol/</guid><description>&lt;p&gt;Go Micro speaks the &lt;a href="https://a2a-protocol.org"&gt;Agent2Agent (A2A) protocol&lt;/a&gt; — the open standard for agents on different frameworks to discover and call each other over HTTP. The A2A gateway is the agent-side analogue of the &lt;a href="../mcp"&gt;MCP gateway&lt;/a&gt;: MCP exposes your services as tools, A2A exposes your agents as agents.&lt;/p&gt;
-&lt;p&gt;There is nothing to add to an agent. An agent already registers in the registry with &lt;code&gt;type=agent&lt;/code&gt; metadata; the gateway discovers it, generates an &lt;strong&gt;Agent Card&lt;/strong&gt; from that metadata, and translates incoming A2A tasks to the agent&amp;rsquo;s existing &lt;code&gt;Agent.Chat&lt;/code&gt; RPC — the same call &lt;code&gt;delegate&lt;/code&gt; and flows use.&lt;/p&gt;</description></item><item><title>AI Provider Guide</title><link>https://alex-dna-tech.github.io/docs/guides/ai-provider-guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/ai-provider-guide/</guid><description>&lt;h1 id="adding-an-ai-provider-to-go-micro"&gt;Adding an AI Provider to Go Micro&lt;a class="td-heading-self-link" href="#adding-an-ai-provider-to-go-micro" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;This guide walks you through implementing a new AI model provider for
-go-micro&amp;rsquo;s &lt;code&gt;ai&lt;/code&gt; package. After following these steps your provider will
-be available via &lt;code&gt;ai.New(&amp;quot;yourprovider&amp;quot;)&lt;/code&gt; and automatically usable by the
-MCP gateway, the agent playground, and any service that calls
-&lt;code&gt;service.Model()&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;There is nothing to add to an agent. An agent already registers in the registry with &lt;code&gt;type=agent&lt;/code&gt; metadata; the gateway discovers it, generates an &lt;strong&gt;Agent Card&lt;/strong&gt; from that metadata, and translates incoming A2A tasks to the agent&amp;rsquo;s existing &lt;code&gt;Agent.Chat&lt;/code&gt; RPC — the same call &lt;code&gt;delegate&lt;/code&gt; and flows use.&lt;/p&gt;</description></item><item><title>AI Provider Guide</title><link>https://alex-dna-tech.github.io/docs/guides/ai-provider-guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/ai-provider-guide/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The &lt;code&gt;ai&lt;/code&gt; package uses the same plugin pattern as the rest of go-micro:
 define an interface, register an implementation, and let users swap
-providers with a single import. All providers live under &lt;code&gt;ai/&amp;lt;name&amp;gt;/&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Provider Conformance</title><link>https://alex-dna-tech.github.io/docs/guides/provider-conformance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/provider-conformance/</guid><description>&lt;h1 id="provider-conformance-matrix"&gt;Provider Conformance Matrix&lt;a class="td-heading-self-link" href="#provider-conformance-matrix" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Go Micro treats model providers as interchangeable pieces of the same agent
+providers with a single import. All providers live under &lt;code&gt;ai/&amp;lt;name&amp;gt;/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Files you will create:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;ai/
+└── yourprovider/
+ ├── yourprovider.go # Provider implementation
+ └── yourprovider_test.go # Unit tests
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="discover-registered-provider-capabilities"&gt;Discover registered provider capabilities&lt;a class="td-heading-self-link" href="#discover-registered-provider-capabilities" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Go Micro exposes the provider interfaces registered in the current build, so
+runtime tooling and docs can report what is actually available after blank
+imports are linked in:&lt;/p&gt;</description></item><item><title>Provider Conformance</title><link>https://alex-dna-tech.github.io/docs/guides/provider-conformance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/provider-conformance/</guid><description>&lt;p&gt;Go Micro treats model providers as interchangeable pieces of the same agent
 harness: services expose tools, agents reason over them, and workflows stitch the
 work together. The conformance harness keeps that promise honest by running the
 same deterministic services → agents → workflows scenarios against every
 configured provider.&lt;/p&gt;
 &lt;p&gt;The live harness is in &lt;code&gt;internal/harness/provider-conformance&lt;/code&gt;. It skips
 providers without API keys by default, so it is safe to run locally, and it fails
-when any configured provider breaks the shared contract.&lt;/p&gt;</description></item><item><title>Atlas Cloud Integration</title><link>https://alex-dna-tech.github.io/docs/guides/atlascloud-integration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/atlascloud-integration/</guid><description>&lt;h1 id="atlas-cloud-integration-guide"&gt;Atlas Cloud Integration Guide&lt;a class="td-heading-self-link" href="#atlas-cloud-integration-guide" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;a href="https://www.atlascloud.ai/"&gt;Atlas Cloud&lt;/a&gt; is an enterprise AI infrastructure platform offering 300+ models across text, image, and video through a unified, OpenAI-compatible API. It is an official Go Micro sponsor and a first-class provider in the &lt;code&gt;ai&lt;/code&gt; package.&lt;/p&gt;
-&lt;h2 id="quick-start"&gt;Quick Start&lt;a class="td-heading-self-link" href="#quick-start" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+when any configured provider breaks the shared contract.&lt;/p&gt;</description></item><item><title>Atlas Cloud Integration</title><link>https://alex-dna-tech.github.io/docs/guides/atlascloud-integration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/atlascloud-integration/</guid><description>&lt;h2 id="quick-start"&gt;Quick Start&lt;a class="td-heading-self-link" href="#quick-start" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Install or update Go Micro:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;go get go-micro.dev/v6@latest
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Import the Atlas Cloud provider and use it:&lt;/p&gt;
@@ -195,9 +197,7 @@ when any configured provider breaks the shared contract.&lt;/p&gt;</description>
 &lt;/table&gt;
 &lt;h3 id="environment-variables"&gt;Environment Variables&lt;a class="td-heading-self-link" href="#environment-variables" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;The &lt;code&gt;micro chat&lt;/code&gt; CLI and &lt;code&gt;micro run&lt;/code&gt; / &lt;code&gt;micro server&lt;/code&gt; read configuration from environment variables:&lt;/p&gt;</description></item><item><title>Payments (x402)</title><link>https://alex-dna-tech.github.io/docs/guides/x402-payments/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/x402-payments/</guid><description>&lt;p&gt;Go Micro can require a payment before a tool runs, using &lt;a href="https://x402.org"&gt;x402&lt;/a&gt; — the open HTTP &lt;strong&gt;402 Payment Required&lt;/strong&gt; standard for stablecoin payments, designed for AI agents and onchain APIs. It lets every Go Micro endpoint, already exposed as an AI-callable tool, become a &lt;em&gt;paid&lt;/em&gt; tool: a service answers a call with &lt;code&gt;402&lt;/code&gt; and payment requirements, the client pays and retries, and the gateway verifies the payment before serving.&lt;/p&gt;
-&lt;p&gt;Payments are &lt;strong&gt;opt-in&lt;/strong&gt; and &lt;strong&gt;dependency-light&lt;/strong&gt;. Go Micro carries no chain or crypto code — it speaks the protocol and delegates verification and settlement to a pluggable &lt;strong&gt;facilitator&lt;/strong&gt; (Coinbase CDP, Alchemy, or self-hosted), so Base and Solana are just different facilitators behind one interface.&lt;/p&gt;</description></item><item><title>Comparison</title><link>https://alex-dna-tech.github.io/docs/guides/comparison/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/comparison/</guid><description>&lt;h1 id="framework-comparison"&gt;Framework Comparison&lt;a class="td-heading-self-link" href="#framework-comparison" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;How Go Micro compares to other Go microservices frameworks.&lt;/p&gt;
-&lt;h2 id="quick-comparison"&gt;Quick Comparison&lt;a class="td-heading-self-link" href="#quick-comparison" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Payments are &lt;strong&gt;opt-in&lt;/strong&gt; and &lt;strong&gt;dependency-light&lt;/strong&gt;. Go Micro carries no chain or crypto code — it speaks the protocol and delegates verification and settlement to a pluggable &lt;strong&gt;facilitator&lt;/strong&gt; (Coinbase CDP, Alchemy, or self-hosted), so Base and Solana are just different facilitators behind one interface.&lt;/p&gt;</description></item><item><title>Comparison</title><link>https://alex-dna-tech.github.io/docs/guides/comparison/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/comparison/</guid><description>&lt;h2 id="quick-comparison"&gt;Quick Comparison&lt;a class="td-heading-self-link" href="#quick-comparison" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 	&lt;thead&gt;
 			&lt;tr&gt;

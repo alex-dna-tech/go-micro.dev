@@ -8,8 +8,6 @@ LLMS index: [llms.txt](/llms.txt)
 
 ---
 
-Plugins are scoped under each interface directory within this repository. To use a plugin, import it directly from the corresponding interface subpackage and pass it to your service via options.
-
 Common interfaces and locations:
 - Registry: `go-micro.dev/v6/registry/*` (e.g. `consul`, `etcd`, `nats`, `mdns`)
 - Broker: `go-micro.dev/v6/broker/*` (e.g. `nats`, `rabbitmq`, `http`, `memory`)

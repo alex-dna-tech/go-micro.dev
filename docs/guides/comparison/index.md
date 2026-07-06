@@ -8,10 +8,6 @@ LLMS index: [llms.txt](/llms.txt)
 
 ---
 
-# Framework Comparison
-
-How Go Micro compares to other Go microservices frameworks.
-
 ## Quick Comparison
 
 | Feature | Go Micro | go-kit | gRPC | Dapr |

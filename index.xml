@@ -101,7 +101,10 @@ Too complex: High barrier to entry, discourages adoption&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;Testing burden&lt;/strong&gt;: Each gateway required separate testing&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="decision"&gt;Decision&lt;a class="td-heading-self-link" href="#decision" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;We unified the gateway implementation by:&lt;/p&gt;</description></item><item><title>Client/Server</title><link>https://alex-dna-tech.github.io/docs/interfaces/client-server/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/client-server/</guid><description>&lt;p&gt;The client is used to make requests to other services.&lt;/p&gt;
+&lt;p&gt;We unified the gateway implementation by:&lt;/p&gt;</description></item><item><title>Client Server</title><link>https://alex-dna-tech.github.io/docs/interfaces/client-server/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/client-server/</guid><description>&lt;h1 id="clientserver"&gt;Client/Server&lt;a class="td-heading-self-link" href="#clientserver" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Go Micro uses a client/server model for RPC communication between services.&lt;/p&gt;
+&lt;h2 id="client"&gt;Client&lt;a class="td-heading-self-link" href="#client" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The client is used to make requests to other services.&lt;/p&gt;
 &lt;h2 id="server"&gt;Server&lt;a class="td-heading-self-link" href="#server" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The server handles incoming requests.&lt;/p&gt;
 &lt;p&gt;Both client and server are pluggable and support middleware wrappers for additional functionality.&lt;/p&gt;
@@ -111,7 +114,7 @@ Too complex: High barrier to entry, discourages adoption&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;go-micro.dev/v5&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;go-micro.dev/v6&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;log&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
@@ -123,8 +126,7 @@ Too complex: High barrier to entry, discourages adoption&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;func&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;service&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;micro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;NewService&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;micro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Name&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;greeter&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;service&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;micro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;NewService&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;greeter&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;service&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;micro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;RegisterHandler&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;service&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Server&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Greeter&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="w"&gt;
@@ -201,14 +203,20 @@ Too complex: High barrier to entry, discourages adoption&lt;/p&gt;
 &lt;p&gt;Run your service with env vars set:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;MICRO_REGISTRY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;consul &lt;span class="nv"&gt;MICRO_REGISTRY_ADDRESS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;127.0.0.1:8500 go run main.go
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>No-secret First Agent</title><link>https://alex-dna-tech.github.io/docs/guides/no-secret-first-agent/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/no-secret-first-agent/</guid><description>&lt;h1 id="no-secret-first-agent-transcript"&gt;No-secret first-agent transcript&lt;a class="td-heading-self-link" href="#no-secret-first-agent-transcript" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;This is the fastest first-agent success path when you do not have a provider key
-handy. It starts from the maintained &lt;code&gt;examples/support&lt;/code&gt; app and uses the
-repository harness that CI already runs: real Go Micro services, registry,
-broker, client, store, agent loop, flow handoff, and guardrail code with only the
-LLM provider mocked.&lt;/p&gt;
 &lt;p&gt;Use it before the live-provider &lt;a href="https://alex-dna-tech.github.io/docs/guides/your-first-agent/"&gt;Your First Agent&lt;/a&gt;
 walkthrough when you want to see the services → agents → workflows lifecycle run
-end to end with no secrets.&lt;/p&gt;</description></item><item><title>State with Postgres Store</title><link>https://alex-dna-tech.github.io/docs/examples/learn-by-examples/store-postgres/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/examples/learn-by-examples/store-postgres/</guid><description>&lt;h2 id="in-code"&gt;In code&lt;a class="td-heading-self-link" href="#in-code" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+end to end with no secrets.&lt;/p&gt;
+&lt;h2 id="what-this-proves"&gt;What this proves&lt;a class="td-heading-self-link" href="#what-this-proves" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Services&lt;/strong&gt; expose typed &lt;code&gt;customers&lt;/code&gt;, &lt;code&gt;tickets&lt;/code&gt;, and &lt;code&gt;notify&lt;/code&gt; endpoints.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The &lt;code&gt;support&lt;/code&gt; agent&lt;/strong&gt; discovers those endpoints as tools and uses them to
+triage a ticket.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The &lt;code&gt;intake&lt;/code&gt; flow&lt;/strong&gt; turns a &lt;code&gt;ticket.created&lt;/code&gt; event into an agent run.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The approval gate&lt;/strong&gt; intercepts the customer email action before the tool
+executes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="transcript"&gt;Transcript&lt;a class="td-heading-self-link" href="#transcript" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;From a fresh clone of the repository:&lt;/p&gt;</description></item><item><title>State with Postgres Store</title><link>https://alex-dna-tech.github.io/docs/examples/learn-by-examples/store-postgres/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/examples/learn-by-examples/store-postgres/</guid><description>&lt;h2 id="in-code"&gt;In code&lt;a class="td-heading-self-link" href="#in-code" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;package&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt;
@@ -311,8 +319,22 @@ end to end with no secrets.&lt;/p&gt;</description></item><item><title>State wit
 &lt;li&gt;&lt;strong&gt;Go 1.24+&lt;/strong&gt; for development. The &lt;code&gt;curl&lt;/code&gt; install below gives you the &lt;code&gt;micro&lt;/code&gt; binary without Go, but &lt;code&gt;micro run&lt;/code&gt; compiles your services, so you&amp;rsquo;ll want Go installed to build them.&lt;/li&gt;
 &lt;li&gt;An &lt;strong&gt;LLM provider key&lt;/strong&gt; (Anthropic, OpenAI, Gemini, …) &lt;em&gt;only&lt;/em&gt; for the AI features — &lt;code&gt;micro run --prompt&lt;/code&gt;, &lt;code&gt;micro chat&lt;/code&gt;, and agents. Plain services need no key. Set it before running, e.g. &lt;code&gt;export ANTHROPIC_API_KEY=sk-ant-...&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Before your first provider-backed agent run, check the local path with:&lt;/p&gt;</description></item><item><title>Registry</title><link>https://alex-dna-tech.github.io/docs/interfaces/registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/registry/</guid><description>&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;The registry is responsible for service discovery in Go Micro. It allows services to register themselves and discover other services.&lt;/p&gt;
+&lt;p&gt;Before your first provider-backed agent run, check the local path with:&lt;/p&gt;</description></item><item><title>Registry</title><link>https://alex-dna-tech.github.io/docs/interfaces/registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/registry/</guid><description>&lt;p&gt;&lt;figure role="figure" aria-label="Registry"&gt;
+ &lt;a href="https://alex-dna-tech.github.io/docs/interfaces/registry/registry.jpg"&gt;
+ &lt;div class="image-wrapper" style="background: linear-gradient(#f9fbfc, #395ea9);"&gt;
+ &lt;img
+ alt="Registry"
+ title="Registry"
+ width="1200"
+ height="800"srcset="https://alex-dna-tech.github.io/docs/interfaces/registry/registry_hu_361ba57780b38549.webp 420w, https://alex-dna-tech.github.io/docs/interfaces/registry/registry_hu_fd333042d738cc01.webp 789w, https://alex-dna-tech.github.io/docs/interfaces/registry/registry_hu_65d5697476888c89.webp 1019w, "
+ sizes="(min-width: 1000px) 789px, (min-width: 500px) 80.42vw, 87.78vw"
+ src="https://alex-dna-tech.github.io/docs/interfaces/registry/registry_hu_8881564135664dac.jpg"
+ decoding="async"loading="lazy"
+ /&gt;
+ &lt;/div&gt;
+ &lt;/a&gt;
+ &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
 &lt;h2 id="features"&gt;Features&lt;a class="td-heading-self-link" href="#features" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Service registration and deregistration&lt;/li&gt;
@@ -329,12 +351,10 @@ end to end with no secrets.&lt;/p&gt;</description></item><item><title>State wit
 &lt;/ul&gt;
 &lt;p&gt;You can configure the registry when initializing your service.&lt;/p&gt;
 &lt;h2 id="plugins-location"&gt;Plugins Location&lt;a class="td-heading-self-link" href="#plugins-location" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Registry plugins live in this repository under &lt;code&gt;go-micro.dev/v6/registry/&amp;lt;plugin&amp;gt;&lt;/code&gt; (e.g., &lt;code&gt;consul&lt;/code&gt;, &lt;code&gt;etcd&lt;/code&gt;, &lt;code&gt;nats&lt;/code&gt;). Import the desired package and pass it via &lt;code&gt;micro.Registry(...)&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Your First Agent</title><link>https://alex-dna-tech.github.io/docs/guides/your-first-agent/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/your-first-agent/</guid><description>&lt;p&gt;This walkthrough builds the smallest useful Go Micro agent path: one service
-with typed endpoints, one agent scoped to that service, and one CLI conversation
-that proves the agent can use the service as a tool. It is the 0→1 version of
-the services → agents → workflows lifecycle: build capability first, add
-intelligence on top, then keep a clear path toward flows when the work needs to
-run on events or schedules.&lt;/p&gt;</description></item><item><title>0→hero Reference</title><link>https://alex-dna-tech.github.io/docs/guides/zero-to-hero/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/zero-to-hero/</guid><description>&lt;p&gt;Use it when you want to answer: &amp;ldquo;Can I scaffold a service, run it locally, talk
+&lt;p&gt;Registry plugins live in this repository under &lt;code&gt;go-micro.dev/v6/registry/&amp;lt;plugin&amp;gt;&lt;/code&gt; (e.g., &lt;code&gt;consul&lt;/code&gt;, &lt;code&gt;etcd&lt;/code&gt;, &lt;code&gt;nats&lt;/code&gt;). Import the desired package and pass it via &lt;code&gt;micro.Registry(...)&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Your First Agent</title><link>https://alex-dna-tech.github.io/docs/guides/your-first-agent/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/your-first-agent/</guid><description>&lt;h2 id="runnable-reference-first"&gt;Runnable reference first&lt;a class="td-heading-self-link" href="#runnable-reference-first" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;If you want to run the lifecycle before copying code, start with the &lt;a href="https://alex-dna-tech.github.io/docs/guides/no-secret-first-agent/"&gt;no-secret first-agent transcript&lt;/a&gt; or run the maintained support-desk example from the repository root:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;go run ./examples/support
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It uses a deterministic mock model by default, so it needs no provider key, and it exercises the same shape this guide teaches: services become tools, an agent uses them, and a flow can trigger the work. Use the transcript for expected output, then use this guide when you are ready to build the smaller 0→1 version yourself.&lt;/p&gt;</description></item><item><title>0→hero Reference</title><link>https://alex-dna-tech.github.io/docs/guides/zero-to-hero/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/zero-to-hero/</guid><description>&lt;p&gt;Use it when you want to answer: &amp;ldquo;Can I scaffold a service, run it locally, talk
 to an agent, inspect durable work, and reach the deployment boundary without
 cloud credentials?&amp;rdquo;&lt;/p&gt;
 &lt;h2 id="what-the-contract-covers"&gt;What the contract covers&lt;a class="td-heading-self-link" href="#what-the-contract-covers" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -435,7 +455,6 @@ agent / flow / micro chat → agent-managed, event-driven, or interactive orches
  &lt;/a&gt;
  &lt;figcaption&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;The broker provides pub/sub messaging for Go Micro services.&lt;/p&gt;
 &lt;h2 id="features"&gt;Features&lt;a class="td-heading-self-link" href="#features" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Publish messages to topics&lt;/li&gt;
@@ -451,7 +470,9 @@ agent / flow / micro chat → agent-managed, event-driven, or interactive orches
 &lt;li&gt;Memory (&lt;code&gt;go-micro.dev/v6/broker/memory&lt;/code&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Plugins are scoped under &lt;code&gt;go-micro.dev/v6/broker/&amp;lt;plugin&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Configure the broker in code or via environment variables.&lt;/p&gt;</description></item><item><title>Contributing</title><link>https://alex-dna-tech.github.io/docs/project/contributing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/project/contributing/</guid><description>&lt;p&gt;This is a rendered copy of the repository &lt;code&gt;CONTRIBUTING.md&lt;/code&gt; for convenient access via the documentation site.&lt;/p&gt;
+&lt;p&gt;Configure the broker in code or via environment variables.&lt;/p&gt;
+&lt;h2 id="example-usage"&gt;Example Usage&lt;a class="td-heading-self-link" href="#example-usage" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s how to use the broker in your Go Micro service:&lt;/p&gt;</description></item><item><title>Contributing</title><link>https://alex-dna-tech.github.io/docs/project/contributing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/project/contributing/</guid><description>&lt;p&gt;This is a rendered copy of the repository &lt;code&gt;CONTRIBUTING.md&lt;/code&gt; for convenient access via the documentation site.&lt;/p&gt;
 &lt;h2 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Go Micro welcomes contributions of all kinds: code, documentation, examples, and plugins.&lt;/p&gt;
 &lt;h2 id="quick-start"&gt;Quick Start&lt;a class="td-heading-self-link" href="#quick-start" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -467,9 +488,7 @@ agent / flow / micro chat → agent-managed, event-driven, or interactive orches
 &lt;li&gt;Open a PR describing motivation and approach&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="commit-format"&gt;Commit Format&lt;a class="td-heading-self-link" href="#commit-format" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Use conventional commits:&lt;/p&gt;</description></item><item><title>Debugging your agent</title><link>https://alex-dna-tech.github.io/docs/guides/debugging-agents/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/debugging-agents/</guid><description>&lt;p&gt;Use this guide when an agent surprises you: it answered without using a service,
-called the wrong endpoint, looped, lost memory, refused a tool, or behaved
-differently when a flow handed work to it. The local inner loop is:&lt;/p&gt;
+&lt;p&gt;Use conventional commits:&lt;/p&gt;</description></item><item><title>Debugging your agent</title><link>https://alex-dna-tech.github.io/docs/guides/debugging-agents/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/debugging-agents/</guid><description>&lt;p&gt;The local inner loop is:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-sh" data-lang="sh"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;micro run &lt;span class="c1"&gt;# start services, agents, gateway, dashboard&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;micro chat &lt;span class="c1"&gt;# reproduce one turn&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;micro inspect ... &lt;span class="c1"&gt;# read the recorded run or workflow history&lt;/span&gt;
@@ -493,7 +512,6 @@ lines for Go, CLI installation, provider-key setup, and the local gateway port.&
  &lt;/a&gt;
  &lt;figcaption&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;The transport layer is responsible for communication between services.&lt;/p&gt;
 &lt;h2 id="features"&gt;Features&lt;a class="td-heading-self-link" href="#features" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Pluggable transport implementations&lt;/li&gt;
@@ -524,8 +542,7 @@ lines for Go, CLI installation, provider-key setup, and the local gateway port.&
 &lt;li&gt;&lt;strong&gt;Secure by default&lt;/strong&gt; — TLS verification on, state scoped per component.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="principles"&gt;Principles&lt;a class="td-heading-self-link" href="#principles" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;These constrain everything below:&lt;/p&gt;</description></item><item><title>Store</title><link>https://alex-dna-tech.github.io/docs/interfaces/store/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/store/</guid><description>&lt;p&gt;The store provides a pluggable interface for data storage in Go Micro.&lt;/p&gt;
-&lt;h2 id="features"&gt;Features&lt;a class="td-heading-self-link" href="#features" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;These constrain everything below:&lt;/p&gt;</description></item><item><title>Store</title><link>https://alex-dna-tech.github.io/docs/interfaces/store/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/store/</guid><description>&lt;h2 id="features"&gt;Features&lt;a class="td-heading-self-link" href="#features" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Key-value storage&lt;/li&gt;
 &lt;li&gt;Multiple backend support&lt;/li&gt;
@@ -569,8 +586,7 @@ lines for Go, CLI installation, provider-key setup, and the local gateway port.&
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="configure-a-specific-store-in-code"&gt;Configure a specific store in code&lt;a class="td-heading-self-link" href="#configure-a-specific-store-in-code" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Postgres:&lt;/p&gt;</description></item><item><title>Agent Guardrails</title><link>https://alex-dna-tech.github.io/docs/guides/agent-guardrails/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/agent-guardrails/</guid><description>&lt;p&gt;An autonomous agent decides its own actions at runtime, which is what makes it useful — and what makes it risky. The common failure modes are mundane: it loops, repeating the same call without making progress; it runs away, taking far more steps (and cost) than the task warrants; it takes an action that should have had a human or a policy in the way.&lt;/p&gt;
-&lt;p&gt;Go Micro separates &lt;strong&gt;orchestration&lt;/strong&gt; (the model deciding what to do) from &lt;strong&gt;execution safety&lt;/strong&gt; (whether a decided action is allowed to run). Every tool call an agent makes passes through one choke point, and that&amp;rsquo;s where the guardrails live — so they apply uniformly to service calls, custom tools, and &lt;code&gt;delegate&lt;/code&gt;, without touching the model or your services.&lt;/p&gt;</description></item><item><title>Get Badge</title><link>https://alex-dna-tech.github.io/docs/project/badge/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/project/badge/</guid><description/></item><item><title>Plugins</title><link>https://alex-dna-tech.github.io/docs/interfaces/plugins/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/plugins/</guid><description>&lt;p&gt;Plugins are scoped under each interface directory within this repository. To use a plugin, import it directly from the corresponding interface subpackage and pass it to your service via options.&lt;/p&gt;
-&lt;p&gt;Common interfaces and locations:&lt;/p&gt;
+&lt;p&gt;Go Micro separates &lt;strong&gt;orchestration&lt;/strong&gt; (the model deciding what to do) from &lt;strong&gt;execution safety&lt;/strong&gt; (whether a decided action is allowed to run). Every tool call an agent makes passes through one choke point, and that&amp;rsquo;s where the guardrails live — so they apply uniformly to service calls, custom tools, and &lt;code&gt;delegate&lt;/code&gt;, without touching the model or your services.&lt;/p&gt;</description></item><item><title>Get Badge</title><link>https://alex-dna-tech.github.io/docs/project/badge/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/project/badge/</guid><description/></item><item><title>Plugins</title><link>https://alex-dna-tech.github.io/docs/interfaces/plugins/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/interfaces/plugins/</guid><description>&lt;p&gt;Common interfaces and locations:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Registry: &lt;code&gt;go-micro.dev/v6/registry/*&lt;/code&gt; (e.g. &lt;code&gt;consul&lt;/code&gt;, &lt;code&gt;etcd&lt;/code&gt;, &lt;code&gt;nats&lt;/code&gt;, &lt;code&gt;mdns&lt;/code&gt;)&lt;/li&gt;
 &lt;li&gt;Broker: &lt;code&gt;go-micro.dev/v6/broker/*&lt;/code&gt; (e.g. &lt;code&gt;nats&lt;/code&gt;, &lt;code&gt;rabbitmq&lt;/code&gt;, &lt;code&gt;http&lt;/code&gt;, &lt;code&gt;memory&lt;/code&gt;)&lt;/li&gt;
@@ -581,7 +597,21 @@ lines for Go, CLI installation, provider-key setup, and the local gateway port.&
 &lt;li&gt;Auth, Cache, etc. follow the same pattern under their respective directories.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="registry-examples"&gt;Registry Examples&lt;a class="td-heading-self-link" href="#registry-examples" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Consul:&lt;/p&gt;</description></item><item><title>Agents and Workflows</title><link>https://alex-dna-tech.github.io/docs/guides/agents-and-workflows/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/agents-and-workflows/</guid><description>&lt;p&gt;Go Micro&amp;rsquo;s AI primitives map directly onto the taxonomy in Anthropic&amp;rsquo;s &lt;a href="https://www.anthropic.com/engineering/building-effective-agents"&gt;Building Effective Agents&lt;/a&gt;. That post draws one distinction that matters:&lt;/p&gt;
+&lt;p&gt;Consul:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;go-micro.dev/v6&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;go-micro.dev/v6/registry/consul&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;func&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;reg&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;consul&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;NewConsulRegistry&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;svc&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;micro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;NewService&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;plugin-example&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;micro&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Registry&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;reg&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;svc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;svc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Etcd:&lt;/p&gt;</description></item><item><title>Agents and Workflows</title><link>https://alex-dna-tech.github.io/docs/guides/agents-and-workflows/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/agents-and-workflows/</guid><description>&lt;p&gt;Go Micro&amp;rsquo;s AI primitives map directly onto the taxonomy in Anthropic&amp;rsquo;s &lt;a href="https://www.anthropic.com/engineering/building-effective-agents"&gt;Building Effective Agents&lt;/a&gt;. That post draws one distinction that matters:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Workflows&lt;/strong&gt; — &amp;ldquo;LLMs and tools orchestrated through &lt;strong&gt;predefined code paths&lt;/strong&gt;.&amp;rdquo; Deterministic.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Agents&lt;/strong&gt; — &amp;ldquo;LLMs &lt;strong&gt;dynamically direct their own processes&lt;/strong&gt; and tool usage.&amp;rdquo; Model-driven.&lt;/li&gt;
@@ -921,16 +951,19 @@ enough; a build is fixed and re-run until it&amp;rsquo;s green.&lt;/p&gt;</descr
 &lt;/blockquote&gt;
 &lt;h2 id="current-hosting-options"&gt;Current Hosting Options&lt;a class="td-heading-self-link" href="#current-hosting-options" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id="single-vps-or-bare-metal"&gt;Single VPS or Bare Metal&lt;a class="td-heading-self-link" href="#single-vps-or-bare-metal" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;The simplest approach. Deploy compiled binaries to a Linux server and manage them with systemd. This is the model described in the &lt;a href="https://alex-dna-tech.github.io/docs/overview/deployment/"&gt;Deployment Guide&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>AI Provider Guide</title><link>https://alex-dna-tech.github.io/docs/guides/ai-provider-guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/ai-provider-guide/</guid><description>&lt;h1 id="adding-an-ai-provider-to-go-micro"&gt;Adding an AI Provider to Go Micro&lt;a class="td-heading-self-link" href="#adding-an-ai-provider-to-go-micro" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;This guide walks you through implementing a new AI model provider for
-go-micro&amp;rsquo;s &lt;code&gt;ai&lt;/code&gt; package. After following these steps your provider will
-be available via &lt;code&gt;ai.New(&amp;quot;yourprovider&amp;quot;)&lt;/code&gt; and automatically usable by the
-MCP gateway, the agent playground, and any service that calls
-&lt;code&gt;service.Model()&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The simplest approach. Deploy compiled binaries to a Linux server and manage them with systemd. This is the model described in the &lt;a href="https://alex-dna-tech.github.io/docs/overview/deployment/"&gt;Deployment Guide&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>AI Provider Guide</title><link>https://alex-dna-tech.github.io/docs/guides/ai-provider-guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/ai-provider-guide/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The &lt;code&gt;ai&lt;/code&gt; package uses the same plugin pattern as the rest of go-micro:
 define an interface, register an implementation, and let users swap
-providers with a single import. All providers live under &lt;code&gt;ai/&amp;lt;name&amp;gt;/&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Performance Considerations</title><link>https://alex-dna-tech.github.io/docs/overview/performance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/performance/</guid><description>&lt;blockquote&gt;
+providers with a single import. All providers live under &lt;code&gt;ai/&amp;lt;name&amp;gt;/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Files you will create:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;ai/
+└── yourprovider/
+ ├── yourprovider.go # Provider implementation
+ └── yourprovider_test.go # Unit tests
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="discover-registered-provider-capabilities"&gt;Discover registered provider capabilities&lt;a class="td-heading-self-link" href="#discover-registered-provider-capabilities" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Go Micro exposes the provider interfaces registered in the current build, so
+runtime tooling and docs can report what is actually available after blank
+imports are linked in:&lt;/p&gt;</description></item><item><title>Performance Considerations</title><link>https://alex-dna-tech.github.io/docs/overview/performance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/performance/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;go-micro is designed for &lt;strong&gt;developer productivity and ease of use&lt;/strong&gt; while maintaining good performance for most use cases. This document explains the performance characteristics and trade-offs.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="reflection-usage"&gt;Reflection Usage&lt;a class="td-heading-self-link" href="#reflection-usage" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -945,17 +978,14 @@ providers with a single import. All providers live under &lt;code&gt;ai/&amp;lt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;server&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;Handle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;server&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;NewHandler&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nx"&gt;GreeterService&lt;/span&gt;&lt;span class="p"&gt;{}))&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This simplicity is &lt;strong&gt;only possible with reflection&lt;/strong&gt;. Alternative approaches (like gRPC or psrpc) require:&lt;/p&gt;</description></item><item><title>Provider Conformance</title><link>https://alex-dna-tech.github.io/docs/guides/provider-conformance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/provider-conformance/</guid><description>&lt;h1 id="provider-conformance-matrix"&gt;Provider Conformance Matrix&lt;a class="td-heading-self-link" href="#provider-conformance-matrix" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Go Micro treats model providers as interchangeable pieces of the same agent
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This simplicity is &lt;strong&gt;only possible with reflection&lt;/strong&gt;. Alternative approaches (like gRPC or psrpc) require:&lt;/p&gt;</description></item><item><title>Provider Conformance</title><link>https://alex-dna-tech.github.io/docs/guides/provider-conformance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/provider-conformance/</guid><description>&lt;p&gt;Go Micro treats model providers as interchangeable pieces of the same agent
 harness: services expose tools, agents reason over them, and workflows stitch the
 work together. The conformance harness keeps that promise honest by running the
 same deterministic services → agents → workflows scenarios against every
 configured provider.&lt;/p&gt;
 &lt;p&gt;The live harness is in &lt;code&gt;internal/harness/provider-conformance&lt;/code&gt;. It skips
 providers without API keys by default, so it is safe to run locally, and it fails
-when any configured provider breaks the shared contract.&lt;/p&gt;</description></item><item><title>Atlas Cloud Integration</title><link>https://alex-dna-tech.github.io/docs/guides/atlascloud-integration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/atlascloud-integration/</guid><description>&lt;h1 id="atlas-cloud-integration-guide"&gt;Atlas Cloud Integration Guide&lt;a class="td-heading-self-link" href="#atlas-cloud-integration-guide" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;a href="https://www.atlascloud.ai/"&gt;Atlas Cloud&lt;/a&gt; is an enterprise AI infrastructure platform offering 300+ models across text, image, and video through a unified, OpenAI-compatible API. It is an official Go Micro sponsor and a first-class provider in the &lt;code&gt;ai&lt;/code&gt; package.&lt;/p&gt;
-&lt;h2 id="quick-start"&gt;Quick Start&lt;a class="td-heading-self-link" href="#quick-start" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+when any configured provider breaks the shared contract.&lt;/p&gt;</description></item><item><title>Atlas Cloud Integration</title><link>https://alex-dna-tech.github.io/docs/guides/atlascloud-integration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/atlascloud-integration/</guid><description>&lt;h2 id="quick-start"&gt;Quick Start&lt;a class="td-heading-self-link" href="#quick-start" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Install or update Go Micro:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;go get go-micro.dev/v6@latest
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Import the Atlas Cloud provider and use it:&lt;/p&gt;
@@ -1015,9 +1045,7 @@ when any configured provider breaks the shared contract.&lt;/p&gt;</description>
 &lt;/table&gt;
 &lt;h3 id="environment-variables"&gt;Environment Variables&lt;a class="td-heading-self-link" href="#environment-variables" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;The &lt;code&gt;micro chat&lt;/code&gt; CLI and &lt;code&gt;micro run&lt;/code&gt; / &lt;code&gt;micro server&lt;/code&gt; read configuration from environment variables:&lt;/p&gt;</description></item><item><title>Payments (x402)</title><link>https://alex-dna-tech.github.io/docs/guides/x402-payments/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/x402-payments/</guid><description>&lt;p&gt;Go Micro can require a payment before a tool runs, using &lt;a href="https://x402.org"&gt;x402&lt;/a&gt; — the open HTTP &lt;strong&gt;402 Payment Required&lt;/strong&gt; standard for stablecoin payments, designed for AI agents and onchain APIs. It lets every Go Micro endpoint, already exposed as an AI-callable tool, become a &lt;em&gt;paid&lt;/em&gt; tool: a service answers a call with &lt;code&gt;402&lt;/code&gt; and payment requirements, the client pays and retries, and the gateway verifies the payment before serving.&lt;/p&gt;
-&lt;p&gt;Payments are &lt;strong&gt;opt-in&lt;/strong&gt; and &lt;strong&gt;dependency-light&lt;/strong&gt;. Go Micro carries no chain or crypto code — it speaks the protocol and delegates verification and settlement to a pluggable &lt;strong&gt;facilitator&lt;/strong&gt; (Coinbase CDP, Alchemy, or self-hosted), so Base and Solana are just different facilitators behind one interface.&lt;/p&gt;</description></item><item><title>Comparison</title><link>https://alex-dna-tech.github.io/docs/guides/comparison/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/comparison/</guid><description>&lt;h1 id="framework-comparison"&gt;Framework Comparison&lt;a class="td-heading-self-link" href="#framework-comparison" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;How Go Micro compares to other Go microservices frameworks.&lt;/p&gt;
-&lt;h2 id="quick-comparison"&gt;Quick Comparison&lt;a class="td-heading-self-link" href="#quick-comparison" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Payments are &lt;strong&gt;opt-in&lt;/strong&gt; and &lt;strong&gt;dependency-light&lt;/strong&gt;. Go Micro carries no chain or crypto code — it speaks the protocol and delegates verification and settlement to a pluggable &lt;strong&gt;facilitator&lt;/strong&gt; (Coinbase CDP, Alchemy, or self-hosted), so Base and Solana are just different facilitators behind one interface.&lt;/p&gt;</description></item><item><title>Comparison</title><link>https://alex-dna-tech.github.io/docs/guides/comparison/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/comparison/</guid><description>&lt;h2 id="quick-comparison"&gt;Quick Comparison&lt;a class="td-heading-self-link" href="#quick-comparison" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;table&gt;
 	&lt;thead&gt;
 			&lt;tr&gt;
@@ -1521,7 +1549,7 @@ v0.14.4-dev &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;script&gt;
 document.addEventListener("DOMContentLoaded", function() {
  var options = { hour: '2-digit', hour12: false, minute: '2-digit', timeZoneName: 'short' };
- var buildDate = new Date("2026-07-06T14:04:51Z");
+ var buildDate = new Date("2026-07-06T16:22:49Z");
  document.getElementById("local-time").innerText = buildDate.toLocaleString(undefined, options);
 });
 &lt;/script&gt;</description></item></channel></rss>

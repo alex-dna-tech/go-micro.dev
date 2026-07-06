@@ -8,8 +8,6 @@ LLMS index: [llms.txt](/llms.txt)
 
 ---
 
-# Provider Conformance Matrix
-
 Go Micro treats model providers as interchangeable pieces of the same agent
 harness: services expose tools, agents reason over them, and workflows stitch the
 work together. The conformance harness keeps that promise honest by running the
