@@ -3,8 +3,6 @@ title: Real-World Examples
 weight: 2
 description: Production-ready patterns and complete application examples.
 ---
-
-
 {{% alert title="Coming Soon" color=warning %}}
 
 We're actively working on additional real-world examples. Contributions are welcome!

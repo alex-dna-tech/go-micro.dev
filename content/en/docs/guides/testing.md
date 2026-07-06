@@ -4,10 +4,6 @@ weight: 1
 draft: true
 description: "The testing package provides utilities for testing micro services in isolation."
 ---
-# Testing Micro Services
-
-The `testing` package provides utilities for testing micro services in isolation.
-
 ## Quick Start
 
 ```go

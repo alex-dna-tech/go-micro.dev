@@ -4,10 +4,6 @@ weight: 1
 draft: true
 description: "Use the Postgres store for persistent key/value state."
 ---
-# State with Postgres Store
-
-Use the Postgres store for persistent key/value state.
-
 ## In code
 
 ```go

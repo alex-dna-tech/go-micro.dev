@@ -2,13 +2,10 @@
 title: "Model"
 weight: 1
 draft: true
-description: "The model package provides a structured data model layer for Go Micro services. Define Go structs, tag your fields, and get CRUD operations with queries, filtering, ordering, and pagination."
+description: "The `model` package provides a structured data model layer for Go Micro services. Define Go structs, tag your fields, and get CRUD operations with queries, filtering, ordering, and pagination."
 ---
-# Data Model
 
 ![Go Micro data model](data-model.jpg)
-
-The `model` package provides a structured data model layer for Go Micro services. Define Go structs, tag your fields, and get CRUD operations with queries, filtering, ordering, and pagination.
 
 ## Quick Start
 

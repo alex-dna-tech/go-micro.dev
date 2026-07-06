@@ -1,16 +1,9 @@
 ---
 title: "AI Provider Guide"
 weight: 110
-description: "This guide walks you through implementing a new AI model provider for"
+description: "This guide walks you through implementing a new AI model provider for go-micro's `ai` package. After following these steps your provider will be available via `ai.New(\"yourprovider\")` and automatically usable by the MCP gateway, the agent playground, and any service that calls `service.Model()`."
+
 ---
-# Adding an AI Provider to Go Micro
-
-This guide walks you through implementing a new AI model provider for
-go-micro's `ai` package. After following these steps your provider will
-be available via `ai.New("yourprovider")` and automatically usable by the
-MCP gateway, the agent playground, and any service that calls
-`service.Model()`.
-
 ## Overview
 
 The `ai` package uses the same plugin pattern as the rest of go-micro:

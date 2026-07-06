@@ -1,9 +1,13 @@
 ---
-title: Client/Server
+title: "Client Server"
 weight: 1
-description: Go Micro uses a client/server model for RPC communication between services.
+description: "Go Micro uses a client/server model for RPC communication between services."
 ---
+# Client/Server
 
+Go Micro uses a client/server model for RPC communication between services.
+
+## Client
 The client is used to make requests to other services.
 
 ## Server
@@ -20,7 +24,7 @@ package main
 
 import (
     "context"
-    "go-micro.dev/v5"
+    "go-micro.dev/v6"
     "log"
 )
 
@@ -32,8 +36,7 @@ func (g *Greeter) Hello(ctx context.Context, req *struct{}, rsp *struct{Msg stri
 }
 
 func main() {
-    service := micro.NewService(
-        micro.Name("greeter"),
+    service := micro.NewService("greeter",
     )
     service.Init()
     micro.RegisterHandler(service.Server(), new(Greeter))

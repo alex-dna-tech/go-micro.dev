@@ -4,10 +4,6 @@ weight: 1
 draft: true
 description: "Use NATS as the transport between services."
 ---
-# NATS Transport
-
-Use NATS as the transport between services.
-
 ## In code
 
 ```go

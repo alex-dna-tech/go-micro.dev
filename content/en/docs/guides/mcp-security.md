@@ -4,10 +4,6 @@ weight: 1
 draft: true
 description: "This guide covers how to secure your MCP gateway for production use, including authentication, per-tool scopes, rate limiting, and audit logging."
 ---
-# MCP Security Guide
-
-This guide covers how to secure your MCP gateway for production use, including authentication, per-tool scopes, rate limiting, and audit logging.
-
 ## Overview
 
 The MCP gateway provides four layers of security:

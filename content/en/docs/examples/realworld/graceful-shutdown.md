@@ -4,8 +4,6 @@ weight: 1
 draft: true
 description: "Properly shutting down services to avoid dropped requests and data loss."
 ---
-Properly shutting down services to avoid dropped requests and data loss.
-
 ## The Problem
 
 Without graceful shutdown:

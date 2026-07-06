@@ -1,12 +1,9 @@
 ---
 title: "Debugging your agent"
 weight: 30
-description: "Use this guide when an agent surprises you: it answered without using a service,"
+description: "Use this guide when an agent surprises you: it answered without using a service, called the wrong endpoint, looped, lost memory, refused a tool, or behaved differently when a flow handed work to it."
 ---
-Use this guide when an agent surprises you: it answered without using a service,
-called the wrong endpoint, looped, lost memory, refused a tool, or behaved
-differently when a flow handed work to it. The local inner loop is:
-
+The local inner loop is:
 ```sh
 micro run          # start services, agents, gateway, dashboard
 micro chat         # reproduce one turn

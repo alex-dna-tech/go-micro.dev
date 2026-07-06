@@ -4,7 +4,7 @@ weight: 1
 draft: true
 description: "micro run provides a complete development environment for Go microservices."
 ---
-# micro run - Local Development
+## Local Development
 
 `micro run` provides a complete development environment for Go microservices.
 

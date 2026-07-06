@@ -3,10 +3,6 @@ title: "Comparison"
 weight: 150
 description: "How Go Micro compares to other Go microservices frameworks."
 ---
-# Framework Comparison
-
-How Go Micro compares to other Go microservices frameworks.
-
 ## Quick Comparison
 
 | Feature | Go Micro | go-kit | gRPC | Dapr |

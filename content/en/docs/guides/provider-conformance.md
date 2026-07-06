@@ -3,7 +3,6 @@ title: "Provider Conformance"
 weight: 120
 description: "Go Micro treats model providers as interchangeable pieces of the same agent"
 ---
-# Provider Conformance Matrix
 
 Go Micro treats model providers as interchangeable pieces of the same agent
 harness: services expose tools, agents reason over them, and workflows stitch the

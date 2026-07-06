@@ -3,7 +3,6 @@ title: NATS Transport
 weight: 6
 description: Use NATS as the transport between services.
 ---
-
 ## In code
 
 ```go

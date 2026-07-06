@@ -4,10 +4,6 @@ weight: 1
 draft: true
 description: "The health package provides health check functionality for microservices, including Kubernetes-style liveness and readiness probes."
 ---
-# Health Checks
-
-The `health` package provides health check functionality for microservices, including Kubernetes-style liveness and readiness probes.
-
 ## Quick Start
 
 ```go

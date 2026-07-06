@@ -4,10 +4,6 @@ weight: 1
 draft: true
 description: "Get up and running with go-micro in under 5 minutes."
 ---
-# Quick Start
-
-Get up and running with go-micro in under 5 minutes.
-
 ## Install
 
 The recommended way is the precompiled binary — no Go toolchain required:

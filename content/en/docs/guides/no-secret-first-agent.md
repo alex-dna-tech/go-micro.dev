@@ -1,15 +1,9 @@
 ---
 title: "No-secret First Agent"
 weight: 5
-description: "This is the fastest first-agent success path when you do not have a provider key"
+description: " This is the fastest first-agent success path when you do not have a provider key handy. It starts from the maintained `examples/support` app and uses the repository harness that CI already runs: real Go Micro services, registry, broker, client, store, agent loop, flow handoff, and guardrail code with only the LLM provider mocked."
 ---
 # No-secret first-agent transcript
-
-This is the fastest first-agent success path when you do not have a provider key
-handy. It starts from the maintained `examples/support` app and uses the
-repository harness that CI already runs: real Go Micro services, registry,
-broker, client, store, agent loop, flow handoff, and guardrail code with only the
-LLM provider mocked.
 
 Use it before the live-provider [Your First Agent](your-first-agent)
 walkthrough when you want to see the services → agents → workflows lifecycle run

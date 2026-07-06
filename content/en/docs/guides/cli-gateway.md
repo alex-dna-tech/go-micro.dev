@@ -2,12 +2,8 @@
 title: "Cli Gateway"
 weight: 1
 draft: true
-description: "The Go Micro CLI provides two gateway modes for accessing your microservices: development (micro run) and production (micro server). Both use the same underlying gateway architecture, ensuring consist"
+description: "The Go Micro CLI provides two gateway modes for accessing your microservices: development (`micro run`) and production (`micro server`). Both use the same underlying gateway architecture, ensuring consistent behavior across environments."
 ---
-# CLI & Gateway Guide
-
-The Go Micro CLI provides two gateway modes for accessing your microservices: development (`micro run`) and production (`micro server`). Both use the same underlying gateway architecture, ensuring consistent behavior across environments.
-
 ## Overview
 
 ```

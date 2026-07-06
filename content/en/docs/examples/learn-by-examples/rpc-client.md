@@ -3,8 +3,6 @@ title: RPC Client
 weight: 2
 description: Call a running service using the Go Micro client.
 ---
-
-
 ```go
 package main
 

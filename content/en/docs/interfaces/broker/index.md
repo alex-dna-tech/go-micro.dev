@@ -5,8 +5,6 @@ description: "The broker provides pub/sub messaging for Go Micro services."
 ---
 ![Broker](broker.jpg)
 
-The broker provides pub/sub messaging for Go Micro services.
-
 ## Features
 - Publish messages to topics
 - Subscribe to topics

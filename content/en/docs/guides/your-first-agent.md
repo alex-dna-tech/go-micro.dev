@@ -1,15 +1,8 @@
 ---
 title: "Your First Agent"
 weight: 10
-description: "This walkthrough builds the smallest useful Go Micro agent path: one service"
+description: "This walkthrough builds the smallest useful Go Micro agent path: one service with typed endpoints, one agent scoped to that service, and one CLI conversation that proves the agent can use the service as a tool. It is the 0→1 version of the services → agents → workflows lifecycle: build capability first, add intelligence on top, then keep a clear path toward flows when the work needs to run on events or schedules."
 ---
-This walkthrough builds the smallest useful Go Micro agent path: one service
-with typed endpoints, one agent scoped to that service, and one CLI conversation
-that proves the agent can use the service as a tool. It is the 0→1 version of
-the services → agents → workflows lifecycle: build capability first, add
-intelligence on top, then keep a clear path toward flows when the work needs to
-run on events or schedules.
-
 ## Runnable reference first
 
 If you want to run the lifecycle before copying code, start with the [no-secret first-agent transcript](no-secret-first-agent) or run the maintained support-desk example from the repository root:

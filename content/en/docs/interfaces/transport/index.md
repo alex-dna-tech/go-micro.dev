@@ -5,8 +5,6 @@ description: "The transport layer is responsible for communication between servi
 ---
 ![Transport](transport.jpg)
 
-The transport layer is responsible for communication between services.
-
 ## Features
 - Pluggable transport implementations
 - Secure and efficient communication

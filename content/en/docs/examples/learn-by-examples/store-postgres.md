@@ -3,7 +3,6 @@ title: State with Postgres Store
 weight: 5
 description: Use the Postgres store for persistent key/value state.
 ---
-
 ## In code
 
 ```go

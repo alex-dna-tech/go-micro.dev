@@ -1,10 +1,10 @@
 ---
-title: "Reflection Evaluation Summary"
+title: "Summary: Reflection Removal Evaluation"
+titleLink: "Reflection Evaluation Summary"
 weight: 1
 draft: true
 description: "Issue: [FEATURE] Remove reflect"
 ---
-# Summary: Reflection Removal Evaluation
 
 **Issue**: [FEATURE] Remove reflect  
 **Date**: 2026-02-03  

@@ -3,8 +3,6 @@ title: "Store"
 weight: 40
 description: "The store provides a pluggable interface for data storage in Go Micro."
 ---
-The store provides a pluggable interface for data storage in Go Micro.
-
 ## Features
 - Key-value storage
 - Multiple backend support
