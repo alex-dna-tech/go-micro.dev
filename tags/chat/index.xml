@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Chat on GoMicro</title><link>https://alex-dna-tech.github.io/tags/chat/</link><description>Recent content in Chat on GoMicro</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 06 Jul 2026 13:05:59 +0300</lastBuildDate><atom:link href="https://alex-dna-tech.github.io/tags/chat/index.xml" rel="self" type="application/rss+xml"/><item><title>micro chat: Talk to Your Services</title><link>https://alex-dna-tech.github.io/blog/2026/05/29/micro-chat-talk-to-your-services/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/blog/2026/05/29/micro-chat-talk-to-your-services/</guid><description>&lt;p&gt;&lt;figure role="figure" aria-label=""&gt;
+ &lt;a href="https://alex-dna-tech.github.io/blog/2026/05/29/micro-chat-talk-to-your-services/developer-experience.jpg"&gt;
+ &lt;div class="image-wrapper" style="background: linear-gradient(#0d0e18, #b9cac5);"&gt;
+ &lt;img
+ alt=""
+ title=""
+ width="1200"
+ height="800"srcset="https://alex-dna-tech.github.io/blog/2026/05/29/micro-chat-talk-to-your-services/developer-experience_hu_25f9e961930f9c6c.webp 420w, https://alex-dna-tech.github.io/blog/2026/05/29/micro-chat-talk-to-your-services/developer-experience_hu_66426f2033e7a07c.webp 789w, https://alex-dna-tech.github.io/blog/2026/05/29/micro-chat-talk-to-your-services/developer-experience_hu_c399469856c46d5f.webp 1019w, "
+ sizes="(min-width: 1000px) 789px, (min-width: 500px) 80.42vw, 87.78vw"
+ src="https://alex-dna-tech.github.io/blog/2026/05/29/micro-chat-talk-to-your-services/developer-experience_hu_a59c6abb530f08fd.jpg"
+ decoding="async"loading="lazy"
+ /&gt;
+ &lt;/div&gt;
+ &lt;/a&gt;
+ &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;We built &lt;code&gt;micro chat&lt;/code&gt; — a CLI that lets you talk to your microservices through an LLM. It discovers every service in the registry, exposes each endpoint as a tool, and lets a model decide which RPCs to call based on what you ask.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;ANTHROPIC_API_KEY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;sk-ant-... micro chat --provider anthropic
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;gt; list all users
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; → called users_Users_List&lt;span class="o"&gt;({})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There are &lt;span class="m"&gt;3&lt;/span&gt; users: Alice, Bob, and Charlie.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;gt; send a welcome email to Alice
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; → called email_Email_Send&lt;span class="o"&gt;({&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;to&amp;#34;&lt;/span&gt;:&lt;span class="s2"&gt;&amp;#34;alice@example.com&amp;#34;&lt;/span&gt;,&lt;span class="s2"&gt;&amp;#34;template&amp;#34;&lt;/span&gt;:&lt;span class="s2"&gt;&amp;#34;welcome&amp;#34;&lt;/span&gt;&lt;span class="o"&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Done, welcome email sent to Alice.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;gt; how many orders were placed this week?
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; → called orders_Orders_Count&lt;span class="o"&gt;({&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;since&amp;#34;&lt;/span&gt;:&lt;span class="s2"&gt;&amp;#34;2026-05-22&amp;#34;&lt;/span&gt;&lt;span class="o"&gt;})&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There were &lt;span class="m"&gt;47&lt;/span&gt; orders placed this week.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;No glue code. No API wrappers. No tool definitions. You write normal Go services with doc comments, and &lt;code&gt;micro chat&lt;/code&gt; turns them into things an LLM can call.&lt;/p&gt;</description></item></channel></rss>

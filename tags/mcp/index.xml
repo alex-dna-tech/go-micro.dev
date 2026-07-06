@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MCP on GoMicro</title><link>https://alex-dna-tech.github.io/tags/mcp/</link><description>Recent content in MCP on GoMicro</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 06 Jul 2026 13:05:59 +0300</lastBuildDate><atom:link href="https://alex-dna-tech.github.io/tags/mcp/index.xml" rel="self" type="application/rss+xml"/><item><title>Tools as Services: Why Go Micro Was Always Ready for AI</title><link>https://alex-dna-tech.github.io/blog/2026/05/30/tools-as-services-why-go-micro-was-always-ready-for-ai/</link><pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/blog/2026/05/30/tools-as-services-why-go-micro-was-always-ready-for-ai/</guid><description>&lt;p&gt;When people see &lt;code&gt;micro chat&lt;/code&gt; or the MCP gateway, they assume we built something new. We didn&amp;rsquo;t. We exposed something that was already there.&lt;/p&gt;
+&lt;p&gt;Go Micro has always treated services as self-describing, addressable units. Every service registers its name, endpoints, and request types with the registry. Every endpoint is callable through a standardised path. The only thing that changed is &lt;em&gt;who&amp;rsquo;s calling&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id="the-pattern"&gt;The Pattern&lt;a class="td-heading-self-link" href="#the-pattern" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Go Micro was built on one idea: &lt;strong&gt;a service should be accessible the same way regardless of how you access it&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Your Microservices Are Already an AI Platform</title><link>https://alex-dna-tech.github.io/blog/2026/03/05/your-microservices-are-already-an-ai-platform/</link><pubDate>Thu, 05 Mar 2026 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/blog/2026/03/05/your-microservices-are-already-an-ai-platform/</guid><description>&lt;p&gt;&lt;figure role="figure" aria-label=""&gt;
+ &lt;a href="https://alex-dna-tech.github.io/blog/2026/03/05/your-microservices-are-already-an-ai-platform/blog-mcp.jpg"&gt;
+ &lt;div class="image-wrapper" style="background: linear-gradient(#f9fafd, #22305d, #5160be);"&gt;
+ &lt;img
+ alt=""
+ title=""
+ width="1200"
+ height="800"srcset="https://alex-dna-tech.github.io/blog/2026/03/05/your-microservices-are-already-an-ai-platform/blog-mcp_hu_2142880c2718e3a6.webp 420w, https://alex-dna-tech.github.io/blog/2026/03/05/your-microservices-are-already-an-ai-platform/blog-mcp_hu_ec9e7f9c4109f676.webp 789w, https://alex-dna-tech.github.io/blog/2026/03/05/your-microservices-are-already-an-ai-platform/blog-mcp_hu_6f2d540900bbe0f.webp 1019w, "
+ sizes="(min-width: 1000px) 789px, (min-width: 500px) 80.42vw, 87.78vw"
+ src="https://alex-dna-tech.github.io/blog/2026/03/05/your-microservices-are-already-an-ai-platform/blog-mcp_hu_b73698a5ebf9f06e.jpg"
+ decoding="async"loading="lazy"
+ /&gt;
+ &lt;/div&gt;
+ &lt;/a&gt;
+ &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s the pitch: you have microservices. They already have well-defined endpoints, typed request/response schemas, and service discovery. An AI agent needs the same things — a list of tools with input schemas and descriptions. The gap between &amp;ldquo;microservice endpoint&amp;rdquo; and &amp;ldquo;AI tool&amp;rdquo; is surprisingly small.&lt;/p&gt;
+&lt;p&gt;With Go Micro + MCP, that gap is &lt;strong&gt;zero lines of code&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Making Microservices AI-Native with MCP</title><link>https://alex-dna-tech.github.io/blog/2026/02/11/making-microservices-ai-native-with-mcp/</link><pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/blog/2026/02/11/making-microservices-ai-native-with-mcp/</guid><description>&lt;p&gt;&lt;figure role="figure" aria-label=""&gt;
+ &lt;a href="https://alex-dna-tech.github.io/blog/2026/02/11/making-microservices-ai-native-with-mcp/blog-mcp.jpg"&gt;
+ &lt;div class="image-wrapper" style="background: linear-gradient(#f9fafd, #22305d, #5160be);"&gt;
+ &lt;img
+ alt=""
+ title=""
+ width="1200"
+ height="800"srcset="https://alex-dna-tech.github.io/blog/2026/02/11/making-microservices-ai-native-with-mcp/blog-mcp_hu_2142880c2718e3a6.webp 420w, https://alex-dna-tech.github.io/blog/2026/02/11/making-microservices-ai-native-with-mcp/blog-mcp_hu_ec9e7f9c4109f676.webp 789w, https://alex-dna-tech.github.io/blog/2026/02/11/making-microservices-ai-native-with-mcp/blog-mcp_hu_6f2d540900bbe0f.webp 1019w, "
+ sizes="(min-width: 1000px) 789px, (min-width: 500px) 80.42vw, 87.78vw"
+ src="https://alex-dna-tech.github.io/blog/2026/02/11/making-microservices-ai-native-with-mcp/blog-mcp_hu_b73698a5ebf9f06e.jpg"
+ decoding="async"loading="lazy"
+ /&gt;
+ &lt;/div&gt;
+ &lt;/a&gt;
+ &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;re excited to announce &lt;strong&gt;MCP (Model Context Protocol) support&lt;/strong&gt; in Go Micro v5.15.0 — making your microservices instantly accessible to AI tools like Claude.&lt;/p&gt;
+&lt;h2 id="the-vision"&gt;The Vision&lt;a class="td-heading-self-link" href="#the-vision" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Imagine telling Claude: &lt;em&gt;&amp;ldquo;Why is user 123&amp;rsquo;s order stuck?&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Claude responds by:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Calling your &lt;code&gt;users&lt;/code&gt; service to check the account&lt;/li&gt;
+&lt;li&gt;Calling your &lt;code&gt;orders&lt;/code&gt; service to inspect the order&lt;/li&gt;
+&lt;li&gt;Calling your &lt;code&gt;payments&lt;/code&gt; service to verify the transaction&lt;/li&gt;
+&lt;li&gt;Giving you a complete diagnosis&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;No API wrappers. No manual integrations. Your services just work with AI.&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tutorial on GoMicro</title><link>https://alex-dna-tech.github.io/tags/tutorial/</link><description>Recent content in Tutorial on GoMicro</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 06 Jul 2026 13:05:59 +0300</lastBuildDate><atom:link href="https://alex-dna-tech.github.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml"/><item><title>Building a Support Agent in Go</title><link>https://alex-dna-tech.github.io/blog/2026/06/19/building-a-support-agent-in-go/</link><pubDate>Fri, 19 Jun 2026 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/blog/2026/06/19/building-a-support-agent-in-go/</guid><description>&lt;p&gt;Most agent demos are a chat box wired to one tool. Real systems aren&amp;rsquo;t that — they&amp;rsquo;re a handful of services, an agent that operates them, something that triggers the agent without a human typing, and a gate on the actions you don&amp;rsquo;t want it taking on its own. Here&amp;rsquo;s that, built end to end. The full code is in &lt;a href="https://github.com/micro/go-micro/tree/master/examples/support"&gt;&lt;code&gt;examples/support&lt;/code&gt;&lt;/a&gt;; it runs with no API key.&lt;/p&gt;
+&lt;p&gt;The scenario: a customer files a ticket. That should trigger an agent to look the customer up, set a priority, and reply — but it must not email anyone without passing an approval gate.&lt;/p&gt;</description></item><item><title>Build Your Own AI Agent CLI in 150 Lines</title><link>https://alex-dna-tech.github.io/blog/2026/05/30/build-your-own-ai-agent-cli-in-150-lines/</link><pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/blog/2026/05/30/build-your-own-ai-agent-cli-in-150-lines/</guid><description>&lt;p&gt;&lt;figure role="figure" aria-label=""&gt;
+ &lt;a href="https://alex-dna-tech.github.io/blog/2026/05/30/build-your-own-ai-agent-cli-in-150-lines/developer-experience.jpg"&gt;
+ &lt;div class="image-wrapper" style="background: linear-gradient(#0d0e18, #b9cac5);"&gt;
+ &lt;img
+ alt=""
+ title=""
+ width="1200"
+ height="800"srcset="https://alex-dna-tech.github.io/blog/2026/05/30/build-your-own-ai-agent-cli-in-150-lines/developer-experience_hu_25f9e961930f9c6c.webp 420w, https://alex-dna-tech.github.io/blog/2026/05/30/build-your-own-ai-agent-cli-in-150-lines/developer-experience_hu_66426f2033e7a07c.webp 789w, https://alex-dna-tech.github.io/blog/2026/05/30/build-your-own-ai-agent-cli-in-150-lines/developer-experience_hu_c399469856c46d5f.webp 1019w, "
+ sizes="(min-width: 1000px) 789px, (min-width: 500px) 80.42vw, 87.78vw"
+ src="https://alex-dna-tech.github.io/blog/2026/05/30/build-your-own-ai-agent-cli-in-150-lines/developer-experience_hu_a59c6abb530f08fd.jpg"
+ decoding="async"loading="lazy"
+ /&gt;
+ &lt;/div&gt;
+ &lt;/a&gt;
+ &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;We &lt;a href="https://alex-dna-tech.github.io/blog/10"&gt;introduced &lt;code&gt;micro chat&lt;/code&gt;&lt;/a&gt; — a CLI that lets you talk to your microservices through an LLM. People asked how it works under the hood. The honest answer: it&amp;rsquo;s about 150 lines, and there&amp;rsquo;s no magic. This post walks through every piece so you can build your own — for go-micro, for your own framework, or for whatever services you have.&lt;/p&gt;</description></item></channel></rss>

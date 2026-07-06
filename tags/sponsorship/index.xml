@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sponsorship on GoMicro</title><link>https://alex-dna-tech.github.io/tags/sponsorship/</link><description>Recent content in Sponsorship on GoMicro</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 06 Jul 2026 13:05:59 +0300</lastBuildDate><atom:link href="https://alex-dna-tech.github.io/tags/sponsorship/index.xml" rel="self" type="application/rss+xml"/><item><title>Go Micro Joins OpenAI's Codex for Open Source</title><link>https://alex-dna-tech.github.io/blog/2026/06/23/go-micro-joins-openai-s-codex-for-open-source/</link><pubDate>Tue, 23 Jun 2026 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/blog/2026/06/23/go-micro-joins-openai-s-codex-for-open-source/</guid><description>&lt;p&gt;Go Micro has been accepted into &lt;strong&gt;OpenAI&amp;rsquo;s Codex for Open Source&lt;/strong&gt; program. OpenAI is covering six months of ChatGPT Pro — and with it, access to Codex — to support the day-to-day work of maintaining the project.&lt;/p&gt;
+&lt;h2 id="what-the-grant-is"&gt;What the grant is&lt;a class="td-heading-self-link" href="#what-the-grant-is" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Codex for Open Source backs maintainers directly: the constant, unglamorous work of reviewing changes, cutting releases, triaging issues, and keeping quality high. That&amp;rsquo;s most of what maintaining a framework actually is, and it&amp;rsquo;s the part that rarely gets funded. OpenAI putting Codex against it is a real, practical help.&lt;/p&gt;</description></item><item><title>Atlas Cloud Sponsors Go Micro: 300+ AI Models, One Integration</title><link>https://alex-dna-tech.github.io/blog/2026/05/28/atlas-cloud-sponsors-go-micro-300-ai-models-one-integration/</link><pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/blog/2026/05/28/atlas-cloud-sponsors-go-micro-300-ai-models-one-integration/</guid><description>&lt;p&gt;&lt;figure role="figure" aria-label=""&gt;
+ &lt;a href="https://alex-dna-tech.github.io/blog/2026/05/28/atlas-cloud-sponsors-go-micro-300-ai-models-one-integration/blog-atlas.jpg"&gt;
+ &lt;div class="image-wrapper" style="background: linear-gradient(#d5e6fd, #225dc7, #4f97f3);"&gt;
+ &lt;img
+ alt=""
+ title=""
+ width="1200"
+ height="800"srcset="https://alex-dna-tech.github.io/blog/2026/05/28/atlas-cloud-sponsors-go-micro-300-ai-models-one-integration/blog-atlas_hu_612726cef0d9dbf7.webp 420w, https://alex-dna-tech.github.io/blog/2026/05/28/atlas-cloud-sponsors-go-micro-300-ai-models-one-integration/blog-atlas_hu_a0e3d4b8b2ee2c63.webp 789w, https://alex-dna-tech.github.io/blog/2026/05/28/atlas-cloud-sponsors-go-micro-300-ai-models-one-integration/blog-atlas_hu_76df8b8dafb0cb40.webp 1019w, "
+ sizes="(min-width: 1000px) 789px, (min-width: 500px) 80.42vw, 87.78vw"
+ src="https://alex-dna-tech.github.io/blog/2026/05/28/atlas-cloud-sponsors-go-micro-300-ai-models-one-integration/blog-atlas_hu_e1ed09b60f6c82cc.jpg"
+ decoding="async"loading="lazy"
+ /&gt;
+ &lt;/div&gt;
+ &lt;/a&gt;
+ &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;re excited to announce that &lt;strong&gt;&lt;a href="https://www.atlascloud.ai/"&gt;Atlas Cloud&lt;/a&gt;&lt;/strong&gt; is sponsoring Go Micro as an official AI provider partner. Atlas Cloud is now a first-class provider in the &lt;code&gt;ai&lt;/code&gt; package, giving Go Micro users access to 300+ models across text, image, and video through a single integration.&lt;/p&gt;
+&lt;h2 id="the-sponsorship"&gt;The Sponsorship&lt;a class="td-heading-self-link" href="#the-sponsorship" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Atlas Cloud is an enterprise AI infrastructure platform that provides a unified API for LLM, image, and video generation. They partner with OpenRouter and ComfyUI, offer SOC 2 and HIPAA compliance, and run a custom inference engine (Atlas Photon) with FP4 quantization for fast, cost-effective inference.&lt;/p&gt;</description></item></channel></rss>

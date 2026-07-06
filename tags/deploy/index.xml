@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Deploy on GoMicro</title><link>https://alex-dna-tech.github.io/tags/deploy/</link><description>Recent content in Deploy on GoMicro</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 06 Jul 2026 13:05:59 +0300</lastBuildDate><atom:link href="https://alex-dna-tech.github.io/tags/deploy/index.xml" rel="self" type="application/rss+xml"/><item><title>Introducing micro deploy</title><link>https://alex-dna-tech.github.io/blog/2026/01/27/introducing-micro-deploy/</link><pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/blog/2026/01/27/introducing-micro-deploy/</guid><description>&lt;p&gt;&lt;figure role="figure" aria-label=""&gt;
+ &lt;a href="https://alex-dna-tech.github.io/blog/2026/01/27/introducing-micro-deploy/blog-deploy.jpg"&gt;
+ &lt;div class="image-wrapper" style="background: linear-gradient(#f9fafb, #2e3b51, #4e79b5);"&gt;
+ &lt;img
+ alt=""
+ title=""
+ width="1200"
+ height="800"srcset="https://alex-dna-tech.github.io/blog/2026/01/27/introducing-micro-deploy/blog-deploy_hu_76f26a844d7a641b.webp 420w, https://alex-dna-tech.github.io/blog/2026/01/27/introducing-micro-deploy/blog-deploy_hu_478ef1bd0af28e82.webp 789w, https://alex-dna-tech.github.io/blog/2026/01/27/introducing-micro-deploy/blog-deploy_hu_7e6359610d0d15f3.webp 1019w, "
+ sizes="(min-width: 1000px) 789px, (min-width: 500px) 80.42vw, 87.78vw"
+ src="https://alex-dna-tech.github.io/blog/2026/01/27/introducing-micro-deploy/blog-deploy_hu_41077b64420e609d.jpg"
+ decoding="async"loading="lazy"
+ /&gt;
+ &lt;/div&gt;
+ &lt;/a&gt;
+ &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;re excited to announce &lt;strong&gt;micro deploy&lt;/strong&gt; in Go Micro v5.13.0 — a simple way to deploy your services to any Linux server.&lt;/p&gt;
+&lt;h2 id="the-problem"&gt;The Problem&lt;a class="td-heading-self-link" href="#the-problem" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Go Micro has always been great for building microservices:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;micro new myservice
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; myservice
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;micro run
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;But getting those services to production? That was on you. You&amp;rsquo;d need to figure out Docker, Kubernetes, or write your own deployment scripts.&lt;/p&gt;</description></item></channel></rss>
