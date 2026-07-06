@@ -46,3 +46,12 @@ To propose a new ADR:
 5. Update status based on review
 
 ADRs are immutable once accepted. To change a decision, create a new ADR that supersedes the old one.
+
+---
+
+Section pages:
+
+- [Adr 001 Plugin Architecture](/docs/project/architecture/adr-001-plugin-architecture/): Microservices frameworks need to support multiple infrastructure backends (registries, brokers, transports, stores). Different teams have different preferences and existing infrastructure.
+- [Adr 004 Mdns Default Registry](/docs/project/architecture/adr-004-mdns-default-registry/): Service discovery is critical for microservices. Common approaches:
+- [Adr 009 Progressive Configuration](/docs/project/architecture/adr-009-progressive-configuration/): Microservices frameworks face a paradox:
+- [Adr 010 Unified Gateway](/docs/project/architecture/adr-010-unified-gateway/): Authors: Go Micro Team
