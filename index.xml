@@ -334,14 +334,63 @@ with typed endpoints, one agent scoped to that service, and one CLI conversation
 that proves the agent can use the service as a tool. It is the 0→1 version of
 the services → agents → workflows lifecycle: build capability first, add
 intelligence on top, then keep a clear path toward flows when the work needs to
-run on events or schedules.&lt;/p&gt;</description></item><item><title>0→hero Reference</title><link>https://alex-dna-tech.github.io/docs/guides/zero-to-hero/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/zero-to-hero/</guid><description>&lt;h1 id="0hero-reference-path"&gt;0→hero reference path&lt;a class="td-heading-self-link" href="#0hero-reference-path" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;The 0→hero path is the maintained, no-secret reference for the Go Micro
-services → agents → workflows lifecycle. It ties the CLI inner loop and the
-runtime harness together so a contributor can prove the framework still works as
-one system, not as separate demos.&lt;/p&gt;
-&lt;p&gt;Use it when you want to answer: &amp;ldquo;Can I scaffold a service, run it locally, talk
+run on events or schedules.&lt;/p&gt;</description></item><item><title>0→hero Reference</title><link>https://alex-dna-tech.github.io/docs/guides/zero-to-hero/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/guides/zero-to-hero/</guid><description>&lt;p&gt;Use it when you want to answer: &amp;ldquo;Can I scaffold a service, run it locally, talk
 to an agent, inspect durable work, and reach the deployment boundary without
-cloud credentials?&amp;rdquo;&lt;/p&gt;</description></item><item><title>AI Integration</title><link>https://alex-dna-tech.github.io/docs/overview/ai-integration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/ai-integration/</guid><description>&lt;p&gt;Go Micro is an AI-native microservices framework. Every service you build is automatically accessible to AI agents, and every service can call AI models. This page explains how the pieces fit together.&lt;/p&gt;
+cloud credentials?&amp;rdquo;&lt;/p&gt;
+&lt;h2 id="what-the-contract-covers"&gt;What the contract covers&lt;a class="td-heading-self-link" href="#what-the-contract-covers" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;Boundary&lt;/th&gt;
+					&lt;th&gt;Contract&lt;/th&gt;
+					&lt;th&gt;CI check&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Scaffold&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;micro new&lt;/code&gt; generates a runnable service with and without MCP support.&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;go test ./cmd/micro/cli/new -run TestZeroToOne -count=1&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;First agent&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;micro new&lt;/code&gt;, &lt;code&gt;micro agent preflight&lt;/code&gt;, &lt;code&gt;micro run&lt;/code&gt;, &lt;code&gt;micro chat&lt;/code&gt;, and &lt;code&gt;micro inspect agent&lt;/code&gt; stay available for the documented first-agent walkthrough.&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;go test ./cmd/micro -run TestFirstAgentWalkthroughCLIBoundaries -count=1&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Run&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;micro run&lt;/code&gt; remains the local development entry point.&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;go test ./cmd/micro -run TestZeroToHeroCLIBoundaries -count=1&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Chat&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;micro chat&lt;/code&gt; remains the interactive agent entry point.&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;go test ./cmd/micro -run TestZeroToHeroCLIBoundaries -count=1&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Inspect&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;micro inspect agent&lt;/code&gt;, &lt;code&gt;micro inspect flow&lt;/code&gt;, and &lt;code&gt;micro flow runs&lt;/code&gt; remain discoverable for run history.&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;go test ./cmd/micro -run TestZeroToHeroCLIBoundaries -count=1&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Deploy&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;micro deploy --dry-run&lt;/code&gt; resolves deploy targets without touching remote infrastructure.&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;go test ./cmd/micro/cli/deploy -run TestDeployDryRun -count=1&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Runtime reference app&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;examples/support&lt;/code&gt; runs typed services, an agent using those services as tools, an event-driven flow handoff, and an approval gate with only the model mocked.&lt;/td&gt;
+					&lt;td&gt;`go test ./examples/support -run &amp;lsquo;TestRunSupportMockSmoke&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Runtime harnesses&lt;/td&gt;
+					&lt;td&gt;Real services, agents, durable flows, store-backed history, delegation, and A2A run with only the model mocked.&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;./internal/harness/zero-to-hero-ci/run.sh&lt;/code&gt; and &lt;code&gt;make provider-conformance-mock&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="run-the-runnable-example"&gt;Run the runnable example&lt;a class="td-heading-self-link" href="#run-the-runnable-example" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;From the repository root, start with the support-desk example when you want to see the full lifecycle in one terminal:&lt;/p&gt;</description></item><item><title>AI Integration</title><link>https://alex-dna-tech.github.io/docs/overview/ai-integration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alex-dna-tech.github.io/docs/overview/ai-integration/</guid><description>&lt;p&gt;Go Micro is an AI-native microservices framework. Every service you build is automatically accessible to AI agents, and every service can call AI models. This page explains how the pieces fit together.&lt;/p&gt;
 &lt;p&gt;&lt;figure role="figure" aria-label="AI integration architecture"&gt;
  &lt;a href="https://alex-dna-tech.github.io/docs/overview/ai-integration/mcp-agent.jpg"&gt;
  &lt;div class="image-wrapper" style="background: linear-gradient(#fbfbfd, #5751ca, #253148, #61a2ec);"&gt;
@@ -1472,7 +1521,7 @@ v0.14.4-dev &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;script&gt;
 document.addEventListener("DOMContentLoaded", function() {
  var options = { hour: '2-digit', hour12: false, minute: '2-digit', timeZoneName: 'short' };
- var buildDate = new Date("2026-07-06T13:59:11Z");
+ var buildDate = new Date("2026-07-06T14:04:51Z");
  document.getElementById("local-time").innerText = buildDate.toLocaleString(undefined, options);
 });
 &lt;/script&gt;</description></item></channel></rss>

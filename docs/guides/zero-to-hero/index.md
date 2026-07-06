@@ -1,19 +1,12 @@
 # 0→hero Reference
 
-> The 0→hero path is the maintained, no-secret reference for the Go Micro
+> The 0→hero path is the maintained, no-secret reference for the Go Micro services → agents → workflows lifecycle. It ties the CLI inner loop and the runtime harness together so a contributor can prove the framework still works as one system, not as separate demos.
 
 ---
 
 LLMS index: [llms.txt](/llms.txt)
 
 ---
-
-# 0→hero reference path
-
-The 0→hero path is the maintained, no-secret reference for the Go Micro
-services → agents → workflows lifecycle. It ties the CLI inner loop and the
-runtime harness together so a contributor can prove the framework still works as
-one system, not as separate demos.
 
 Use it when you want to answer: "Can I scaffold a service, run it locally, talk
 to an agent, inspect durable work, and reach the deployment boundary without

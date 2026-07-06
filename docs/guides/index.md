@@ -9,7 +9,7 @@ Section pages:
 - [Migration Guides](/docs/guides/migration/): Step-by-step guides for migrating to Go Micro from other frameworks.
 - [No-secret First Agent](/docs/guides/no-secret-first-agent/): This is the fastest first-agent success path when you do not have a provider key
 - [Your First Agent](/docs/guides/your-first-agent/): This walkthrough builds the smallest useful Go Micro agent path: one service
-- [0→hero Reference](/docs/guides/zero-to-hero/): The 0→hero path is the maintained, no-secret reference for the Go Micro
+- [0→hero Reference](/docs/guides/zero-to-hero/): The 0→hero path is the maintained, no-secret reference for the Go Micro services → agents → workflows lifecycle. It ties the CLI inner loop and the runtime harness together so a contributor can prove the framework still works as one system, not as separate demos.
 - [Debugging your agent](/docs/guides/debugging-agents/): Use this guide when an agent surprises you: it answered without using a service,
 - [Plan & Delegate](/docs/guides/plan-delegate/): Every Go Micro agent has two built-in capabilities, on top of the service tools it discovers:
 - [Agent Guardrails](/docs/guides/agent-guardrails/): An autonomous agent decides its own actions at runtime, which is what makes it useful — and what makes it risky. The common failure modes are mundane: it loops, repeating the same call without making
