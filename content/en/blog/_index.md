@@ -3,6 +3,6 @@ title: Blog
 aliases: [/blog/2018/*]
 menu:
   main:
-    weight: 30
+    weight: 20
     pre: <i class='fa-solid fa-blog'></i>
 ---
