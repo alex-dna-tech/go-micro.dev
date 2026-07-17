@@ -1,6 +1,6 @@
 ---
 title: "Summary: Reflection Removal Evaluation"
-titleLink: "Reflection Evaluation Summary"
+linkTitle: "Reflection Evaluation Summary"
 weight: 1
 draft: true
 description: "Issue: [FEATURE] Remove reflect"

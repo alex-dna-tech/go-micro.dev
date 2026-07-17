@@ -224,9 +224,9 @@ For the complete roadmap including business model details, risk mitigation, and 
 
 ## Resources
 
-- [MCP Integration Guide](/docs/mcp)
-- [Blog: AI-Native Microservices](/blog/2)
-- [Examples](/examples)
+- [MCP Integration Guide](/docs/overview/mcp/)
+- [Blog: AI-Native Microservices](/blog/2026/02/11/making-microservices-ai-native-with-mcp/)
+- [Examples](/docs/examples)
 - [Discord Community](https://discord.gg/jwTYuUVAGh)
 
 ---

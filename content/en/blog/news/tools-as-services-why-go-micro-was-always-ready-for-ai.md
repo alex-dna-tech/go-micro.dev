@@ -127,11 +127,3 @@ Every framework primitive that has a CLI command could also be a tool. The regis
 
 The thesis hasn't changed since 2015: **build the service once, access it everywhere**. The "everywhere" just expanded to include AI.
 
----
-
-*Go Micro is an open source framework for distributed systems development. [Star us on GitHub](https://github.com/micro/go-micro).*
-
-<div class="post-nav">
-  <div><a href="/blog/11">&larr; Build Your Own AI Agent CLI</a></div>
-  <div><a href="/blog/">All Posts</a></div>
-</div>

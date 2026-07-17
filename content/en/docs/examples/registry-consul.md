@@ -1,13 +1,10 @@
 ---
-title: "Registry Consul"
+title: "Service Discovery with Consul"
+linkTitles: "Registry Consul"
 weight: 1
 draft: true
 description: "Use Consul as the service registry."
 ---
-# Service Discovery with Consul
-
-Use Consul as the service registry.
-
 ## In code
 
 ```go

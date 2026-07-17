@@ -1,6 +1,6 @@
 ---
-title: "Reflection"
-titleLink: "Reflection Removal Analysis"
+title: "Reflection Removal Analysis"
+linkTitle: "Reflection"
 weight: 1
 draft: true
 description: "Author: GitHub Copilot"

@@ -1,6 +1,6 @@
 ---
 title: "Go Micro is Becoming a Framework for Agentic Development"
-linkTitle: "Go Micro is Becoming a Framework for Agentic Development"
+linkTitle: "Agentic Development"
 date: 2026-06-17
 description: "Three months ago, with Anthropic's support, Go Micro went all in on AI. A look back at what shipped — agents, workflows, guardrails, payments, durable execution — and where it's heading."
 category:

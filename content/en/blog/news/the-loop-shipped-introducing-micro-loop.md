@@ -104,7 +104,3 @@ micro loop init
 
 *Go Micro is an open source agent harness and service framework for Go. [Star us on GitHub](https://github.com/micro/go-micro).*
 
-<div class="post-nav">
-  <div><a href="/blog/32">&larr; An Agent Is a Service: Where Agent Frameworks Are Going</a></div>
-  <div><a href="/blog/">All Posts</a></div>
-</div>

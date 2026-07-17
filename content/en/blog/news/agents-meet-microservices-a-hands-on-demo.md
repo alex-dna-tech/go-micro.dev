@@ -207,11 +207,3 @@ The guides cover all of this:
 - [MCP Security](/docs/guides/mcp-security) — Auth, scopes, rate limiting
 - [Agent Patterns](/docs/guides/agent-patterns) — Architecture patterns for production
 
----
-
-*Go Micro is an open source framework for distributed systems development. [Star us on GitHub](https://github.com/micro/go-micro) — 21K stars and growing.*
-
-<div class="post-nav">
-  <div><a href="/blog/3">← Building the AI-Native Future</a></div>
-  <div><a href="/blog/">All Posts</a></div>
-</div>---
