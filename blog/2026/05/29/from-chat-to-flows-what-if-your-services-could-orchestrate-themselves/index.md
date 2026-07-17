@@ -192,13 +192,3 @@ The thesis behind Go Micro's AI-native direction is that **services should be co
 Each layer builds on the previous one. And at each layer, the question is the same: does this belong in the framework, or is it better left to the user? So far, we've been conservative — `ai.Tools` is 150 lines, `History` is 80, `micro chat` is 170. Small, composable building blocks rather than a big orchestration framework.
 
 We think that's the right approach. But we're watching to see if the community says otherwise.
-
----
-
-*Go Micro is an open source framework for distributed systems development. [Star us on GitHub](https://github.com/micro/go-micro).*
-
-<div class="post-nav">
-  <div><a href="/blog/8">&larr; Atlas Cloud Sponsors Go Micro</a></div>
-  <div><a href="/blog/">All Posts</a></div>
-  <div><a href="/blog/10">micro chat &rarr;</a></div>
-</div>

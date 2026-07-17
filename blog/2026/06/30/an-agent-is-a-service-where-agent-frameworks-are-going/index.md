@@ -77,12 +77,3 @@ There is one more piece of evidence we find hard to argue with: Go Micro is incr
 None of this is winner-take-all, and it should not be. Every serious framework here speaks **MCP** for tools and **A2A** for agents. A Go Micro agent and a tRPC-Agent-Go agent can call each other; either can consume the other's tools; an ADK or LangGraph agent can plug into a Go Micro runtime over A2A, and the reverse. The protocols are the commons.
 
 So the real question is not which framework wins. It is where your agents should *live*. The answer that Go Micro is built around is that when an agent has to operate inside a real system, it is a distributed system — and the simplest place to build it is the runtime where your services already live.
-
----
-
-*Go Micro is an open source agent harness and service framework for Go. [Star us on GitHub](https://github.com/micro/go-micro).*
-
-<div class="post-nav">
-  <div><a href="/blog/31">&larr; How Go Micro Builds Itself</a></div>
-  <div><a href="/blog/">All Posts</a></div>
-</div>

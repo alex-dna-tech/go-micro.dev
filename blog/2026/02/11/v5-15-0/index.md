@@ -476,12 +476,3 @@ micro run --mcp-address :3000
 ```
 
 See the [MCP Gateway documentation](/docs/mcp) for full details.
-
----
-
-*Go Micro is an open source framework for distributed systems development in Go. [Star us on GitHub](https://github.com/micro/go-micro).*
-
-<div class="post-nav">
-  <div><a href="/blog/1">← Introducing micro deploy</a></div>
-  <div><a href="/blog/">All Posts</a></div>
-</div>

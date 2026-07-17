@@ -27,12 +27,3 @@ Honestly: throughput. More reviewed PRs, faster releases, quicker issue triage, 
 ## Thanks
 
 Thanks to OpenAI for backing open source maintainers, and for supporting Go Micro specifically. It joins [Anthropic](/blog/3) and [Atlas Cloud](/blog/8) — the companies helping keep this project moving.
-
----
-
-*Go Micro is an open source framework for building agents, services, and workflows in Go. [Star us on GitHub](https://github.com/micro/go-micro).*
-
-<div class="post-nav">
-  <div><a href="/blog/28">&larr; Building a Support Agent in Go</a></div>
-  <div><a href="/blog/">All Posts</a></div>
-</div>

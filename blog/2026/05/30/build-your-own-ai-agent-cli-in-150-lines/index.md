@@ -178,13 +178,3 @@ ANTHROPIC_API_KEY=sk-ant-... micro chat --provider anthropic
 The full source is [`cmd/micro/chat/chat.go`](https://github.com/micro/go-micro/blob/master/cmd/micro/chat/chat.go) — about 220 lines including flags, help text, and provider env-var handling. The agent core is the ~40 lines you saw above.
 
 Build your own. It's more approachable than you think.
-
----
-
-*Go Micro is an open source framework for distributed systems development. [Star us on GitHub](https://github.com/micro/go-micro).*
-
-<div class="post-nav">
-  <div><a href="/blog/10">&larr; micro chat</a></div>
-  <div><a href="/blog/">All Posts</a></div>
-  <div><a href="/blog/12">Tools as Services &rarr;</a></div>
-</div>

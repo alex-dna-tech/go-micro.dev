@@ -8,8 +8,8 @@
 - [AGENTS.md](https://alex-dna-tech.github.io/tags/agents/index.md)
 - [Docs](https://alex-dna-tech.github.io/docs/index.md)
 - [Blog](https://alex-dna-tech.github.io/blog/index.md)
+- [Support](https://alex-dna-tech.github.io/docs/project/support/index.md): Go Micro is free and open source. There are two ways to get help: the community, and commercial support.
 - [Discord](https://discord.gg/G8Gk5j3uXr)
-- [Commercial Support](https://alex-dna-tech.github.io/docs/project/support/index.md): Go Micro is free and open source. There are two ways to get help: the community, and commercial support.
 - [GitHub](https://github.com/micro/go-micro)
 
 ## Documentation index

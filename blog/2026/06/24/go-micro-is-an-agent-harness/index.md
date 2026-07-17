@@ -40,13 +40,4 @@ That list is the roadmap's [Now and Next](/docs/roadmap.html), tracked as open i
 ## Read more
 
 - [The Agent Harness](/docs/guides/agent-harness.html) — what the harness is, piece by piece, with status
-- [Roadmap](/docs/roadmap.html)
-
----
-
-*Go Micro is an open source agent harness and service framework for Go. [Star us on GitHub](https://github.com/micro/go-micro).*
-
-<div class="post-nav">
-  <div><a href="/blog/29">&larr; OpenAI Codex for Open Source</a></div>
-  <div><a href="/blog/">All Posts</a></div>
-</div>
+- [Roadmap](/docs/project/roadmap)

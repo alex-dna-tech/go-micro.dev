@@ -163,8 +163,3 @@ We're grateful to Atlas Cloud for their sponsorship and excited to have them as 
 *Go Micro is an open source framework for distributed systems development. [Star us on GitHub](https://github.com/micro/go-micro).*
 
 *Thanks to Atlas Cloud for sponsoring Go Micro and supporting the open source community.*
-
-<div class="post-nav">
-  <div><a href="/blog/7">&larr; Your Microservices Are Already an AI Platform</a></div>
-  <div><a href="/blog/">All Posts</a></div>
-</div>

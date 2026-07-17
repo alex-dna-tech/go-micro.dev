@@ -123,12 +123,3 @@ The pattern extends beyond what we've built:
 Every framework primitive that has a CLI command could also be a tool. The registry, broker, store, and config interfaces are all accessible from the terminal *and* from code. Making them accessible to AI agents is the same step we've already taken for services.
 
 The thesis hasn't changed since 2015: **build the service once, access it everywhere**. The "everywhere" just expanded to include AI.
-
----
-
-*Go Micro is an open source framework for distributed systems development. [Star us on GitHub](https://github.com/micro/go-micro).*
-
-<div class="post-nav">
-  <div><a href="/blog/11">&larr; Build Your Own AI Agent CLI</a></div>
-  <div><a href="/blog/">All Posts</a></div>
-</div>

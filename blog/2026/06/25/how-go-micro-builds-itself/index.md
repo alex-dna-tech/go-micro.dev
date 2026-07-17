@@ -63,12 +63,3 @@ That's the texture of the work: not a model writing a framework in one shot, but
 We think the future of agentic software is scheduled, looping, work-performing agents — not chat. Go Micro is built by exactly that, against its own repo. The human still sets direction and owns the calls that need taste; CI is the gate; everything is reversible. Within those bounds, the harness builds itself.
 
 If it can do that, it can build yours.
-
----
-
-*Go Micro is an open source agent harness and service framework for Go. [Star us on GitHub](https://github.com/micro/go-micro).*
-
-<div class="post-nav">
-  <div><a href="/blog/30">&larr; Go Micro is an Agent Harness</a></div>
-  <div><a href="/blog/">All Posts</a></div>
-</div>
