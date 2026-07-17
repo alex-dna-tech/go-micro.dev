@@ -4,22 +4,22 @@
 
 ## Site index
 
-- [Home page](https://alex-dna-tech.github.io/index.md)
-- [AGENTS.md](https://alex-dna-tech.github.io/tags/agents/index.md)
-- [Docs](https://alex-dna-tech.github.io/docs/index.md)
-- [Blog](https://alex-dna-tech.github.io/blog/index.md)
-- [Support](https://alex-dna-tech.github.io/docs/project/support/index.md): Go Micro is free and open source. There are two ways to get help: the community, and commercial support.
+- [Home page](https://micro.labqa.pp.ua/index.md)
+- [AGENTS.md](https://micro.labqa.pp.ua/tags/agents/index.md)
+- [Docs](https://micro.labqa.pp.ua/docs/index.md)
+- [Blog](https://micro.labqa.pp.ua/blog/index.md)
+- [Support](https://micro.labqa.pp.ua/docs/project/support/index.md): Go Micro is free and open source. There are two ways to get help: the community, and commercial support.
 - [Discord](https://discord.gg/G8Gk5j3uXr)
 - [GitHub](https://github.com/micro/go-micro)
 
 ## Documentation index
 
-- [Overview](https://alex-dna-tech.github.io/docs/overview/index.md)
-- [Interfaces](https://alex-dna-tech.github.io/docs/interfaces/index.md)
-- [Examples](https://alex-dna-tech.github.io/docs/examples/index.md)
-- [Guides](https://alex-dna-tech.github.io/docs/guides/index.md)
-- [Project](https://alex-dna-tech.github.io/docs/project/index.md)
+- [Overview](https://micro.labqa.pp.ua/docs/overview/index.md)
+- [Interfaces](https://micro.labqa.pp.ua/docs/interfaces/index.md)
+- [Examples](https://micro.labqa.pp.ua/docs/examples/index.md)
+- [Guides](https://micro.labqa.pp.ua/docs/guides/index.md)
+- [Project](https://micro.labqa.pp.ua/docs/project/index.md)
 
 ## Site locales
 
-- [English](https://alex-dna-tech.github.io/index.md)
+- [English](https://micro.labqa.pp.ua/index.md)
