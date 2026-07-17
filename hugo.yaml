@@ -1,4 +1,5 @@
 baseURL: https://micro.labqa.pp.ua
+canonifyURLs: true
 title: Go Micro
 menus:
   main:
