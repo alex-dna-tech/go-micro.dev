@@ -166,7 +166,3 @@ We're grateful to Atlas Cloud for their sponsorship and excited to have them as 
 
 *Thanks to Atlas Cloud for sponsoring Go Micro and supporting the open source community.*
 
-<div class="post-nav">
-  <div><a href="/blog/7">&larr; Your Microservices Are Already an AI Platform</a></div>
-  <div><a href="/blog/">All Posts</a></div>
-</div>

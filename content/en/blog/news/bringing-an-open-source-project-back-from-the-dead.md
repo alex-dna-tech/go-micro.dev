@@ -1,6 +1,6 @@
 ---
 title: "Bringing an Open Source Project Back from the Dead"
-linkTitle: "Bringing an Open Source Project Back from the Dead"
+linkTitle: "Back from the Dead"
 date: 2026-06-18
 description: "Go Micro started in January 2015, went through a VC-funded company and a platform pivot, and then went quiet. This is how it came back — and how agents, services, and flows brought it to v6."
 category:

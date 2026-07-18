@@ -239,9 +239,3 @@ See the [MCP documentation](/docs/mcp) and [AI-native services guide](/docs/guid
 *Go Micro is an open source framework for distributed systems development. [Star us on GitHub](https://github.com/micro/go-micro) — we're at 21K stars and growing.*
 
 *Thanks to Anthropic for the Claude Max sponsorship through their open source program.*
-
-<div class="post-nav">
-  <div><a href="/blog/2">← Making Microservices AI-Native with MCP</a></div>
-  <div><a href="/blog/">All Posts</a></div>
-  <div><a href="/blog/4">Agents Meet Microservices →</a></div>
-</div>

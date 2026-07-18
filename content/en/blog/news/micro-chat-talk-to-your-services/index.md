@@ -10,7 +10,6 @@ tags:
 - agents
 - chat
 ---
-
 ![](developer-experience.jpg)
 
 We built `micro chat` — a CLI that lets you talk to your microservices through an LLM. It discovers every service in the registry, exposes each endpoint as a tool, and lets a model decide which RPCs to call based on what you ask.
@@ -174,12 +173,3 @@ This is the same code `micro chat` runs internally. Use it to add LLM-powered or
 
 Both are experiments in what happens when services are composable by agents, not just by code. The framework provides the building blocks. You decide how to use them.
 
----
-
-*Go Micro is an open source framework for distributed systems development. [Star us on GitHub](https://github.com/micro/go-micro).*
-
-<div class="post-nav">
-  <div><a href="/blog/9">&larr; From Chat to Flows</a></div>
-  <div><a href="/blog/">All Posts</a></div>
-  <div><a href="/blog/11">Build Your Own &rarr;</a></div>
-</div>

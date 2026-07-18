@@ -1,16 +1,10 @@
 ---
-title: "Tls Security Update"
+title: "TLS Security Update - Important Information"
+linkTitle: "TLS Security Update"
 weight: 1
 draft: true
-description: "Go Micro v6 verifies TLS certificates by default. This completes the v5 security"
+description: "Go Micro v6 verifies TLS certificates by default. This completes the v5 security migration where verification was opt-in."
 ---
-# TLS Security Update - Important Information
-
-## What Changed
-
-Go Micro v6 verifies TLS certificates by default. This completes the v5 security
-migration where verification was opt-in.
-
 ## Current Behavior (v6.x)
 
 **Default**: TLS certificate verification is **enabled**.

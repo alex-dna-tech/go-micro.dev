@@ -1,13 +1,10 @@
 ---
-title: "Pubsub Nats"
+title: "Pub/Sub with NATS Broker"
+linkTitle: "Pubsub Nats"
 weight: 1
 draft: true
 description: "Use the NATS broker for pub/sub."
 ---
-# Pub/Sub with NATS Broker
-
-Use the NATS broker for pub/sub.
-
 ## In code
 
 ```go

@@ -69,10 +69,11 @@ params:
 <!-- Text -->
 <div class="text-center mb-5">
     <h1 class="display-3 fw-bold mb-4">
-        <span class="gradient-text">GoMicro</span>
+        <span class="gradient-text">GoMicro</span></br>
+        An Agent Harness for Go
     </h1>
     <p class="lead text-gray-custom mb-5 mx-auto">
-        A Go microservices framework
+        Build agents, services, and workflows on one runtime.
     </p>
 </div>
 

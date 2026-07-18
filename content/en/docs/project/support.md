@@ -1,14 +1,13 @@
 ---
 title: "Commercial Support"
-weight: 10
+linkTitle: "Support"
+weight: 30
 menu:
   main:
-    weight: 40
+    weight: 30
     pre: <i class='fa-solid fa-handshake'></i>
 description: "Go Micro is free and open source. There are two ways to get help: the community, and commercial support."
 ---
-Go Micro is free and open source. There are two ways to get help: the community, and commercial support.
-
 ## Community support (free)
 
 - **Documentation** — [/docs](/docs)

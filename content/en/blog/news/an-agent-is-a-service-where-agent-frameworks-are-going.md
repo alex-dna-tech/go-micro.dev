@@ -81,11 +81,3 @@ None of this is winner-take-all, and it should not be. Every serious framework h
 
 So the real question is not which framework wins. It is where your agents should *live*. The answer that Go Micro is built around is that when an agent has to operate inside a real system, it is a distributed system — and the simplest place to build it is the runtime where your services already live.
 
----
-
-*Go Micro is an open source agent harness and service framework for Go. [Star us on GitHub](https://github.com/micro/go-micro).*
-
-<div class="post-nav">
-  <div><a href="/blog/31">&larr; How Go Micro Builds Itself</a></div>
-  <div><a href="/blog/">All Posts</a></div>
-</div>
