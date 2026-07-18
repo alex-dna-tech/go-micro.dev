@@ -1,6 +1,6 @@
 ---
 title: "MCP Troubleshooting"
-titleLink: "Troubleshooting"
+linkTitle: "Troubleshooting"
 weight: 1
 draft: true
 description: "Common issues when using the MCP gateway and AI agents with Go Micro services."

@@ -1,6 +1,6 @@
 ---
 title: "API Gateway with Backend Services"
-titleLink: "Api Gateway"
+linkTitle: "Api Gateway"
 weight: 1
 draft: true
 description: "A complete example showing an API gateway routing to multiple backend microservices."

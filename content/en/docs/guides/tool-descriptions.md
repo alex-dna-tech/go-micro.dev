@@ -1,12 +1,10 @@
 ---
 title: "Best Practices for Tool Descriptions"
-titleLink: "Tool Descriptions"
+linkTitle: "Tool Descriptions"
 weight: 1
 draft: true
 description: "Your Go doc comments become the documentation that AI agents read when deciding how to call your service. Better descriptions lead to fewer errors, faster task completion, and a better user experience"
 ---
-# 
-
 Your Go doc comments become the documentation that AI agents read when deciding how to call your service. Better descriptions lead to fewer errors, faster task completion, and a better user experience.
 
 ## How Agents Use Your Docs

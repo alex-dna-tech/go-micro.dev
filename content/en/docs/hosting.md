@@ -1,6 +1,6 @@
 ---
-title: "Hosting"
-titleLink: "Hosting Go Micro Services"
+title: "Hosting Go Micro Services"
+linkTitle: "Hosting"
 weight: 1
 draft: true
 description: "This document outlines what hosting looks like for go-micro services, the options available today, and what an ideal hosting platform would provide."
