@@ -39,6 +39,28 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
 
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
+          check-latest: true
+
+      - name: Generate vanity data
+        run: bash scripts/generate-vanity-data.sh
+
+      - name: Commit refreshed vanity data
+        # Only on main, and only when upstream tags changed the package set.
+        # Idempotent: an unchanged file produces no commit, so no rebuild loop.
+        if: ${{ github.ref == 'refs/heads/main' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet data/vanity.yaml; then
+            git add data/vanity.yaml
+            git commit -m "chore: refresh vanity data from upstream micro/go-micro tags"
+            git push
+          fi
+
       - run: npm ci
       - run: >-
           hugo --minify

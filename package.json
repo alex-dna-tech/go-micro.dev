@@ -48,7 +48,8 @@
     "update:hugo": "npm install --save-dev --save-exact hugo-extended@latest",
     "update:main": "npm run update:packages && npm run update:docsy:main",
     "update:packages": "npx npm-check-updates -u",
-    "update": "npm run update:packages && npm run update:docsy:mod"
+    "update": "npm run update:packages && npm run update:docsy:mod",
+    "vanity:generate": "bash scripts/generate-vanity-data.sh"
   },
   "devDependencies": {
     "autoprefixer": "^10.5.4",
