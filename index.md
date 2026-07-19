@@ -229,10 +229,15 @@ Get the code
 
 Section pages:
 
-- [](/v5/)
-- [](/v6/)
 - [About Goldydocs](/about/): A sample site using the Docsy Hugo theme.
 - [Blog](/blog/)
 - [Documentation](/docs/)
+- [github.com/asim/go-micro/v3](/v3/)
+- [github.com/micro/go-micro](/v0/)
+- [github.com/micro/go-micro](/v1/)
+- [github.com/micro/go-micro/v2](/v2/)
+- [go-micro.dev/v4](/v4/)
+- [go-micro.dev/v5](/v5/)
+- [go-micro.dev/v6](/v6/)
 - [Search Results](/search/)
 - [Website information](/site/): Information about the website.

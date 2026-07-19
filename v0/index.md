@@ -1,0 +1,42 @@
+# github.com/micro/go-micro
+
+LLMS index: [llms.txt](/llms.txt)
+
+---
+
+Section pages:
+
+- [github.com/micro/go-micro/broker](/v0/broker/)
+- [github.com/micro/go-micro/broker/http](/v0/broker/http/)
+- [github.com/micro/go-micro/broker/memory](/v0/broker/memory/)
+- [github.com/micro/go-micro/client](/v0/client/)
+- [github.com/micro/go-micro/client/mock](/v0/client/mock/)
+- [github.com/micro/go-micro/client/rpc](/v0/client/rpc/)
+- [github.com/micro/go-micro/cmd](/v0/cmd/)
+- [github.com/micro/go-micro/codec](/v0/codec/)
+- [github.com/micro/go-micro/codec/bytes](/v0/codec/bytes/)
+- [github.com/micro/go-micro/codec/grpc](/v0/codec/grpc/)
+- [github.com/micro/go-micro/codec/json](/v0/codec/json/)
+- [github.com/micro/go-micro/codec/jsonrpc](/v0/codec/jsonrpc/)
+- [github.com/micro/go-micro/codec/proto](/v0/codec/proto/)
+- [github.com/micro/go-micro/codec/protorpc](/v0/codec/protorpc/)
+- [github.com/micro/go-micro/errors](/v0/errors/)
+- [github.com/micro/go-micro/metadata](/v0/metadata/)
+- [github.com/micro/go-micro/registry](/v0/registry/)
+- [github.com/micro/go-micro/registry/consul](/v0/registry/consul/)
+- [github.com/micro/go-micro/registry/gossip](/v0/registry/gossip/)
+- [github.com/micro/go-micro/registry/gossip/proto](/v0/registry/gossip/proto/)
+- [github.com/micro/go-micro/registry/mdns](/v0/registry/mdns/)
+- [github.com/micro/go-micro/registry/memory](/v0/registry/memory/)
+- [github.com/micro/go-micro/selector](/v0/selector/)
+- [github.com/micro/go-micro/selector/dns](/v0/selector/dns/)
+- [github.com/micro/go-micro/selector/registry](/v0/selector/registry/)
+- [github.com/micro/go-micro/selector/static](/v0/selector/static/)
+- [github.com/micro/go-micro/server](/v0/server/)
+- [github.com/micro/go-micro/server/debug](/v0/server/debug/)
+- [github.com/micro/go-micro/server/debug/proto](/v0/server/debug/proto/)
+- [github.com/micro/go-micro/server/mock](/v0/server/mock/)
+- [github.com/micro/go-micro/server/rpc](/v0/server/rpc/)
+- [github.com/micro/go-micro/transport](/v0/transport/)
+- [github.com/micro/go-micro/transport/http](/v0/transport/http/)
+- [github.com/micro/go-micro/transport/memory](/v0/transport/memory/)
