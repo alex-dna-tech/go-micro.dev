@@ -1,13 +1,11 @@
 ---
 title: Support
+linkTitle: Support
 description: "Go Micro support — free community help, plus commercial support, consulting, and sponsorship for teams running Go Micro in production."
 menu:
   main:
-    name: Support
-    weight: 60
+    weight: 30
     pre: <i class='fa-solid fa-handshake'></i>
-params:
-  body_class: td-no-left-sidebar
 ---
 {{% blocks/hero
   height="bg-pattern td-below-navbar"
