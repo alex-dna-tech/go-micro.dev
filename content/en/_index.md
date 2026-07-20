@@ -6,8 +6,9 @@ params:
 ---
 
 {{% blocks/hero
-  height="full bg-pattern td-below-navbar"
+  height="full td-below-navbar"
   color="dark-blue"
+  pattern=true
 %}}
 
 <div class="d-flex justify-content-center align-items-center mb-5">
@@ -97,7 +98,7 @@ Get the code
 {{% blocks/link-down color="info" %}}
 {{% /blocks/hero %}}
 
-{{% blocks/section color="dark-blue bg-pattern py-5" type="row" %}}
+{{% blocks/section color="dark-blue" type="row" pattern=true padding="py-5" %}}
 <div class="row g-4 justify-content-center">
 <div class="col-lg-4 col-md-6">
 {{% elements/variant-card 
@@ -158,6 +159,135 @@ Get the code
 <div class="p-3 display-6">🌐</div>
 {{% /elements/variant-card %}}
 </div>
+</div>
+{{% /blocks/section %}}
+
+{{% blocks/section color="dark-blue" type="row" pattern=true padding="py-5" %}}
+<div class="row g-4 justify-content-center">
+<div class="col-lg-4 col-md-6">
+{{% elements/variant-card
+    color="gradient"
+    title="Agent Harness"
+    subtitle="A model, memory, tools, plan/delegate, guardrails, and execution middleware around every agent."
+%}}
+<div class="p-3 display-6">🤖</div>
+{{% /elements/variant-card %}}
+</div>
+
+<div class="col-lg-4 col-md-6">
+{{% elements/variant-card
+    color="gradient"
+    title="Services as Tools"
+    subtitle="Build services in Go or generate them from a prompt. Their endpoints become typed tools automatically."
+%}}
+<div class="p-3 display-6">🔧</div>
+{{% /elements/variant-card %}}
+</div>
+
+<div class="col-lg-4 col-md-6">
+{{% elements/variant-card
+    color="gradient"
+    title="Durable Workflows"
+    subtitle="Use fixed, checkpointed code paths for deterministic work; hand off to agents when the path is dynamic."
+%}}
+<div class="p-3 display-6">⚙️</div>
+{{% /elements/variant-card %}}
+</div>
+
+<div class="col-lg-4 col-md-6">
+{{% elements/variant-card
+    color="gradient"
+    title="MCP Gateway"
+    subtitle="Every service endpoint is automatically an AI-callable tool via the Model Context Protocol."
+%}}
+<div class="p-3 display-6">🌐</div>
+{{% /elements/variant-card %}}
+</div>
+
+<div class="col-lg-4 col-md-6">
+{{% elements/variant-card
+    color="gradient"
+    title="A2A Gateway"
+    subtitle="Every agent is reachable over the Agent2Agent protocol — discovered and called by agents on any framework."
+%}}
+<div class="p-3 display-6">🤝</div>
+{{% /elements/variant-card %}}
+</div>
+
+<div class="col-lg-4 col-md-6">
+{{% elements/variant-card
+    color="gradient"
+    title="Pluggable Everything"
+    subtitle="All abstractions are Go interfaces. Swap any component without changing your code."
+%}}
+<div class="p-3 display-6">🔌</div>
+{{% /elements/variant-card %}}
+</div>
+</div>
+{{% /blocks/section %}}
+
+{{% blocks/section color="dark-blue" pattern=true padding="py-5" %}}
+<div class="row align-items-center">
+<div class="col-lg-6">
+<img src="/images/generated/mcp-agent.jpg" alt="AI agent calling microservices via MCP" class="img-fluid rounded-4 shadow" />
+</div>
+<div class="col-lg-6">
+<h2>From Prompt Loop to Operating Harness</h2>
+<p>Tell it what you need. The AI designs services, generates an agent, and drops you into an interactive console. The harness gives that agent tools, memory, guardrails, and workflows so it can operate across services.</p>
+<pre><code><span style="color:#ff7b72">$</span> <span style="color:#d2a8ff">micro run</span> <span style="color:#a5d6ff">--prompt "task management system"</code></pre>
+<pre><code><span style="color:#ff7b72">&gt;</span> Create a project called Launch, add tasks, assign to Alice</code></pre>
+<a class="btn btn-go mt-3" href="/blog/16">Learn About Agents</a>
+</div>
+</div>
+{{% /blocks/section %}}
+
+{{% blocks/section color="dark-blue" pattern=true padding="py-5" %}}
+<div class="row align-items-center">
+<div class="col-lg-6">
+<h2>Distributed Systems for Agents</h2>
+<p>Agents need the same substrate services do: discovery, RPC, events, state, auth, observability, and deployment. Swap any component without changing your code — go from mDNS to Consul, or HTTP to gRPC, with a single option.</p>
+</div>
+<div class="col-lg-6">
+<img src="/images/generated/architecture.jpg" alt="Go Micro architecture diagram" class="img-fluid rounded-4 shadow" />
+</div>
+</div>
+{{% /blocks/section %}}
+
+{{% blocks/section color="dark-blue" pattern=true padding="py-5" %}}
+<div class="row align-items-center">
+<div class="col-lg-6">
+<h2>Developer Experience</h2>
+<p><code>micro new</code> scaffolds a service or an agent — every endpoint is automatically an MCP tool. <code>micro run</code> starts everything with hot reload, an API gateway, and an interactive console, and <code>micro chat</code> talks to your agents and services from the terminal.</p>
+</div>
+<div class="col-lg-6">
+<img src="/images/generated/developer-experience.jpg" alt="Terminal showing micro run and micro chat" class="img-fluid rounded-4 shadow" />
+</div>
+</div>
+{{% /blocks/section %}}
+
+{{% blocks/section color="dark-blue" pattern=true padding="py-5" type="text-center" %}}
+<h2>Sponsors</h2>
+<p class="text-muted mb-4">Go Micro is supported by companies building the future of AI infrastructure.</p>
+<div class="d-flex align-items-center justify-content-center gap-4 flex-wrap mb-4">
+<a href="/blog/3"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Anthropic_logo.svg" alt="Anthropic" style="height: 28px; opacity: 0.7;" /></a>
+<a href="/blog/29"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" alt="OpenAI" style="height: 28px; opacity: 0.7;" /></a>
+<a href="/blog/8"><img src="https://www.atlascloud.ai/logo.svg" alt="Atlas Cloud" style="height: 28px; opacity: 0.7;" /></a>
+</div>
+<p class="text-muted mb-3">Want to support Go Micro and put your logo here? Or running it in production and need a hand?</p>
+<div class="d-flex gap-3 justify-content-center">
+<a href="https://discord.gg/G8Gk5j3uXr" class="btn btn-outline-go">Become a sponsor</a>
+<a href="/support" class="btn btn-go">Commercial support</a>
+</div>
+{{% /blocks/section %}}
+
+{{% blocks/section color="dark-blue" pattern=true padding="py-5" type="text-center" %}}
+<h2>Trusted by Developers</h2>
+<p class="text-light mb-4">23,000+ stars on GitHub. Production-ready. Apache 2.0 licensed.</p>
+<div class="d-flex gap-3 justify-content-center flex-wrap">
+<a href="/docs/getting-started.html" class="btn btn-go">Get Started</a>
+<a href="/docs/" class="btn btn-outline-go">Read the Docs</a>
+<a href="https://discord.gg/G8Gk5j3uXr" class="btn btn-outline-go">Join Discord</a>
+<a href="/blog/" class="btn btn-outline-go">Blog</a>
 </div>
 {{% /blocks/section %}}
 

@@ -1,9 +1,12 @@
 {{ $color := .Get "color" | default .Ordinal -}}
 {{ $height := .Get "height" | default "auto"  -}}
 {{ $type   := .Get "type" | default "container" -}}
+{{/* pattern: adds the dotted bg-pattern overlay. padding: vertical padding utility (e.g. py-5). See DESIGN.md. */ -}}
+{{ $pattern := .Get "pattern" | default false -}}
+{{ $padding := .Get "padding" | default "" -}}
 
 <div><a id="td-block-{{ .Ordinal }}" class="td-anchor-no-extra-offset"></a></div>
-<section class="row td-box td-box--{{ $color }} td-box--height-{{ $height }}">
+<section class="row td-box td-box--{{ $color }} td-box--height-{{ $height }}{{ if $pattern }} bg-pattern{{ end }}{{ with $padding }} {{ . }}{{ end }}">
   <div class="col container">
     <div class="{{ $type }}">
       {{/* Do NOT remove this comment! It ends the HTML block above. See https://spec.commonmark.org/0.30/#html-blocks, 7. */}}
