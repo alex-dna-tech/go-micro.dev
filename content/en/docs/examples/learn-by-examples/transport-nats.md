@@ -1,7 +1,6 @@
 ---
-title: NATS Transport
-weight: 6
-description: Use NATS as the transport between services.
+title: "Transport Nats"
+description: "Use NATS as the transport between services."
 ---
 ## In code
 
@@ -9,13 +8,13 @@ description: Use NATS as the transport between services.
 package main
 
 import (
-    "go-micro.dev/v5"
-    tnats "go-micro.dev/v5/transport/nats"
+    "go-micro.dev/v6"
+    tnats "go-micro.dev/v6/transport/nats"
 )
 
 func main() {
     t := tnats.NewTransport()
-    svc := micro.NewService(micro.Transport(t))
+    svc := micro.NewService("nats-transport", micro.Transport(t))
     svc.Init()
     svc.Run()
 }

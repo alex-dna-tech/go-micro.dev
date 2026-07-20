@@ -4,7 +4,7 @@ linkTitle: "MCP & AI Agents"
 weight: 60
 description: "Go Micro provides built-in support for the Model Context Protocol (MCP), enabling AI agents like Claude to discover and interact with your microservices as tools."
 ---
-# Model Context Protocol (MCP)
+## Model Context Protocol (MCP)
 
 Go Micro provides built-in support for the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), enabling AI agents like Claude to discover and interact with your microservices as tools.
 

@@ -1,12 +1,10 @@
 ---
-title: "Add Mcp"
+title: "Add MCP to Existing Services"
+linkTitle: "Add Mcp"
 weight: 1
 draft: true
 description: "You have a working go-micro service and want to make it accessible to AI agents via MCP. This guide covers the three approaches, from simplest to most flexible."
 ---
-# Add MCP to Existing Services
-
-You have a working go-micro service and want to make it accessible to AI agents via MCP. This guide covers the three approaches, from simplest to most flexible.
 
 ## Option 1: One-Line Setup (Recommended)
 

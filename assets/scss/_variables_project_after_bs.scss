@@ -139,6 +139,96 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
     color: #6b7280;
 }
 
+// Support page: tier cards ("Choose your level")
+.tier-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: rgba(31, 41, 55, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tier-card.featured {
+    border-color: #00ADD8;
+    box-shadow: 0 4px 24px rgba(0, 173, 216, 0.2);
+}
+
+.tier-card:hover {
+    transform: translateY(-4px);
+}
+
+.tier-name {
+    font-size: 1.15rem;
+    color: #f3f4f6;
+    margin-bottom: 0.25rem;
+}
+
+.tier-who {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-bottom: 1rem;
+    min-height: 2.4em;
+}
+
+.price {
+    font-weight: 700;
+    color: #00ADD8;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.tier-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.88rem;
+    color: #d1d5db;
+    flex: 1;
+}
+
+.tier-list li {
+    position: relative;
+    padding: 0.3rem 0 0.3rem 1.4rem;
+}
+
+.tier-list li::before {
+    content: "✓";
+    color: #00ADD8;
+    position: absolute;
+    left: 0;
+}
+
+// Support page: community link cards
+.link-card {
+    display: block;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: rgba(31, 41, 55, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.link-card:hover {
+    text-decoration: none;
+    border-color: #00ADD8;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 24px rgba(0, 173, 216, 0.2);
+}
+
+.link-card strong {
+    display: block;
+    color: #00ADD8;
+}
+
+.link-card span {
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
 .border-light-custom {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }

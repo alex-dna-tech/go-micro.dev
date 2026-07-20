@@ -1,9 +1,10 @@
 ---
-title: Pub/Sub with NATS Broker
-weigth: 3
-description: Use the NATS broker for pub/sub.
+title: "Pub/Sub with NATS Broker"
+linkTitle: "Pubsub Nats"
+weight: 1
+draft: true
+description: "Use the NATS broker for pub/sub."
 ---
-
 ## In code
 
 ```go
@@ -11,14 +12,14 @@ package main
 
 import (
     "log"
-    "go-micro.dev/v5"
-    "go-micro.dev/v5/broker"
-    bnats "go-micro.dev/v5/broker/nats"
+    "go-micro.dev/v6"
+    "go-micro.dev/v6/broker"
+    bnats "go-micro.dev/v6/broker/nats"
 )
 
 func main() {
     b := bnats.NewNatsBroker()
-    svc := micro.NewService(micro.Broker(b))
+    svc := micro.NewService("nats-pubsub", micro.Broker(b))
     svc.Init()
 
     // subscribe

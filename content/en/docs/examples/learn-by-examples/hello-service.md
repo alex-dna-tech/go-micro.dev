@@ -1,9 +1,7 @@
 ---
-title: Hello Service
-weight: 1
-description: A minimal HTTP service using Go Micro, with a single endpoint.
+title: "Hello Service"
+description: "A minimal HTTP service using Go Micro, with a single endpoint."
 ---
-
 ## Service
 
 ```go
@@ -11,7 +9,7 @@ package main
 
 import (
     "context"
-    "go-micro.dev/v5"
+    "go-micro.dev/v6"
 )
 
 type Request struct { Name string `json:"name"` }
@@ -26,7 +24,7 @@ func (h *Say) Hello(ctx context.Context, req *Request, rsp *Response) error {
 }
 
 func main() {
-    svc := micro.New("helloworld")
+    svc := micro.NewService("helloworld")
     svc.Init()
     svc.Handle(new(Say))
     svc.Run()
@@ -52,8 +50,7 @@ curl -XPOST \
 Set a fixed address:
 
 ```go
-svc := micro.NewService(
-    micro.Name("helloworld"),
+svc := micro.NewService("helloworld",
     micro.Address(":8080"),
 )
 ```

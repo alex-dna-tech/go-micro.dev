@@ -1,22 +1,21 @@
 ---
-title: Service Discovery with Consul
-weight: 4
-description: Use Consul as the service registry.
+title: "Service Discovery with Consul"
+linkTitles: "Registry Consul"
+description: "Use Consul as the service registry."
 ---
-
 ## In code
 
 ```go
 package main
 
 import (
-    "go-micro.dev/v5"
-    "go-micro.dev/v5/registry/consul"
+    "go-micro.dev/v6"
+    "go-micro.dev/v6/registry/consul"
 )
 
 func main() {
     reg := consul.NewConsulRegistry()
-    svc := micro.NewService(micro.Registry(reg))
+    svc := micro.NewService("consul-registry", micro.Registry(reg))
     svc.Init()
     svc.Run()
 }

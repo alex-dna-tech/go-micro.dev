@@ -3,8 +3,6 @@ title: "Architecture"
 weight: 80
 description: "An overview of the Go Micro architecture."
 ---
-## Architecture
-
 ![Go Micro architecture](architecture.jpg)
 
 An overview of the Go Micro architecture.
