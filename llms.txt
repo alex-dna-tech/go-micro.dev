@@ -8,9 +8,9 @@
 - [AGENTS.md](https://micro.labqa.pp.ua/tags/agents/index.md)
 - [Docs](https://micro.labqa.pp.ua/docs/index.md)
 - [Blog](https://micro.labqa.pp.ua/blog/index.md)
-- [Support](https://micro.labqa.pp.ua/docs/project/support/index.md): Go Micro is free and open source. There are two ways to get help: the community, and commercial support.
 - [Discord](https://discord.gg/G8Gk5j3uXr)
 - [GitHub](https://github.com/micro/go-micro)
+- [Support](https://micro.labqa.pp.ua/support/index.md): Go Micro support — free community help, plus commercial support, consulting, and sponsorship for teams running Go Micro in production.
 
 ## Documentation index
 

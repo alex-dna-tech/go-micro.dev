@@ -240,4 +240,5 @@ Section pages:
 - [go-micro.dev/v5](/v5/)
 - [go-micro.dev/v6](/v6/)
 - [Search Results](/search/)
+- [Support](/support/): Go Micro support — free community help, plus commercial support, consulting, and sponsorship for teams running Go Micro in production.
 - [Website information](/site/): Information about the website.

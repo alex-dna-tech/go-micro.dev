@@ -1,4 +1,4 @@
-# NATS Transport
+# Transport Nats
 
 > Use NATS as the transport between services.
 
@@ -14,13 +14,13 @@ LLMS index: [llms.txt](/llms.txt)
 package main
 
 import (
-    "go-micro.dev/v5"
-    tnats "go-micro.dev/v5/transport/nats"
+    "go-micro.dev/v6"
+    tnats "go-micro.dev/v6/transport/nats"
 )
 
 func main() {
     t := tnats.NewTransport()
-    svc := micro.NewService(micro.Transport(t))
+    svc := micro.NewService("nats-transport", micro.Transport(t))
     svc.Init()
     svc.Run()
 }

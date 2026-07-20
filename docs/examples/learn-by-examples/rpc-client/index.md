@@ -1,4 +1,4 @@
-# RPC Client
+# Rpc Client
 
 > Call a running service using the Go Micro client.
 
@@ -14,7 +14,7 @@ package main
 import (
     "context"
     "fmt"
-    "go-micro.dev/v5"
+    "go-micro.dev/v6"
 )
 
 type Request struct { Name string }
@@ -22,7 +22,7 @@ type Request struct { Name string }
 type Response struct { Message string }
 
 func main() {
-    svc := micro.New("caller")
+    svc := micro.NewService("caller")
     svc.Init()
 
     req := svc.Client().NewRequest("helloworld", "Say.Hello", &Request{Name: "John"})

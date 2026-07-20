@@ -75,7 +75,7 @@ ai.Tools → discovers services + executes RPCs programmatically
 ai.Model → calls LLMs (Anthropic, OpenAI, Gemini, Atlas Cloud, ...)
  ↓
 agent / flow / micro chat → agent-managed, event-driven, or interactive orchestration
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Every layer is optional. You can use go-micro without AI. You can use the &lt;code&gt;ai&lt;/code&gt; package without MCP. But when you stack them, you get services that AI agents can discover and orchestrate automatically.&lt;/p&gt;</description></item><item><title>MCP &amp; AI Agents</title><link>https://micro.labqa.pp.ua/docs/overview/mcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/docs/overview/mcp/</guid><description>&lt;h1 id="model-context-protocol-mcp"&gt;Model Context Protocol (MCP)&lt;a class="td-heading-self-link" href="#model-context-protocol-mcp" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Every layer is optional. You can use go-micro without AI. You can use the &lt;code&gt;ai&lt;/code&gt; package without MCP. But when you stack them, you get services that AI agents can discover and orchestrate automatically.&lt;/p&gt;</description></item><item><title>MCP &amp; AI Agents</title><link>https://micro.labqa.pp.ua/docs/overview/mcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/docs/overview/mcp/</guid><description>&lt;h2 id="model-context-protocol-mcp"&gt;Model Context Protocol (MCP)&lt;a class="td-heading-self-link" href="#model-context-protocol-mcp" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Go Micro provides built-in support for the &lt;a href="https://modelcontextprotocol.io/"&gt;Model Context Protocol (MCP)&lt;/a&gt;, enabling AI agents like Claude to discover and interact with your microservices as tools.&lt;/p&gt;
 &lt;p&gt;&lt;figure role="figure" aria-label="AI agent calling microservices via MCP"&gt;
  &lt;a href="https://micro.labqa.pp.ua/docs/overview/mcp/mcp-agent.jpg"&gt;
@@ -94,8 +94,7 @@ agent / flow / micro chat → agent-managed, event-driven, or interactive orches
  &lt;figcaption&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;&lt;/p&gt;
 &lt;h2 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;MCP gateway automatically exposes your microservices as AI-accessible tools through:&lt;/p&gt;</description></item><item><title>Deployment</title><link>https://micro.labqa.pp.ua/docs/overview/deployment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/docs/overview/deployment/</guid><description>&lt;h1 id="deploying-go-micro-services"&gt;Deploying Go Micro Services&lt;a class="td-heading-self-link" href="#deploying-go-micro-services" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;figure role="figure" aria-label="Go Micro deployment"&gt;
+&lt;p&gt;MCP gateway automatically exposes your microservices as AI-accessible tools through:&lt;/p&gt;</description></item><item><title>Deploying Go Micro Services</title><link>https://micro.labqa.pp.ua/docs/overview/deployment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/docs/overview/deployment/</guid><description>&lt;p&gt;&lt;figure role="figure" aria-label="Go Micro deployment"&gt;
  &lt;a href="https://micro.labqa.pp.ua/docs/overview/deployment/deployment.jpg"&gt;
  &lt;div class="image-wrapper" style="background: linear-gradient(#f8f9fa, #343f4e);"&gt;
  &lt;img
@@ -145,8 +144,7 @@ agent / flow / micro chat → agent-managed, event-driven, or interactive orches
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Each command has a distinct role — they don&amp;rsquo;t overlap:&lt;/p&gt;</description></item><item><title>Architecture</title><link>https://micro.labqa.pp.ua/docs/overview/architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/docs/overview/architecture/</guid><description>&lt;h2 id="architecture"&gt;Architecture&lt;a class="td-heading-self-link" href="#architecture" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;figure role="figure" aria-label="Go Micro architecture"&gt;
+&lt;p&gt;Each command has a distinct role — they don&amp;rsquo;t overlap:&lt;/p&gt;</description></item><item><title>Architecture</title><link>https://micro.labqa.pp.ua/docs/overview/architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/docs/overview/architecture/</guid><description>&lt;p&gt;&lt;figure role="figure" aria-label="Go Micro architecture"&gt;
  &lt;a href="https://micro.labqa.pp.ua/docs/overview/architecture/architecture.jpg"&gt;
  &lt;div class="image-wrapper" style="background: linear-gradient(#fafcfc, #4a9cab);"&gt;
  &lt;img

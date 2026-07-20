@@ -1,4 +1,4 @@
-# State with Postgres Store
+# Store Postgres
 
 > Use the Postgres store for persistent key/value state.
 
@@ -15,14 +15,14 @@ package main
 
 import (
     "log"
-    "go-micro.dev/v5"
-    "go-micro.dev/v5/store"
-    postgres "go-micro.dev/v5/store/postgres"
+    "go-micro.dev/v6"
+    "go-micro.dev/v6/store"
+    postgres "go-micro.dev/v6/store/postgres"
 )
 
 func main() {
     st := postgres.NewStore()
-    svc := micro.NewService(micro.Store(st))
+    svc := micro.NewService("postgres-store", micro.Store(st))
     svc.Init()
 
     _ = store.Write(&store.Record{Key: "foo", Value: []byte("bar")})

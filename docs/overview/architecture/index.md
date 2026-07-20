@@ -8,8 +8,6 @@ LLMS index: [llms.txt](/llms.txt)
 
 ---
 
-## Architecture
-
 ![Go Micro architecture](architecture.jpg)
 
 An overview of the Go Micro architecture.

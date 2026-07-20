@@ -1,4 +1,4 @@
-# Deployment
+# Deploying Go Micro Services
 
 > This guide covers deploying go-micro services to a Linux server using systemd.
 
@@ -7,8 +7,6 @@
 LLMS index: [llms.txt](/llms.txt)
 
 ---
-
-# Deploying Go Micro Services
 
 ![Go Micro deployment](deployment.jpg)
 
