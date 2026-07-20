@@ -110,3 +110,18 @@ first-class; alignment utilities (`text-center`) belong in `type`.
 `content/en/about/index.md` still uses the legacy `type="text-center h1 py-4"`
 (alignment + padding in `type`). Migrate it to `type="text-center"`
 + `padding="py-4"` when touched.
+
+## Sponsor logos
+
+In the `_index.md` Sponsors section, each logo is a local `<img>` forced white
+with a CSS filter (the section background is `dark-blue`):
+
+```html
+<a href="/blog/3"><img src="/images/sponsors/anthropic.svg" alt="Anthropic" class="sponsor-logo" /></a>
+```
+
+`.sponsor-logo` applies `filter: brightness(0) invert(1)` — pure white
+regardless of the SVG's own fill. Using `<img>` (not a CSS mask) keeps the
+intrinsic size, so the logo can't collapse to zero width inside the `d-flex`
+row. Assets live in `static/images/sponsors/`. Swap a logo by replacing the
+file and the `src`; the filter handles the color.

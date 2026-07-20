@@ -269,9 +269,9 @@ Get the code
 <h2>Sponsors</h2>
 <p class="text-muted mb-4">Go Micro is supported by companies building the future of AI infrastructure.</p>
 <div class="d-flex align-items-center justify-content-center gap-4 flex-wrap mb-4">
-<a href="/blog/3"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Anthropic_logo.svg" alt="Anthropic" style="height: 28px; opacity: 0.7;" /></a>
-<a href="/blog/29"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" alt="OpenAI" style="height: 28px; opacity: 0.7;" /></a>
-<a href="/blog/8"><img src="https://www.atlascloud.ai/logo.svg" alt="Atlas Cloud" style="height: 28px; opacity: 0.7;" /></a>
+<a href="/blog/3"><img src="/images/sponsors/anthropic.svg" alt="Anthropic" class="sponsor-logo" /></a>
+<a href="/blog/29"><img src="/images/sponsors/openai.svg" alt="OpenAI" class="sponsor-logo" /></a>
+<a href="/blog/8"><img src="/images/sponsors/atlas-cloud-logo.svg" alt="Atlas Cloud" class="sponsor-logo" /></a>
 </div>
 <p class="text-muted mb-3">Want to support Go Micro and put your logo here? Or running it in production and need a hand?</p>
 <div class="d-flex gap-3 justify-content-center">

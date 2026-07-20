@@ -103,6 +103,17 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
+/* Sponsor logos: forced white via filter (section bg is dark-blue).
+   <img> keeps intrinsic size so it can't collapse to 0 width in a flex row. */
+.sponsor-logo {
+    height: 28px;
+    width: auto;
+    opacity: 0.75;
+    /* ponytail: brightness(0) invert(1) = pure white regardless of SVG fill.
+       If a section ever goes light, drop invert(1) (brightness(0) = black). */
+    filter: brightness(0) invert(1);
+}
+
 .size-demo {
     transition: all 0.3s ease;
 }
