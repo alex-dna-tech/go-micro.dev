@@ -94,75 +94,15 @@ Get the code
 <i class="fa-brands fa-github"></i>
 </a>
 </div>
-
 {{% blocks/link-down color="info" %}}
 {{% /blocks/hero %}}
 
 {{% blocks/section color="dark-blue" type="row" pattern=true padding="py-5" %}}
 <div class="row g-4 justify-content-center">
-<div class="col-lg-4 col-md-6">
-{{% elements/variant-card 
-    color="gradient"
-    title="Pluggable" 
-    subtitle="Swap components without changing code" 
-%}}
-<div class="p-3 display-6">🔌</div>
-{{% /elements/variant-card %}}
+<h2>Features</h2>
+<p class="text-light mb-4">An agent harness and a service framework in one — agents, services, and flows on the same runtime, with the production pieces agents need.
+</p>
 </div>
-
-<div class="col-lg-4 col-md-6">
-{{% elements/variant-card 
-    color="gradient"
-    title="Zero Config" 
-    subtitle="Works out of the box with sensible defaults" 
-%}}
-<div class="p-3 display-6">⚡</div>
-{{% /elements/variant-card %}}
-</div>
-
-<div class="col-lg-4 col-md-6">
-{{% elements/variant-card 
-    color="gradient"
-    title="RPC First" 
-    subtitle="Swap components without changing code" 
-%}}
-<div class="p-3 display-6">🎯</div>
-{{% /elements/variant-card %}}
-</div>
-
-<div class="col-lg-4 col-md-6">
-{{% elements/variant-card 
-    color="gradient"
-    title="Pub/Sub" 
-    subtitle="Swap components without changing code" 
-%}}
-<div class="p-3 display-6">📡</div>
-{{% /elements/variant-card %}}
-</div>
-
-<div class="col-lg-4 col-md-6">
-{{% elements/variant-card 
-    color="gradient"
-    title="State Management" 
-    subtitle="Unified store interface for persistence" 
-%}}
-<div class="p-3 display-6">🗄️</div>
-{{% /elements/variant-card %}}
-</div>
-
-<div class="col-lg-4 col-md-6">
-{{% elements/variant-card 
-    color="gradient"
-    title="Multi-Transport" 
-    subtitle="HTTP, gRPC, NATS, and more" 
-%}}
-<div class="p-3 display-6">🌐</div>
-{{% /elements/variant-card %}}
-</div>
-</div>
-{{% /blocks/section %}}
-
-{{% blocks/section color="dark-blue" type="row" pattern=true padding="py-5" %}}
 <div class="row g-4 justify-content-center">
 <div class="col-lg-4 col-md-6">
 {{% elements/variant-card
@@ -170,7 +110,7 @@ Get the code
     title="Agent Harness"
     subtitle="A model, memory, tools, plan/delegate, guardrails, and execution middleware around every agent."
 %}}
-<div class="p-3 display-6">🤖</div>
+<div class="p-3 display-3">🤖</div>
 {{% /elements/variant-card %}}
 </div>
 
@@ -180,7 +120,7 @@ Get the code
     title="Services as Tools"
     subtitle="Build services in Go or generate them from a prompt. Their endpoints become typed tools automatically."
 %}}
-<div class="p-3 display-6">🔧</div>
+<div class="p-3 display-3">🔧</div>
 {{% /elements/variant-card %}}
 </div>
 
@@ -190,7 +130,7 @@ Get the code
     title="Durable Workflows"
     subtitle="Use fixed, checkpointed code paths for deterministic work; hand off to agents when the path is dynamic."
 %}}
-<div class="p-3 display-6">⚙️</div>
+<div class="p-3 display-3">⚙️</div>
 {{% /elements/variant-card %}}
 </div>
 
@@ -200,7 +140,7 @@ Get the code
     title="MCP Gateway"
     subtitle="Every service endpoint is automatically an AI-callable tool via the Model Context Protocol."
 %}}
-<div class="p-3 display-6">🌐</div>
+<div class="p-3 display-3">🌐</div>
 {{% /elements/variant-card %}}
 </div>
 
@@ -210,7 +150,7 @@ Get the code
     title="A2A Gateway"
     subtitle="Every agent is reachable over the Agent2Agent protocol — discovered and called by agents on any framework."
 %}}
-<div class="p-3 display-6">🤝</div>
+<div class="p-3 display-3">🤝</div>
 {{% /elements/variant-card %}}
 </div>
 
@@ -220,7 +160,7 @@ Get the code
     title="Pluggable Everything"
     subtitle="All abstractions are Go interfaces. Swap any component without changing your code."
 %}}
-<div class="p-3 display-6">🔌</div>
+<div class="p-3 display-3">🔌</div>
 {{% /elements/variant-card %}}
 </div>
 </div>
@@ -228,10 +168,10 @@ Get the code
 
 {{% blocks/section color="dark-blue" pattern=true padding="py-5" %}}
 <div class="row align-items-center">
-<div class="col-lg-6">
+<div class="col-lg-6 p-4">
 <img src="/images/generated/mcp-agent.jpg" alt="AI agent calling microservices via MCP" class="img-fluid rounded-4 shadow" />
 </div>
-<div class="col-lg-6">
+<div class="col-lg-6 p-4">
 <h2>From Prompt Loop to Operating Harness</h2>
 <p>Tell it what you need. The AI designs services, generates an agent, and drops you into an interactive console. The harness gives that agent tools, memory, guardrails, and workflows so it can operate across services.</p>
 <pre><code><span style="color:#ff7b72">$</span> <span style="color:#d2a8ff">micro run</span> <span style="color:#a5d6ff">--prompt "task management system"</code></pre>
@@ -243,11 +183,11 @@ Get the code
 
 {{% blocks/section color="dark-blue" pattern=true padding="py-5" %}}
 <div class="row align-items-center">
-<div class="col-lg-6">
+<div class="col-lg-6 p-4">
 <h2>Distributed Systems for Agents</h2>
 <p>Agents need the same substrate services do: discovery, RPC, events, state, auth, observability, and deployment. Swap any component without changing your code — go from mDNS to Consul, or HTTP to gRPC, with a single option.</p>
 </div>
-<div class="col-lg-6">
+<div class="col-lg-6 p-4">
 <img src="/images/generated/architecture.jpg" alt="Go Micro architecture diagram" class="img-fluid rounded-4 shadow" />
 </div>
 </div>
@@ -255,25 +195,25 @@ Get the code
 
 {{% blocks/section color="dark-blue" pattern=true padding="py-5" %}}
 <div class="row align-items-center">
-<div class="col-lg-6">
+<div class="col-lg-6 p-4">
+<img src="/images/generated/developer-experience.jpg" alt="Terminal showing micro run and micro chat" class="img-fluid rounded-4 shadow" />
+</div>
+<div class="col-lg-6 p-4">
 <h2>Developer Experience</h2>
 <p><code>micro new</code> scaffolds a service or an agent — every endpoint is automatically an MCP tool. <code>micro run</code> starts everything with hot reload, an API gateway, and an interactive console, and <code>micro chat</code> talks to your agents and services from the terminal.</p>
-</div>
-<div class="col-lg-6">
-<img src="/images/generated/developer-experience.jpg" alt="Terminal showing micro run and micro chat" class="img-fluid rounded-4 shadow" />
 </div>
 </div>
 {{% /blocks/section %}}
 
 {{% blocks/section color="dark-blue" pattern=true padding="py-5" type="text-center" %}}
 <h2>Sponsors</h2>
-<p class="text-muted mb-4">Go Micro is supported by companies building the future of AI infrastructure.</p>
+<p class="text-light mb-4">Go Micro is supported by companies building the future of AI infrastructure.</p>
 <div class="d-flex align-items-center justify-content-center gap-4 flex-wrap mb-4">
 <a href="/blog/3"><img src="/images/sponsors/anthropic.svg" alt="Anthropic" class="sponsor-logo" /></a>
 <a href="/blog/29"><img src="/images/sponsors/openai.svg" alt="OpenAI" class="sponsor-logo" /></a>
 <a href="/blog/8"><img src="/images/sponsors/atlas-cloud-logo.svg" alt="Atlas Cloud" class="sponsor-logo" /></a>
 </div>
-<p class="text-muted mb-3">Want to support Go Micro and put your logo here? Or running it in production and need a hand?</p>
+<p class="text-light mb-3">Want to support Go Micro and put your logo here? Or running it in production and need a hand?</p>
 <div class="d-flex gap-3 justify-content-center">
 <a href="https://discord.gg/G8Gk5j3uXr" class="btn btn-outline-go">Become a sponsor</a>
 <a href="/support" class="btn btn-go">Commercial support</a>
