@@ -184,11 +184,11 @@ Get the code
 {{% blocks/section color="dark-blue" pattern=true padding="py-5" %}}
 <div class="row align-items-center">
 <div class="col-lg-6 p-4">
+<img src="/images/generated/architecture.jpg" alt="Go Micro architecture diagram" class="img-fluid rounded-4 shadow" />
+</div>
+<div class="col-lg-6 p-4 order-lg-first">
 <h2>Distributed Systems for Agents</h2>
 <p>Agents need the same substrate services do: discovery, RPC, events, state, auth, observability, and deployment. Swap any component without changing your code — go from mDNS to Consul, or HTTP to gRPC, with a single option.</p>
-</div>
-<div class="col-lg-6 p-4">
-<img src="/images/generated/architecture.jpg" alt="Go Micro architecture diagram" class="img-fluid rounded-4 shadow" />
 </div>
 </div>
 {{% /blocks/section %}}
