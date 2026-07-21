@@ -8,7 +8,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 ---
 
-<section id="td-cover-block-0" class="row td-hero-block td-cover-block--height-full bg-pattern td-below-navbar js-td-cover -bg-dark-blue" >
+<section id="td-cover-block-0" class="row td-hero-block td-cover-block--height-full td-below-navbar js-td-cover -bg-dark-blue bg-pattern" >
   <div class="col-12">
     <div class="container td-overlay__inner">
       <div class="text-center">
@@ -101,7 +101,6 @@ Get the code
 
 
 
-
 <a class="btn btn-link text-info" href="#td-block-1" aria-label="Read more"><i class="fa-solid fa-circle-chevron-down" style="font-size: 400%"></i></a>
 
 </div>
@@ -113,40 +112,28 @@ Get the code
 
 
 <div><a id="td-block-1" class="td-anchor-no-extra-offset"></a></div>
-<section class="row td-box td-box--dark-blue bg-pattern py-5 td-box--height-auto">
+<section class="row td-box td-box--dark-blue td-box--height-auto bg-pattern py-5">
   <div class="col container">
     <div class="row">
       
       
+<div class="row g-4 justify-content-center">
+<h2>Features</h2>
+<p class="text-light mb-4">An agent harness and a service framework in one — agents, services, and flows on the same runtime, with the production pieces agents need.
+</p>
+</div>
 <div class="row g-4 justify-content-center">
 <div class="col-lg-4 col-md-6">
 <div class="variant-card variant-card--gradient rounded-4 p-4 border border-secondary">
 <div class="variant-preview d-flex align-items-center justify-content-center rounded-3 mb-3">
 
 <div class="pt-3 lead">
-<div class="p-3 display-6">🔌</div>
+<div class="p-3 display-3">🤖</div>
 </div>
 
 </div>
-<h3 class="fw-semibold fs-5 mb-1">Pluggable</h3>
-<p class="small text-secondary mb-0">Swap components without changing code</p>
-
-</div>
-
-
-</div>
-
-<div class="col-lg-4 col-md-6">
-<div class="variant-card variant-card--gradient rounded-4 p-4 border border-secondary">
-<div class="variant-preview d-flex align-items-center justify-content-center rounded-3 mb-3">
-
-<div class="pt-3 lead">
-<div class="p-3 display-6">⚡</div>
-</div>
-
-</div>
-<h3 class="fw-semibold fs-5 mb-1">Zero Config</h3>
-<p class="small text-secondary mb-0">Works out of the box with sensible defaults</p>
+<h3 class="fw-semibold fs-5 mb-1">Agent Harness</h3>
+<p class="small text-secondary mb-0">A model, memory, tools, plan/delegate, guardrails, and execution middleware around every agent.</p>
 
 </div>
 
@@ -158,29 +145,12 @@ Get the code
 <div class="variant-preview d-flex align-items-center justify-content-center rounded-3 mb-3">
 
 <div class="pt-3 lead">
-<div class="p-3 display-6">🎯</div>
+<div class="p-3 display-3">🔧</div>
 </div>
 
 </div>
-<h3 class="fw-semibold fs-5 mb-1">RPC First</h3>
-<p class="small text-secondary mb-0">Swap components without changing code</p>
-
-</div>
-
-
-</div>
-
-<div class="col-lg-4 col-md-6">
-<div class="variant-card variant-card--gradient rounded-4 p-4 border border-secondary">
-<div class="variant-preview d-flex align-items-center justify-content-center rounded-3 mb-3">
-
-<div class="pt-3 lead">
-<div class="p-3 display-6">📡</div>
-</div>
-
-</div>
-<h3 class="fw-semibold fs-5 mb-1">Pub/Sub</h3>
-<p class="small text-secondary mb-0">Swap components without changing code</p>
+<h3 class="fw-semibold fs-5 mb-1">Services as Tools</h3>
+<p class="small text-secondary mb-0">Build services in Go or generate them from a prompt. Their endpoints become typed tools automatically.</p>
 
 </div>
 
@@ -192,12 +162,12 @@ Get the code
 <div class="variant-preview d-flex align-items-center justify-content-center rounded-3 mb-3">
 
 <div class="pt-3 lead">
-<div class="p-3 display-6">🗄️</div>
+<div class="p-3 display-3">⚙️</div>
 </div>
 
 </div>
-<h3 class="fw-semibold fs-5 mb-1">State Management</h3>
-<p class="small text-secondary mb-0">Unified store interface for persistence</p>
+<h3 class="fw-semibold fs-5 mb-1">Durable Workflows</h3>
+<p class="small text-secondary mb-0">Use fixed, checkpointed code paths for deterministic work; hand off to agents when the path is dynamic.</p>
 
 </div>
 
@@ -209,17 +179,156 @@ Get the code
 <div class="variant-preview d-flex align-items-center justify-content-center rounded-3 mb-3">
 
 <div class="pt-3 lead">
-<div class="p-3 display-6">🌐</div>
+<div class="p-3 display-3">🌐</div>
 </div>
 
 </div>
-<h3 class="fw-semibold fs-5 mb-1">Multi-Transport</h3>
-<p class="small text-secondary mb-0">HTTP, gRPC, NATS, and more</p>
+<h3 class="fw-semibold fs-5 mb-1">MCP Gateway</h3>
+<p class="small text-secondary mb-0">Every service endpoint is automatically an AI-callable tool via the Model Context Protocol.</p>
 
 </div>
 
 
 </div>
+
+<div class="col-lg-4 col-md-6">
+<div class="variant-card variant-card--gradient rounded-4 p-4 border border-secondary">
+<div class="variant-preview d-flex align-items-center justify-content-center rounded-3 mb-3">
+
+<div class="pt-3 lead">
+<div class="p-3 display-3">🤝</div>
+</div>
+
+</div>
+<h3 class="fw-semibold fs-5 mb-1">A2A Gateway</h3>
+<p class="small text-secondary mb-0">Every agent is reachable over the Agent2Agent protocol — discovered and called by agents on any framework.</p>
+
+</div>
+
+
+</div>
+
+<div class="col-lg-4 col-md-6">
+<div class="variant-card variant-card--gradient rounded-4 p-4 border border-secondary">
+<div class="variant-preview d-flex align-items-center justify-content-center rounded-3 mb-3">
+
+<div class="pt-3 lead">
+<div class="p-3 display-3">🔌</div>
+</div>
+
+</div>
+<h3 class="fw-semibold fs-5 mb-1">Pluggable Everything</h3>
+<p class="small text-secondary mb-0">All abstractions are Go interfaces. Swap any component without changing your code.</p>
+
+</div>
+
+
+</div>
+</div>
+</div>
+  </div>
+</section>
+
+
+<div><a id="td-block-2" class="td-anchor-no-extra-offset"></a></div>
+<section class="row td-box td-box--dark-blue td-box--height-auto bg-pattern py-5">
+  <div class="col container">
+    <div class="container">
+      
+      
+<div class="row align-items-center">
+<div class="col-lg-6 p-4">
+<img src="/images/generated/mcp-agent.jpg" alt="AI agent calling microservices via MCP" class="img-fluid rounded-4 shadow" />
+</div>
+<div class="col-lg-6 p-4">
+<h2>From Prompt Loop to Operating Harness</h2>
+<p>Tell it what you need. The AI designs services, generates an agent, and drops you into an interactive console. The harness gives that agent tools, memory, guardrails, and workflows so it can operate across services.</p>
+<pre><code><span style="color:#ff7b72">$</span> <span style="color:#d2a8ff">micro run</span> <span style="color:#a5d6ff">--prompt "task management system"</code></pre>
+<pre><code><span style="color:#ff7b72">&gt;</span> Create a project called Launch, add tasks, assign to Alice</code></pre>
+<a class="btn btn-go mt-3" href="/blog/16">Learn About Agents</a>
+</div>
+</div>
+</div>
+  </div>
+</section>
+
+
+<div><a id="td-block-3" class="td-anchor-no-extra-offset"></a></div>
+<section class="row td-box td-box--dark-blue td-box--height-auto bg-pattern py-5">
+  <div class="col container">
+    <div class="container">
+      
+      
+<div class="row align-items-center">
+<div class="col-lg-6 p-4">
+<h2>Distributed Systems for Agents</h2>
+<p>Agents need the same substrate services do: discovery, RPC, events, state, auth, observability, and deployment. Swap any component without changing your code — go from mDNS to Consul, or HTTP to gRPC, with a single option.</p>
+</div>
+<div class="col-lg-6 p-4">
+<img src="/images/generated/architecture.jpg" alt="Go Micro architecture diagram" class="img-fluid rounded-4 shadow" />
+</div>
+</div>
+</div>
+  </div>
+</section>
+
+
+<div><a id="td-block-4" class="td-anchor-no-extra-offset"></a></div>
+<section class="row td-box td-box--dark-blue td-box--height-auto bg-pattern py-5">
+  <div class="col container">
+    <div class="container">
+      
+      
+<div class="row align-items-center">
+<div class="col-lg-6 p-4">
+<img src="/images/generated/developer-experience.jpg" alt="Terminal showing micro run and micro chat" class="img-fluid rounded-4 shadow" />
+</div>
+<div class="col-lg-6 p-4">
+<h2>Developer Experience</h2>
+<p><code>micro new</code> scaffolds a service or an agent — every endpoint is automatically an MCP tool. <code>micro run</code> starts everything with hot reload, an API gateway, and an interactive console, and <code>micro chat</code> talks to your agents and services from the terminal.</p>
+</div>
+</div>
+</div>
+  </div>
+</section>
+
+
+<div><a id="td-block-5" class="td-anchor-no-extra-offset"></a></div>
+<section class="row td-box td-box--dark-blue td-box--height-auto bg-pattern py-5">
+  <div class="col container">
+    <div class="text-center">
+      
+      
+<h2>Sponsors</h2>
+<p class="text-light mb-4">Go Micro is supported by companies building the future of AI infrastructure.</p>
+<div class="d-flex align-items-center justify-content-center gap-4 flex-wrap mb-4">
+<a href="/blog/3"><img src="/images/sponsors/anthropic.svg" alt="Anthropic" class="sponsor-logo" /></a>
+<a href="/blog/29"><img src="/images/sponsors/openai.svg" alt="OpenAI" class="sponsor-logo" /></a>
+<a href="/blog/8"><img src="/images/sponsors/atlas-cloud-logo.svg" alt="Atlas Cloud" class="sponsor-logo" /></a>
+</div>
+<p class="text-light mb-3">Want to support Go Micro and put your logo here? Or running it in production and need a hand?</p>
+<div class="d-flex gap-3 justify-content-center">
+<a href="https://discord.gg/G8Gk5j3uXr" class="btn btn-outline-go">Become a sponsor</a>
+<a href="/support" class="btn btn-go">Commercial support</a>
+</div>
+</div>
+  </div>
+</section>
+
+
+<div><a id="td-block-6" class="td-anchor-no-extra-offset"></a></div>
+<section class="row td-box td-box--dark-blue td-box--height-auto bg-pattern py-5">
+  <div class="col container">
+    <div class="text-center">
+      
+      
+<h2>Trusted by Developers</h2>
+<p class="text-light mb-4">23,000+ stars on GitHub. Production-ready. Apache 2.0 licensed.</p>
+<div class="d-flex gap-3 justify-content-center flex-wrap">
+<a href="/docs/getting-started.html" class="btn btn-go">Get Started</a>
+<a href="/docs/" class="btn btn-outline-go">Read the Docs</a>
+<a href="https://discord.gg/G8Gk5j3uXr" class="btn btn-outline-go">Join Discord</a>
+<a href="/blog/" class="btn btn-outline-go">Blog</a>
 </div>
 </div>
   </div>

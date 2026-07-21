@@ -1,4 +1,4 @@
-# v5.13.0
+# What's New in Go Micro: v5.13.0
 
 > We're excited to announce **micro deploy** in Go Micro v5.13.0 — a simple way to deploy your services to any Linux server.
 

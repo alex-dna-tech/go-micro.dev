@@ -1074,11 +1074,9 @@ when any configured provider breaks the shared contract.&lt;/p&gt;</description>
 &lt;li&gt;You need pub/sub messaging&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="code-comparison"&gt;Code Comparison&lt;a class="td-heading-self-link" href="#code-comparison" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;go-kit&lt;/strong&gt; (requires more setup):&lt;/p&gt;</description></item><item><title>v6.6.0</title><link>https://micro.labqa.pp.ua/blog/2026/07/11/v6-6-0/</link><pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/blog/2026/07/11/v6-6-0/</guid><description>&lt;h1 id="whats-new-in-go-micro-v660"&gt;What&amp;rsquo;s New in Go Micro: v6.6.0&lt;a class="td-heading-self-link" href="#whats-new-in-go-micro-v660" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Go Micro v6.6.0 is a harness reliability release. The theme is the same services → agents → workflows lifecycle, but with more of the first-agent path covered by local checks and more recovery paths made deterministic when agents resume, retry, delegate, or notify.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;go-kit&lt;/strong&gt; (requires more setup):&lt;/p&gt;</description></item><item><title>What's New in Go Micro: v6.6.0</title><link>https://micro.labqa.pp.ua/blog/2026/07/11/v6-6-0/</link><pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/blog/2026/07/11/v6-6-0/</guid><description>&lt;p&gt;Go Micro v6.6.0 is a harness reliability release. The theme is the same services → agents → workflows lifecycle, but with more of the first-agent path covered by local checks and more recovery paths made deterministic when agents resume, retry, delegate, or notify.&lt;/p&gt;
 &lt;h2 id="the-first-agent-path-is-harder-to-break"&gt;The first-agent path is harder to break&lt;a class="td-heading-self-link" href="#the-first-agent-path-is-harder-to-break" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;The README, website docs, examples, and 0→hero guide chain now have more harness coverage. The CLI and docs keep the path from install troubleshooting through &lt;code&gt;micro agent demo&lt;/code&gt;, quickcheck, examples, the smallest first-agent, debugging, and 0→hero in one consistent order.&lt;/p&gt;</description></item><item><title>v6.3.15</title><link>https://micro.labqa.pp.ua/blog/2026/07/05/v6-3-15/</link><pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/blog/2026/07/05/v6-3-15/</guid><description>&lt;h1 id="whats-new-in-go-micro-v6315"&gt;What&amp;rsquo;s New in Go Micro: v6.3.15&lt;a class="td-heading-self-link" href="#whats-new-in-go-micro-v6315" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Go Micro v6.3.15 is a small but useful harness release: less friction for the first agent, better streaming provider coverage, and more reliable execution when models and delegates do not behave perfectly.&lt;/p&gt;
+&lt;p&gt;The README, website docs, examples, and 0→hero guide chain now have more harness coverage. The CLI and docs keep the path from install troubleshooting through &lt;code&gt;micro agent demo&lt;/code&gt;, quickcheck, examples, the smallest first-agent, debugging, and 0→hero in one consistent order.&lt;/p&gt;</description></item><item><title>What's New in Go Micro: v6.3.15</title><link>https://micro.labqa.pp.ua/blog/2026/07/05/v6-3-15/</link><pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/blog/2026/07/05/v6-3-15/</guid><description>&lt;p&gt;Go Micro v6.3.15 is a small but useful harness release: less friction for the first agent, better streaming provider coverage, and more reliable execution when models and delegates do not behave perfectly.&lt;/p&gt;
 &lt;h2 id="anthropic-now-streams"&gt;Anthropic now streams&lt;a class="td-heading-self-link" href="#anthropic-now-streams" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The Anthropic provider now supports Messages SSE streaming and is registered as a streaming-capable provider. That means Go Micro agents can use Anthropic in the same streaming path as the other streaming-capable providers, with request/response parser coverage and provider capability docs kept in sync.&lt;/p&gt;</description></item><item><title>The Loop, Shipped: Introducing micro loop</title><link>https://micro.labqa.pp.ua/blog/2026/07/02/the-loop-shipped-introducing-micro-loop/</link><pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/blog/2026/07/02/the-loop-shipped-introducing-micro-loop/</guid><description>&lt;p&gt;A few weeks ago we wrote &lt;a href="https://micro.labqa.pp.ua/blog/31"&gt;How Go Micro Builds Itself&lt;/a&gt;: a loop of two AI agents — Codex writing scoped increments, Claude Code orchestrating and reviewing, a human setting direction — kept honest by CI. It was our own thesis, &lt;em&gt;an agent operating a system&lt;/em&gt;, pointed at the repository that defines the thesis.&lt;/p&gt;
 &lt;p&gt;People asked the obvious question: &lt;strong&gt;can I run that on my repo?&lt;/strong&gt;&lt;/p&gt;
@@ -1253,8 +1251,8 @@ when any configured provider breaks the shared contract.&lt;/p&gt;</description>
 &lt;li&gt;Calling your &lt;code&gt;payments&lt;/code&gt; service to verify the transaction&lt;/li&gt;
 &lt;li&gt;Giving you a complete diagnosis&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;No API wrappers. No manual integrations. Your services just work with AI.&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>v5.15.0</title><link>https://micro.labqa.pp.ua/blog/2026/02/11/v5-15-0/</link><pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/blog/2026/02/11/v5-15-0/</guid><description>&lt;h1 id="making-microservices-ai-native-with-mcp"&gt;Making Microservices AI-Native with MCP&lt;a class="td-heading-self-link" href="#making-microservices-ai-native-with-mcp" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h1&gt;
-&lt;h2 id="the-vision"&gt;The Vision&lt;a class="td-heading-self-link" href="#the-vision" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;No API wrappers. No manual integrations. Your services just work with AI.&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>What's New in Go Micro: v5.15.0</title><link>https://micro.labqa.pp.ua/blog/2026/02/11/v5-15-0/</link><pubDate>Wed, 11 Feb 2026 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/blog/2026/02/11/v5-15-0/</guid><description>&lt;h2 id="making-microservices-ai-native-with-mcp"&gt;Making Microservices AI-Native with MCP&lt;a class="td-heading-self-link" href="#making-microservices-ai-native-with-mcp" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="the-vision"&gt;The Vision&lt;a class="td-heading-self-link" href="#the-vision" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Imagine telling Claude: &lt;em&gt;&amp;ldquo;Why is user 123&amp;rsquo;s order stuck?&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Claude responds by:&lt;/p&gt;
 &lt;ol&gt;
@@ -1264,7 +1262,7 @@ when any configured provider breaks the shared contract.&lt;/p&gt;</description>
 &lt;li&gt;Giving you a complete diagnosis&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;No API wrappers. No manual integrations. Your services just work with AI.&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id="what-is-mcp"&gt;What is MCP?&lt;a class="td-heading-self-link" href="#what-is-mcp" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id="what-is-mcp"&gt;What is MCP?&lt;a class="td-heading-self-link" href="#what-is-mcp" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://modelcontextprotocol.io"&gt;Model Context Protocol&lt;/a&gt; is Anthropic&amp;rsquo;s open standard for connecting AI models to external tools. Think of it like a microservices registry, but for AI.&lt;/p&gt;</description></item><item><title>Introducing micro deploy</title><link>https://micro.labqa.pp.ua/blog/2026/01/27/introducing-micro-deploy/</link><pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/blog/2026/01/27/introducing-micro-deploy/</guid><description>&lt;p&gt;&lt;figure role="figure" aria-label=""&gt;
  &lt;a href="https://micro.labqa.pp.ua/blog/2026/01/27/introducing-micro-deploy/blog-deploy.jpg"&gt;
  &lt;div class="image-wrapper" style="background: linear-gradient(#f9fafb, #2e3b51, #4e79b5);"&gt;
@@ -1287,7 +1285,7 @@ when any configured provider breaks the shared contract.&lt;/p&gt;</description>
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;micro new myservice
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; myservice
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;micro run
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;But getting those services to production? That was on you. You&amp;rsquo;d need to figure out Docker, Kubernetes, or write your own deployment scripts.&lt;/p&gt;</description></item><item><title>v5.13.0</title><link>https://micro.labqa.pp.ua/blog/2026/01/27/v5-13-0/</link><pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/blog/2026/01/27/v5-13-0/</guid><description>&lt;h2 id="the-problem"&gt;The Problem&lt;a class="td-heading-self-link" href="#the-problem" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;But getting those services to production? That was on you. You&amp;rsquo;d need to figure out Docker, Kubernetes, or write your own deployment scripts.&lt;/p&gt;</description></item><item><title>What's New in Go Micro: v5.13.0</title><link>https://micro.labqa.pp.ua/blog/2026/01/27/v5-13-0/</link><pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/blog/2026/01/27/v5-13-0/</guid><description>&lt;h2 id="the-problem"&gt;The Problem&lt;a class="td-heading-self-link" href="#the-problem" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Go Micro has always been great for building microservices:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;micro new myservice
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; myservice
@@ -1514,7 +1512,31 @@ fix(broker): prevent reconnect storm
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;MICRO_STORE_DATABASE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;micro &lt;span class="se"&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;MICRO_STORE_TABLE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;micro &lt;span class="se"&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;go run main.go
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Transport Nats</title><link>https://micro.labqa.pp.ua/docs/examples/learn-by-examples/transport-nats/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/docs/examples/learn-by-examples/transport-nats/</guid><description>&lt;h2 id="in-code"&gt;In code&lt;a class="td-heading-self-link" href="#in-code" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Support</title><link>https://micro.labqa.pp.ua/support/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/support/</guid><description>&lt;section id="td-cover-block-0" class="row td-hero-block td-cover-block--height-max td-below-navbar js-td-cover -bg-dark-blue bg-pattern" &gt;
+ &lt;div class="col-12"&gt;
+ &lt;div class="container td-overlay__inner"&gt;
+ &lt;div class="text-center"&gt;
+ &lt;div class="pt-3 lead"&gt;
+&lt;h1 class="display-3 fw-bold mb-3"&gt;Support&lt;/h1&gt;
+&lt;p class="lead text-gray-custom mb-4 col-8 offset-2"&gt;
+ Community help is free. Commercial support and consulting keep the project moving — and keep your team unblocked in production.
+&lt;/p&gt;
+&lt;div class="td-cta-buttons my-4"&gt;
+ &lt;a class="btn btn-go btn-lg d-inline-flex align-items-center gap-2" href="https://github.com/sponsors/asim"&gt;Become a sponsor&lt;/a&gt;
+ &lt;a class="btn btn-outline-go btn-lg d-inline-flex align-items-center gap-2" href="https://github.com/micro/go-micro/issues/new?template=commercial_support.md"&gt;Talk to us&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/section&gt;
+&lt;div&gt;&lt;a id="td-block-1" class="td-anchor-no-extra-offset"&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;section class="row td-box td-box--dark-blue td-box--height-auto bg-pattern py-5"&gt;
+ &lt;div class="col container"&gt;
+ &lt;div class="row"&gt;
+&lt;div class="text-center mb-4"&gt;
+ &lt;h2 class="fw-bold"&gt;Choose your level&lt;/h2&gt;
+ &lt;p class="text-gray-custom col-10 offset-1"&gt;From free community help to hands-on engagements. Recurring amounts are set on GitHub Sponsors; support and consulting are scoped per engagement.&lt;/p&gt;</description></item><item><title>Transport Nats</title><link>https://micro.labqa.pp.ua/docs/examples/learn-by-examples/transport-nats/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/docs/examples/learn-by-examples/transport-nats/</guid><description>&lt;h2 id="in-code"&gt;In code&lt;a class="td-heading-self-link" href="#in-code" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;package&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt;
@@ -1556,7 +1578,7 @@ v0.14.4-dev &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;script&gt;
 document.addEventListener("DOMContentLoaded", function() {
  var options = { hour: '2-digit', hour12: false, minute: '2-digit', timeZoneName: 'short' };
- var buildDate = new Date("2026-07-20T18:57:49Z");
+ var buildDate = new Date("2026-07-21T11:40:11Z");
  document.getElementById("local-time").innerText = buildDate.toLocaleString(undefined, options);
 });
 &lt;/script&gt;</description></item></channel></rss>

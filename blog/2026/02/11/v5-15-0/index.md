@@ -1,4 +1,4 @@
-# v5.15.0
+# What's New in Go Micro: v5.15.0
 
 > We're excited to announce **MCP (Model Context Protocol) support** in Go Micro v5.15.0 — making your microservices instantly accessible to AI tools like Claude.
 
@@ -8,9 +8,9 @@ LLMS index: [llms.txt](/llms.txt)
 
 ---
 
-# Making Microservices AI-Native with MCP
+## Making Microservices AI-Native with MCP
 
-## The Vision
+### The Vision
 
 Imagine telling Claude: *"Why is user 123's order stuck?"*
 
@@ -22,7 +22,7 @@ Claude responds by:
 
 **No API wrappers. No manual integrations. Your services just work with AI.**
 
-## What is MCP?
+### What is MCP?
 
 [Model Context Protocol](https://modelcontextprotocol.io) is Anthropic's open standard for connecting AI models to external tools. Think of it like a microservices registry, but for AI.
 

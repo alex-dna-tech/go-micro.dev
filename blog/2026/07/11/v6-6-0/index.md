@@ -1,4 +1,4 @@
-# v6.6.0
+# What's New in Go Micro: v6.6.0
 
 > Go Micro v6.6.0 strengthens the first-agent on-ramp, hardens plan/delegate recovery, and adds CI-backed security checks.
 
@@ -7,8 +7,6 @@
 LLMS index: [llms.txt](/llms.txt)
 
 ---
-
-# What's New in Go Micro: v6.6.0
 
 Go Micro v6.6.0 is a harness reliability release. The theme is the same services → agents → workflows lifecycle, but with more of the first-agent path covered by local checks and more recovery paths made deterministic when agents resume, retry, delegate, or notify.
 

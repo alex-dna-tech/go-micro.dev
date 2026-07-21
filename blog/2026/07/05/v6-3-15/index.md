@@ -1,4 +1,4 @@
-# v6.3.15
+# What's New in Go Micro: v6.3.15
 
 > Go Micro v6.3.15 tightens the first-agent on-ramp, adds Anthropic streaming, and hardens plan/delegate plus text tool-call recovery.
 
@@ -7,8 +7,6 @@
 LLMS index: [llms.txt](/llms.txt)
 
 ---
-
-# What's New in Go Micro: v6.3.15
 
 Go Micro v6.3.15 is a small but useful harness release: less friction for the first agent, better streaming provider coverage, and more reliable execution when models and delegates do not behave perfectly.
 

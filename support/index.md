@@ -8,7 +8,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 ---
 
-<section id="td-cover-block-0" class="row td-hero-block td-cover-block--height-bg-pattern td-below-navbar js-td-cover -bg-dark-blue" >
+<section id="td-cover-block-0" class="row td-hero-block td-cover-block--height-max td-below-navbar js-td-cover -bg-dark-blue bg-pattern" >
   <div class="col-12">
     <div class="container td-overlay__inner">
       <div class="text-center">
@@ -34,7 +34,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 
 <div><a id="td-block-1" class="td-anchor-no-extra-offset"></a></div>
-<section class="row td-box td-box--dark-blue bg-pattern py-5 td-box--height-auto">
+<section class="row td-box td-box--dark-blue td-box--height-auto bg-pattern py-5">
   <div class="col container">
     <div class="row">
       
@@ -105,7 +105,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 
 <div><a id="td-block-2" class="td-anchor-no-extra-offset"></a></div>
-<section class="row td-box td-box--dark-blue py-5 td-box--height-auto">
+<section class="row td-box td-box--dark-blue td-box--height-auto bg-pattern py-5">
   <div class="col container">
     <div class="row">
       
@@ -146,7 +146,7 @@ LLMS index: [llms.txt](/llms.txt)
 
 
 <div><a id="td-block-3" class="td-anchor-no-extra-offset"></a></div>
-<section class="row td-box td-box--dark-blue bg-pattern py-5 td-box--height-auto">
+<section class="row td-box td-box--dark-blue td-box--height-auto bg-pattern py-5">
   <div class="col container">
     <div class="row">
       
