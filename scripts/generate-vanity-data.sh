@@ -3,11 +3,11 @@
 # vanity redirect pages. Each page is built at site-build time by
 # layouts/_content.gotmpl (Hugo Content Adapter) from this file.
 #
-# For every major version v0..v6 of https://github.com/micro/go-micro we pick
-# the latest patch tag, shallow-clone it, and run `go list` to enumerate
-# packages. The module path (go-import prefix) is read from the tag's go.mod so
-# it stays go-get-resolvable even when upstream's declared path differs per
-# major. Pre-module tags (no go.mod) fall back to GOPATH-mode listing.
+# For every major version of https://github.com/micro/go-micro we pick
+# the latest patch tag, shallow-clone it, and enumerate packages. The module
+# path (go-import prefix) is read from the tag's go.mod. Only modules whose
+# path starts with "go-micro.dev/" are emitted — legacy github.com/* modules
+# are skipped since they don't need vanity redirects.
 #
 # Usage: bash scripts/generate-vanity-data.sh [output-path]
 set -euo pipefail
@@ -56,6 +56,12 @@ for tag in "${TAGS[@]}"; do
     module="$(awk '/^module /{print $2; exit}' "$clone/go.mod")"
   else
     module="github.com/micro/go-micro"
+  fi
+
+  # Skip modules that don't belong to the go-micro.dev vanity domain.
+  if [[ "$module" != go-micro.dev/* ]]; then
+    echo "   -> $module (skipped, not go-micro.dev)"
+    continue
   fi
 
   # Enumerate packages by filesystem: any dir holding a buildable .go file.
