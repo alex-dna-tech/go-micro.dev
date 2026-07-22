@@ -9,8 +9,9 @@ tags:
 - AI
 - agents
 - A2A
+aliases:
+  - /blog/26
 ---
-
 Inside a Go Micro system, agents already talk to each other. An agent is a service with an `Agent.Chat` endpoint, so `delegate` just calls another agent over RPC. That works as long as everyone is on Go Micro. The moment an agent is built on a different framework, the conversation stops: it can't call yours, and yours can't call it.
 
 [A2A](https://a2a-protocol.org) — the open Agent2Agent protocol — is the standard that closes that gap, and Go Micro now speaks it.
@@ -50,6 +51,6 @@ This is the synchronous JSON-RPC binding: `message/send` runs the agent and retu
 
 ## Where it fits
 
-A2A completes the interop set. MCP exposes services as tools, A2A exposes agents as agents, and [x402](/blog/22) handles payment between them — all derived from the registry, none of them a new runtime. An agent stays a service; A2A is one more way to reach it, alongside the `Chat` RPC, `micro chat`, and a flow. Building an agent that the rest of the world can talk to is, again, building a service.
+A2A completes the interop set. MCP exposes services as tools, A2A exposes agents as agents, and [x402](/blog/2026/06/15/integrating-x402-payments-for-agents/) handles payment between them — all derived from the registry, none of them a new runtime. An agent stays a service; A2A is one more way to reach it, alongside the `Chat` RPC, `micro chat`, and a flow. Building an agent that the rest of the world can talk to is, again, building a service.
 
 See the [A2A guide](/docs/guides/a2a-protocol) for the full reference.

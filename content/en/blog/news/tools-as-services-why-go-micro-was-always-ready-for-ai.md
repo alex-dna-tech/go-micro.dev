@@ -9,8 +9,9 @@ tags:
 - AI
 - MCP
 - architecture
+aliases:
+  - /blog/12
 ---
-
 When people see `micro chat` or the MCP gateway, they assume we built something new. We didn't. We exposed something that was already there.
 
 Go Micro has always treated services as self-describing, addressable units. Every service registers its name, endpoints, and request types with the registry. Every endpoint is callable through a standardised path. The only thing that changed is *who's calling*.
@@ -78,7 +79,7 @@ The reason the AI integration was straightforward — not months of work, not a 
 
 When we added MCP, we didn't add a new way to call services. We added a new way to *discover* them — one that LLMs understand. The calling mechanism was already there.
 
-When we added `micro chat`, we didn't build an agent framework. We connected the existing tool discovery to an existing model interface and added a for-loop. The whole thing is [~150 lines](/blog/11).
+When we added `micro chat`, we didn't build an agent framework. We connected the existing tool discovery to an existing model interface and added a for-loop. The whole thing is [~150 lines](/blog/2026/05/30/build-your-own-ai-agent-cli-in-150-lines/).
 
 ## The Access Layer Pattern
 

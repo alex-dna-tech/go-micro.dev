@@ -9,8 +9,9 @@ tags:
 - AI
 - agents
 - architecture
+aliases:
+  - /blog/30
 ---
-
 The first wave of agent frameworks solved one problem: put a model in a loop with some tools. That's the easy part now. The harder problem — the one that decides whether an agent makes it past a demo — is **operating** that loop.
 
 Operating a loop means connecting it to real tools, scoping what it can touch, keeping state when the process restarts, routing work to specialists, recovering from provider failures, seeing what it did, and letting other agents call it. That's harness work, and it's most of the actual job.

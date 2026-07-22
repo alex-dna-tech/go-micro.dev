@@ -9,8 +9,9 @@ tags:
 - AI
 - agents
 - code-generation
+aliases:
+  - /blog/13
 ---
-
 Every code generator stops at the same point: here's some files, good luck. You get a skeleton, wire it up yourself, hope it compiles. We wanted something different.
 
 ```bash

@@ -174,9 +174,9 @@ Get the code
 <div class="col-lg-6 p-4">
 <h2>From Prompt Loop to Operating Harness</h2>
 <p>Tell it what you need. The AI designs services, generates an agent, and drops you into an interactive console. The harness gives that agent tools, memory, guardrails, and workflows so it can operate across services.</p>
-<pre><code><span style="color:#ff7b72">$</span> <span style="color:#d2a8ff">micro run</span> <span style="color:#a5d6ff">--prompt "task management system"</code></pre>
-<pre><code><span style="color:#ff7b72">&gt;</span> Create a project called Launch, add tasks, assign to Alice</code></pre>
-<a class="btn btn-go mt-3" href="/blog/16">Learn About Agents</a>
+<pre><code><span style="color:#ff7b72">$</span> <span style="color:#d2a8ff">micro run</span> <span style="color:#a5d6ff">--prompt "task management system"</code></br>
+<code><span style="color:#ff7b72">&gt;</span> Create a project called Launch, add tasks, assign to Alice</code></pre>
+<a class="btn btn-go mt-3" href="/blog/2026/06/05/introducing-micro-newagent/">Learn About Agents</a>
 </div>
 </div>
 {{% /blocks/section %}}
@@ -209,9 +209,9 @@ Get the code
 <h2>Sponsors</h2>
 <p class="text-light mb-4">Go Micro is supported by companies building the future of AI infrastructure.</p>
 <div class="d-flex align-items-center justify-content-center gap-4 flex-wrap mb-4">
-<a href="/blog/3"><img src="/images/sponsors/anthropic.svg" alt="Anthropic" class="sponsor-logo" /></a>
-<a href="/blog/29"><img src="/images/sponsors/openai.svg" alt="OpenAI" class="sponsor-logo" /></a>
-<a href="/blog/8"><img src="/images/sponsors/atlas-cloud-logo.svg" alt="Atlas Cloud" class="sponsor-logo" /></a>
+<a href="/blog/2026/03/04/building-the-ai-native-future-of-go-micro-with-claude/"><img src="/images/sponsors/anthropic.svg" alt="Anthropic" class="sponsor-logo" /></a>
+<a href="/blog/2026/06/23/go-micro-joins-openai-s-codex-for-open-source/"><img src="/images/sponsors/openai.svg" alt="OpenAI" class="sponsor-logo" /></a>
+<a href="/blog/2026/05/28/atlas-cloud-sponsors-go-micro-300-ai-models-one-integration/"><img src="/images/sponsors/atlas-cloud-logo.svg" alt="Atlas Cloud" class="sponsor-logo" /></a>
 </div>
 <p class="text-light mb-3">Want to support Go Micro and put your logo here? Or running it in production and need a hand?</p>
 <div class="d-flex gap-3 justify-content-center">

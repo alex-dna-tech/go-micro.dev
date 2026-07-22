@@ -9,8 +9,9 @@ tags:
 - AI
 - agents
 - development
+aliases:
+  - /blog/31
 ---
-
 Go Micro is an agent harness. The most honest test of that claim is to use agents to build it — so increasingly, we do. A scheduled loop of two AI agents now opens issues, writes increments, and merges its own pull requests against this repo, on a cadence, with a human setting direction rather than typing the code.
 
 This isn't a stunt. If a harness is good enough to operate a loop that builds itself, that's evidence it's good enough to operate the loop that builds *your* software. So we pointed the thesis at itself and wired up the loop. This post is how it actually works — including the parts that didn't, because the failure modes are the interesting part.

@@ -9,8 +9,9 @@ tags:
 - AI
 - agents
 - flows
+aliases:
+  - /blog/9
 ---
-
 ![](blog-agents-demo.jpg)
 
 We shipped `micro chat` recently — an interactive terminal where you talk to your services through an LLM. You say "list all users over 30 and send each a welcome email," and the model figures out which services to call, in what order, with what arguments.

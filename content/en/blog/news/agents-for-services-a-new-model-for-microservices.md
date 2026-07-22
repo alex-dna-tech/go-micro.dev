@@ -9,8 +9,9 @@ tags:
 - AI
 - agents
 - architecture
+aliases:
+  - /blog/15
 ---
-
 Microservices solved monolithic code. Split it into small, independent units. But we centralised the intelligence — one agent, one brain, managing everything. That's just a different kind of monolith.
 
 What if every service had its own agent? Not embedded in the service. Created separately, assigned to manage it. The service is the capability. The agent is the intelligence.

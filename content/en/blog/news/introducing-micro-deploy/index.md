@@ -7,8 +7,9 @@ category:
 - release
 tags:
 - deploy
+aliases:
+  - /blog/1
 ---
-
 ![](blog-deploy.jpg)
 
 We're excited to announce **micro deploy** in Go Micro v5.13.0 — a simple way to deploy your services to any Linux server.

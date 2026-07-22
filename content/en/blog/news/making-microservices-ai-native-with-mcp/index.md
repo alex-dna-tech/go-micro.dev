@@ -8,8 +8,9 @@ category:
 tags:
 - MCP
 - AI
+aliases:
+  - /blog/2
 ---
-
 ![](blog-mcp.jpg)
 
 We're excited to announce **MCP (Model Context Protocol) support** in Go Micro v5.15.0 — making your microservices instantly accessible to AI tools like Claude.

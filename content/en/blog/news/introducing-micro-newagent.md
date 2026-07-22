@@ -8,8 +8,9 @@ category:
 tags:
 - AI
 - agents
+aliases:
+  - /blog/16
 ---
-
 Go Micro now has three core abstractions:
 
 ```go

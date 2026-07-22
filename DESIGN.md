@@ -117,7 +117,7 @@ In the `_index.md` Sponsors section, each logo is a local `<img>` forced white
 with a CSS filter (the section background is `dark-blue`):
 
 ```html
-<a href="/blog/3"><img src="/images/sponsors/anthropic.svg" alt="Anthropic" class="sponsor-logo" /></a>
+<a href="/blog/2026/03/04/building-the-ai-native-future-of-go-micro-with-claude/"><img src="/images/sponsors/anthropic.svg" alt="Anthropic" class="sponsor-logo" /></a>
 ```
 
 `.sponsor-logo` applies `filter: brightness(0) invert(1)` — pure white

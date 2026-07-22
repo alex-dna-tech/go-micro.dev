@@ -3,8 +3,9 @@ title: "The Model Package: Client, Server, and Now Data"
 linkTitle: The Model Package
 date: 2026-03-04
 description: "Go Micro now has a typed data model layer — define structs, get CRUD and queries, swap backends. Every service gets Client, Server, and Model."
+aliases:
+  - /blog/6
 ---
-
 Go Micro has always given you `service.Client()` to call other services and `service.Server()` to handle requests. But most services also need to save and query data. Until now, that meant either using the low-level `store` package (key-value only) or wiring up your own database layer.
 
 Today we're shipping the `model` package — a typed data model layer that completes the service trifecta: **Client, Server, Model**.

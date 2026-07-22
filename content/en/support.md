@@ -8,24 +8,26 @@ menu:
     pre: <i class='fa-solid fa-handshake'></i>
 ---
 {{% blocks/hero
-  height="max td-below-navbar"
+  height="td-below-navbar"
   color="dark-blue"
   pattern=true
 %}}
-
 <h1 class="display-3 fw-bold mb-3">Support</h1>
 <p class="lead text-gray-custom mb-4 col-8 offset-2">
-  Community help is free. Commercial support and consulting keep the project moving — and keep your team unblocked in production.
+  Community help is free.</br>Commercial support and consulting keep the project moving — and keep your team unblocked in production.
 </p>
-
 <div class="td-cta-buttons my-4">
   <a class="btn btn-go btn-lg d-inline-flex align-items-center gap-2" href="https://github.com/sponsors/asim">Become a sponsor</a>
   <a class="btn btn-outline-go btn-lg d-inline-flex align-items-center gap-2" href="https://github.com/micro/go-micro/issues/new?template=commercial_support.md">Talk to us</a>
 </div>
-
 {{% /blocks/hero %}}
 
-{{% blocks/section color="dark-blue" pattern=true padding="py-5" type="row" %}}
+{{% blocks/section 
+    color="dark-blue"
+    pattern=true
+    padding="py-5"
+    type="row"
+%}}
 <div class="text-center mb-4">
   <h2 class="fw-bold">Choose your level</h2>
   <p class="text-gray-custom col-10 offset-1">From free community help to hands-on engagements. Recurring amounts are set on GitHub Sponsors; support and consulting are scoped per engagement.</p>

@@ -8,8 +8,9 @@ category:
 tags:
 - AI
 - strategy
+aliases:
+  - /blog/14
 ---
-
 I started Go Micro in 2015 because building microservices in Go was too hard. Too much boilerplate, too many decisions before you could test a single endpoint. The idea was simple: sane defaults, pluggable architecture, get out of the developer's way.
 
 Eleven years later, the framework works. Service discovery, RPC, pub/sub, config, store — all pluggable, all production-tested. 23,000 stars on GitHub. But let's be honest: the microservices ecosystem moved on. Kubernetes won infrastructure. gRPC became the default transport. Service meshes handle the network. The problems Go Micro originally solved are mostly solved.

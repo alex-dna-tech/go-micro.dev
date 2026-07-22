@@ -9,8 +9,9 @@ tags:
 - MCP
 - AI
 - agents
+aliases:
+  - /blog/7
 ---
-
 ![](blog-mcp.jpg)
 
 Here's the pitch: you have microservices. They already have well-defined endpoints, typed request/response schemas, and service discovery. An AI agent needs the same things — a list of tools with input schemas and descriptions. The gap between "microservice endpoint" and "AI tool" is surprisingly small.

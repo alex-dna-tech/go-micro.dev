@@ -8,8 +8,9 @@ category:
 tags:
 - architecture
 - microservices
+aliases:
+  - /blog/19
 ---
-
 Every era of distributed systems has solved the problem the previous era created. Microservices solved the coordination cost of the monolith and created a distributed-systems problem. Containers and orchestration solved the deployment problem and created an operational one. The service mesh solved the cross-cutting problem and pushed complexity into the platform. Each step was a response to a concrete engineering constraint, not a trend.
 
 Follow that chain to the end, and the interface the industry converged on — a named, typed, discoverable, independently deployable unit — turns out to be almost exactly the interface a language model needs to call a tool. That convergence is the technical reason agents are the next era.

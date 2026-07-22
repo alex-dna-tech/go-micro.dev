@@ -8,8 +8,9 @@ category:
 tags:
 - AI
 - Agents
+aliases:
+  - /blog/4
 ---
-
 We talk a lot about AI-native microservices. Time to show it. In this post we'll build three services — projects, tasks, and team — and then hand them to an AI agent. The agent will create projects, assign tasks, and query team skills using nothing but natural language.
 
 No API wrappers. No tool definitions. Just Go comments.

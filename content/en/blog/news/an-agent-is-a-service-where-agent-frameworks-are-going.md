@@ -9,8 +9,9 @@ tags:
 - AI
 - agents
 - architecture
+aliases:
+  - /blog/32
 ---
-
 There are now a lot of ways to build an agent. LangChain and LangGraph, LlamaIndex, CrewAI, Microsoft's AutoGen, Google's ADK, the model labs' own SDKs, and — most recently in our own backyard — [tRPC-Agent-Go](https://github.com/trpc-group/trpc-agent-go) from Tencent. They are not all solving the same problem, and the places they differ tell you a lot about where this is heading.
 
 This is a field guide to that landscape, and an honest account of where Go Micro sits in it.

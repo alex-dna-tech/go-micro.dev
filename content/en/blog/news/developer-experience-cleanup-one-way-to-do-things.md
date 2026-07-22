@@ -3,8 +3,9 @@ title: "Developer Experience Cleanup: One Way to Do Things"
 linkTitle: "Developer Experience Cleanup"
 date: 2026-03-04
 description: "Unified service creation, cleaner handler registration, and modular monolith support — the Go Micro DX overhaul"
+aliases:
+  - /blog/5
 ---
-
 Go Micro has always prioritized getting out of your way. But over time, the API accumulated multiple ways to do the same thing — `micro.New()`, `micro.NewService()`, `service.New()`, three different handler registration patterns. If you're building something for AI agents or running a modular monolith, you shouldn't have to choose between equivalent APIs.
 
 We've cleaned it up. Here's what changed and why.

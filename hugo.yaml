@@ -1,5 +1,6 @@
 baseURL: https://micro.labqa.pp.ua
 title: Go Micro
+disableAliases: true
 menus:
   main:
     - name: Discord
