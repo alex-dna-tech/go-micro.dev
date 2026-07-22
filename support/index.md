@@ -8,23 +8,20 @@ LLMS index: [llms.txt](/llms.txt)
 
 ---
 
-<section id="td-cover-block-0" class="row td-hero-block td-cover-block--height-max td-below-navbar js-td-cover -bg-dark-blue bg-pattern" >
+<section id="td-cover-block-0" class="row td-hero-block td-cover-block--height-td-below-navbar js-td-cover -bg-dark-blue bg-pattern" >
   <div class="col-12">
     <div class="container td-overlay__inner">
       <div class="text-center">
         <div class="pt-3 lead">
           
-
 <h1 class="display-3 fw-bold mb-3">Support</h1>
 <p class="lead text-gray-custom mb-4 col-8 offset-2">
-  Community help is free. Commercial support and consulting keep the project moving — and keep your team unblocked in production.
+  Community help is free.</br>Commercial support and consulting keep the project moving — and keep your team unblocked in production.
 </p>
-
 <div class="td-cta-buttons my-4">
   <a class="btn btn-go btn-lg d-inline-flex align-items-center gap-2" href="https://github.com/sponsors/asim">Become a sponsor</a>
   <a class="btn btn-outline-go btn-lg d-inline-flex align-items-center gap-2" href="https://github.com/micro/go-micro/issues/new?template=commercial_support.md">Talk to us</a>
 </div>
-
 </div>
       </div>
     </div>

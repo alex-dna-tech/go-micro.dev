@@ -22,8 +22,8 @@ It also lines up with what's already in the box. `openai` has been a first-class
 
 ## What we'll use it for
 
-Honestly: throughput. More reviewed PRs, faster releases, quicker issue triage, more examples and docs. The recent run of work — [agent loops](/docs/guides/agent-loops.html), [A2A](/blog/26), durable flows, a blocking lint gate in CI — is the pace we want to keep, and maintainer tooling is what sustains it.
+Honestly: throughput. More reviewed PRs, faster releases, quicker issue triage, more examples and docs. The recent run of work — [agent loops](/docs/guides/agent-loops.html), [A2A](/blog/2026/06/18/agents-across-frameworks-a2a/), durable flows, a blocking lint gate in CI — is the pace we want to keep, and maintainer tooling is what sustains it.
 
 ## Thanks
 
-Thanks to OpenAI for backing open source maintainers, and for supporting Go Micro specifically. It joins [Anthropic](/blog/3) and [Atlas Cloud](/blog/8) — the companies helping keep this project moving.
+Thanks to OpenAI for backing open source maintainers, and for supporting Go Micro specifically. It joins [Anthropic](/blog/2026/03/04/building-the-ai-native-future-of-go-micro-with-claude/) and [Atlas Cloud](/blog/2026/05/28/atlas-cloud-sponsors-go-micro-300-ai-models-one-integration/) — the companies helping keep this project moving.

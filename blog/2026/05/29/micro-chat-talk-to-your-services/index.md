@@ -167,6 +167,6 @@ This is the same code `micro chat` runs internally. Use it to add LLM-powered or
 
 ## What's Next
 
-`micro chat` is the interactive version. `micro flow` is the event-driven version — same building blocks, but triggered by broker events instead of human input. See the [flows blog post](/blog/9) for that story.
+`micro chat` is the interactive version. `micro flow` is the event-driven version — same building blocks, but triggered by broker events instead of human input. See the [flows blog post](/blog/2026/05/29/from-chat-to-flows-what-if-your-services-could-orchestrate-themselves/) for that story.
 
 Both are experiments in what happens when services are composable by agents, not just by code. The framework provides the building blocks. You decide how to use them.
