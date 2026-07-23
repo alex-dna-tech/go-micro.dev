@@ -101,10 +101,10 @@ Too complex: High barrier to entry, discourages adoption&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;Testing burden&lt;/strong&gt;: Each gateway required separate testing&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="decision"&gt;Decision&lt;a class="td-heading-self-link" href="#decision" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;We unified the gateway implementation by:&lt;/p&gt;</description></item><item><title>Client Server</title><link>https://micro.labqa.pp.ua/docs/interfaces/client-server/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/docs/interfaces/client-server/</guid><description>&lt;h2 id="client"&gt;Client&lt;a class="td-heading-self-link" href="#client" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;The client is used to make requests to other services.&lt;/p&gt;
-&lt;h2 id="server"&gt;Server&lt;a class="td-heading-self-link" href="#server" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;The server handles incoming requests.&lt;/p&gt;
+&lt;p&gt;We unified the gateway implementation by:&lt;/p&gt;</description></item><item><title>Client Server</title><link>https://micro.labqa.pp.ua/docs/interfaces/client-server/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/docs/interfaces/client-server/</guid><description>&lt;ul&gt;
+&lt;li&gt;The &lt;strong&gt;client&lt;/strong&gt; is used to make requests to other services.&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;server&lt;/strong&gt; handles incoming requests.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Both client and server are pluggable and support middleware wrappers for additional functionality.&lt;/p&gt;
 &lt;h2 id="example-usage"&gt;Example Usage&lt;a class="td-heading-self-link" href="#example-usage" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Here&amp;rsquo;s how to define a simple handler and register it with a Go Micro server:&lt;/p&gt;
@@ -351,7 +351,7 @@ agent / flow / micro chat → agent-managed, event-driven, or interactive orches
 &lt;h2 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Go Micro welcomes contributions of all kinds: code, documentation, examples, and plugins.&lt;/p&gt;
 &lt;h2 id="quick-start"&gt;Quick Start&lt;a class="td-heading-self-link" href="#quick-start" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git clone https://github.com/micro/go-micro.git
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git clone --depth &lt;span class="m"&gt;1&lt;/span&gt; https://github.com/micro/go-micro.git
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; go-micro
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;go mod download
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;go &lt;span class="nb"&gt;test&lt;/span&gt; ./...
@@ -1333,7 +1333,7 @@ when any configured provider breaks the shared contract.&lt;/p&gt;</description>
 Please follow this space for updates!&lt;/p&gt;</description></item><item><title>Contributing</title><link>https://micro.labqa.pp.ua/docs/guides/contributing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/docs/guides/contributing/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Go Micro welcomes contributions of all kinds: code, documentation, examples, and plugins.&lt;/p&gt;
 &lt;h2 id="quick-start"&gt;Quick Start&lt;a class="td-heading-self-link" href="#quick-start" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git clone https://github.com/micro/go-micro.git
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git clone --depth &lt;span class="m"&gt;1&lt;/span&gt; https://github.com/micro/go-micro.git
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; go-micro
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;go mod download
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;go &lt;span class="nb"&gt;test&lt;/span&gt; ./...
@@ -1582,7 +1582,7 @@ v0.14.4-dev &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;script&gt;
 document.addEventListener("DOMContentLoaded", function() {
  var options = { hour: '2-digit', hour12: false, minute: '2-digit', timeZoneName: 'short' };
- var buildDate = new Date("2026-07-22T19:49:37Z");
+ var buildDate = new Date("2026-07-23T12:56:52Z");
  document.getElementById("local-time").innerText = buildDate.toLocaleString(undefined, options);
 });
 &lt;/script&gt;</description></item></channel></rss>

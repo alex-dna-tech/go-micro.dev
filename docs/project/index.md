@@ -1,5 +1,9 @@
 # Project
 
+> Architecture, design, and getting involved
+
+---
+
 LLMS index: [llms.txt](/llms.txt)
 
 ---

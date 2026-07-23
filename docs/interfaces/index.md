@@ -1,5 +1,9 @@
 # Interfaces
 
+> Define interfaces to extend microservices
+
+---
+
 LLMS index: [llms.txt](/llms.txt)
 
 ---

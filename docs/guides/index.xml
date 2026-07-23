@@ -314,7 +314,7 @@ when any configured provider breaks the shared contract.&lt;/p&gt;</description>
 &lt;p&gt;&lt;strong&gt;go-kit&lt;/strong&gt; (requires more setup):&lt;/p&gt;</description></item><item><title>Contributing</title><link>https://micro.labqa.pp.ua/docs/guides/contributing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://micro.labqa.pp.ua/docs/guides/contributing/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;a class="td-heading-self-link" href="#overview" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Go Micro welcomes contributions of all kinds: code, documentation, examples, and plugins.&lt;/p&gt;
 &lt;h2 id="quick-start"&gt;Quick Start&lt;a class="td-heading-self-link" href="#quick-start" aria-label="Heading self-link"&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git clone https://github.com/micro/go-micro.git
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git clone --depth &lt;span class="m"&gt;1&lt;/span&gt; https://github.com/micro/go-micro.git
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; go-micro
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;go mod download
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;go &lt;span class="nb"&gt;test&lt;/span&gt; ./...

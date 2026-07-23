@@ -1,5 +1,9 @@
 # Examples
 
+> Learn by building real microservices with go-micro
+
+---
+
 LLMS index: [llms.txt](/llms.txt)
 
 ---

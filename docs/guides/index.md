@@ -1,5 +1,9 @@
 # Guides
 
+> Step-by-step guides for building with go-micro
+
+---
+
 LLMS index: [llms.txt](/llms.txt)
 
 ---

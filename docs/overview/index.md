@@ -1,5 +1,9 @@
 # Overview
 
+> Go Micro is a framework for microservices development
+
+---
+
 LLMS index: [llms.txt](/llms.txt)
 
 ---

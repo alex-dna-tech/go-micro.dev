@@ -27,7 +27,7 @@ Deploy context | local
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   var options = { hour: '2-digit', hour12: false, minute: '2-digit', timeZoneName: 'short' };
-  var buildDate = new Date("2026-07-22T19:49:36Z");
+  var buildDate = new Date("2026-07-23T12:56:52Z");
   document.getElementById("local-time").innerText = buildDate.toLocaleString(undefined, options);
 });
 </script>
