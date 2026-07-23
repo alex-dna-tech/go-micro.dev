@@ -12,7 +12,7 @@ Go Micro welcomes contributions of all kinds: code, documentation, examples, and
 ## Quick Start
 
 ```bash
-git clone https://github.com/micro/go-micro.git
+git clone --depth 1 https://github.com/micro/go-micro.git
 cd go-micro
 go mod download
 go test ./...

@@ -178,7 +178,7 @@ The MCP gateway does the translation. Your comments become the agent's documenta
 
 ```bash
 # Clone and run
-git clone https://github.com/micro/go-micro
+git clone --depth 1 https://github.com/micro/go-micro
 cd go-micro/examples/agent-demo
 go run main.go
 ```

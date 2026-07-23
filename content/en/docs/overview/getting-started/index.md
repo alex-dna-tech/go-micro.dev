@@ -41,7 +41,7 @@ go install go-micro.dev/v6/cmd/micro@latest
 Prefer to start from a runnable reference? Clone the repository and run the maintained support-desk lifecycle example first:
 
 ```bash
-git clone https://github.com/micro/go-micro.git
+git clone --depth 1 https://github.com/micro/go-micro.git
 cd go-micro
 go run ./examples/support
 ```

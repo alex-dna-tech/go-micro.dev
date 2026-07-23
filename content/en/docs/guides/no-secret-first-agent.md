@@ -23,7 +23,7 @@ end to end with no secrets.
 From a fresh clone of the repository:
 
 ```sh
-git clone https://github.com/micro/go-micro.git
+git clone --depth 1 https://github.com/micro/go-micro.git
 cd go-micro
 go run ./examples/support
 ```

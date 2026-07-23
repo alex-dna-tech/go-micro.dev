@@ -155,7 +155,7 @@ It would have been easy to ship a planning engine, a sub-agent scheduler, a dele
 The fastest way to see it end to end is the runnable example in the repo — it has the module set up and both agents wired:
 
 ```bash
-git clone https://github.com/micro/go-micro
+git clone --depth 1 https://github.com/micro/go-micro
 cd go-micro/examples/agent-plan-delegate
 export ANTHROPIC_API_KEY=sk-ant-...    # or OPENAI_API_KEY, GEMINI_API_KEY, ...
 go run main.go

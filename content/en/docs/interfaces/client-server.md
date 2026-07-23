@@ -3,11 +3,8 @@ title: "Client Server"
 weight: 1
 description: "Go Micro uses a client/server model for RPC communication between services."
 ---
-## Client
-The client is used to make requests to other services.
-
-## Server
-The server handles incoming requests.
+- The **client** is used to make requests to other services.
+- The **server** handles incoming requests.
 
 Both client and server are pluggable and support middleware wrappers for additional functionality.
 
